@@ -7,7 +7,7 @@ function App() {
   console.log(appData);
   return (
     <div>
-      {/* <Heading>Hello</Heading> */}
+      <Heading>Hello</Heading>
       <AllRoutes/>
     </div>
   );
