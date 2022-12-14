@@ -1,182 +1,323 @@
-.wrapper {
-  width: 100%;
-  padding: 0 70px;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  background-color: #ffffff;
-  border-bottom: 1px solid red;
+navbar_mean_machine {
+  position: sticky;
 }
 
-.mega-menu {
-  width: 100%;
-  /* height: 60px; */
+.navbar_main_menu_items {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 32px 15px 0px 15px;
+  font-size: 13.6px;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  align-items: center;
+}
+.navbar_main_menu_items_workout {
+  display: flex;
+  position: relative;
+  text-align: left;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+.navbar_main_menu_items_workout:hover {
+  border-bottom: 3px solid rgb(66, 150, 203);
+  cursor: pointer;
+}
+.navbar_main_menu_items_workout_text {
+  color: rgb(33, 36, 50);
+  font-weight: 600;
+}
+.navbar_main_menu_items_programs {
+  display: flex;
+  position: relative;
+  text-align: left;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+.navbar_main_menu_items_respons_signup {
+  display: flex;
+  position: relative;
+  text-align: left;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+.navbar_main_menu_items_programs:hover {
+  border-bottom: 3px solid rgb(66, 150, 203);
+  cursor: pointer;
+}
+.navbar_main_menu_items_programs_text {
+  color: rgb(33, 36, 50);
+  font-weight: 600;
+}
+.navbar_main_menu_items_community {
+  display: flex;
+  position: relative;
+  text-align: left;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+.navbar_main_menu_items_community:hover {
+  border-bottom: 3px solid rgb(66, 150, 203);
+  cursor: pointer;
+}
+.navbar_main_menu_items_community_text {
+  color: rgb(33, 36, 50);
+  font-weight: 600;
+}
+.navbar_main_menu_items_about {
+  display: flex;
+  position: relative;
+  text-align: left;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+.navbar_main_menu_items_about:hover {
+  border-bottom: 3px solid rgb(66, 150, 203);
+  cursor: pointer;
+}
+.navbar_main_menu_items_about_text {
+  color: rgb(33, 36, 50);
+  font-weight: 600;
+}
+.navbar_main_menu_items_healthy_living {
+  display: flex;
+  position: relative;
+  text-align: left;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+.navbar_main_menu_items_healthy_living:hover {
+  border-bottom: 3px solid rgb(66, 150, 203);
+  cursor: pointer;
+}
+.navbar_main_menu_items_healthy_living_text {
+  color: rgb(33, 36, 50);
+  font-weight: 600;
+}
+.navbar_main_menu_items_store {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+.navbar_main_menu_items_store:hover {
+  border-bottom: 3px solid rgb(66, 150, 203);
+  cursor: pointer;
+}
+.navbar_main_menu_items_store_text {
+  color: rgb(33, 36, 50);
+  font-weight: 600;
+}
+.navbar_main_menu_items_membership {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+.navbar_main_menu_items_membership:hover {
+  border-bottom: 3px solid rgb(66, 150, 203);
+  cursor: pointer;
+}
+.navbar_main_menu_items_membership_text {
+  color: rgb(66, 150, 203);
+  font-weight: 600;
+}
+.navbar_main_menu_items_signup {
+  text-align: center;
+  padding: 32px 15px 0px 15px;
+  height: 100%;
+  border-left: 1px solid rgb(233, 242, 244);
+  position: relative;
+  background-color: rgb(255, 255, 255);
+}
+.navbar_main_menu_items_signup:hover {
+  border-bottom: 3px solid rgb(66, 150, 203);
+  cursor: pointer;
+}
+.navbar_main_menu_items_myfitness_text_box {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  font-size: 13px;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  margin-left: 16px;
+}
+.navbar_main_menu_items_hiSign_text {
+  color: rgb(66, 150, 203);
+  font-weight: 400;
+  font-size: 12px;
+}
+.navbar_main_menu_items_myfitness_text {
+  font-weight: 600;
+  color: rgb(33, 36, 50);
+}
+
+.navbar_main_menu_items_right_most {
+  display: flex;
+  height: 100%;
   align-items: center;
   justify-content: space-around;
+  padding-top: 45px;
+  border-left: 1px solid rgb(233, 242, 244);
 }
-
-.logo > a > img {
-  display: block;
-  width: 156px;
-  /* height: 45px; */
+.navbar_main_menu_items_search {
+  height: 100%;
+  width: auto;
+  border-bottom: 3px solid rgb(255, 255, 255);
+  margin-left: 25px;
 }
-.nav-items > ul {
-  /* border: 1px solid red; */
+.navbar_main_menu_items_search:hover {
+  border-bottom: 3px solid rgb(66, 150, 203);
+  cursor: pointer;
+}
+.navbar_main_menu_items_shopping_bag {
+  height: 100%;
+  border-bottom: 3px solid rgb(255, 255, 255);
+  margin-left: 25px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  /* padding-left: 20px; */
-  /* margin: 0 20px; */
-  gap: 20px;
-  list-style: none;
 }
-
-.nav-items > ul > li > div:first-child {
-  display: flex;
-  /* gap: 2px; */
-  justify-content: center;
-  align-items: center;
-  /* border-bottom: 2px solid #ffffff; */
-}
-
-.nav-items > ul > li svg {
-  /* display: inline; */
-  color: #4296cb;
-  font-size: 20px;
-}
-.nav-items a {
-  text-transform: uppercase;
-  /* text-align: center; */
-  font-size: 12px;
-  color: #343744;
-  /* background-color: red; */
-  font-weight: 700;
-  transition: all 0.5s ease;
-  /* border-bottom: 2px solid #ffffff; */
-}
-
-.nav-items div > a:hover {
-  /* display: block; */
-  color: #4296cb;
-}
-/* .nav-items div > li {
-  transition: all 1 ease;
-} */
-.nav-items div > li:hover .dropdown {
-  display: block;
-  transition: all 1s ease;
-}
-.dropdown {
-  background-color: #313443;
-  position: absolute;
-  top: 118px;
-  left: 0;
-  width: 100vw;
-  transition: all 0.2s ease-in-out;
-  /* padding: 40px 0; */
-  visibility: hidden;
-  opacity: 0;
-}
-
-.nav-items li:hover .dropdown {
-  opacity: 1;
-  visibility: visible;
-}
-.dropdown-menu {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
-
-.dropdown-list-box {
-  /* height: 150px; */
-  /* width: 150px; */
-  /* padding: 40px 0; */
-  padding: 20px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(224, 228, 235, 0.501);
-}
-.dropdown-list-box > img {
-  min-width: 100px;
-  /* height: auto; */
-  min-height: 80px;
-  width: 80px;
-}
-.dropdown-list-box > a {
-  text-align: center;
-  color: #fff;
-}
-.dropdown-list-box:hover {
-  background-color: #53545b;
-}
-#membership > div > a {
-  color: #4296cb;
-}
-/* .user-details {
-  border: 1px solid red;
-} */
-.user-details svg {
-  display: inline;
-  color: #4296cb;
-  font-size: 20px;
-}
-.user-details > a > span {
-  color: #4296cb;
+.navbar_main_menu_items_shopping_bag_cart_number {
+  margin-left: 5px;
   font-size: 14px;
+  font-weight: 700;
+  color: rgb(66, 150, 203);
 }
-.user-details-dropdown {
-  /* height: 100px; */
-  width: 15%;
-  position: absolute;
-  top: 96px;
-  /* margin-top: 20px; */
-  /* right: 213px; */
-  right: 14%;
-  padding: 30px;
-  border: 2px solid #4296cb;
-  background-color: #313443;
+.navbar_main_menu_items_shopping_bag:hover {
+  border-bottom: 3px solid rgb(66, 150, 203);
+  cursor: pointer;
+}
+
+/* black box  light rgb(49,52,67) darker rgb(34,37,51) */
+
+.navbar_main_menu_blackbox-workout {
   display: none;
+  padding-left: 25%;
+  padding-right: 25%;
+  justify-content: space-evenly;
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background-color: rgb(49, 52, 67);
 }
-.user-details-dropdown > h4 {
-  color: #ffffff;
+.navbar_main_menu_blackbox-programs {
+  display: none;
+  padding-left: 25%;
+  padding-right: 25%;
+  justify-content: space-evenly;
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background-color: rgb(49, 52, 67);
+}
+.navbar_main_menu_blackbox-about {
+  display: none;
+  padding-left: 25%;
+  padding-right: 25%;
+  justify-content: space-evenly;
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background-color: rgb(49, 52, 67);
+}
+.navbar_main_menu_blackbox-healthy_living {
+  display: none;
+  padding-left: 25%;
+  padding-right: 25%;
+  justify-content: space-evenly;
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background-color: rgb(49, 52, 67);
+}
+.navbar_main_menu_blackbox-community {
+  display: none;
+  padding-left: 25%;
+  padding-right: 25%;
+  justify-content: space-evenly;
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background-color: rgb(49, 52, 67);
+}
+.navbar_main_menu_blackbox-search_bar {
+  display: none;
+  padding-left: 25%;
+  padding-right: 25%;
+  justify-content: space-evenly;
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background-color: rgb(49, 52, 67);
+}
+.navbar_main_menu_blackbox-workout_items {
+  /* margin-top: 40px; */
+  text-align: center;
+  width: 150px;
+  height: 100%;
+  background-color: rgb(221, 217, 217);
+  /* color: black; */
+}
+.navbar_main_menu_blackbox-workout_items:hover {
+  /* background-color: rgb(34, 37, 51); */
+  background-color: rgb(202, 207, 219);
+  /* color: rgb(34, 37, 51); */
+}
+.navbar_main_menu_blackbox-workout_image_box {
+  padding: 35px 35px 12px 55px;
+  width: 150px;
+  margin: auto;
+}
+.navbar_main_menu_blackbox_h4 {
+  /* color: rgb(255, 255, 255); */
+  color: rgb(49, 52, 67);
+  font-size: 14px;
   font-weight: 500;
 }
-.user-details-dropdown > p {
-  color: #ffffff;
-  font-size: 12px;
-  line-height: 23px;
-  margin-top: 15px;
+.navbar_main_menu_blackbox_signup {
+  display: none;
+  width: 281px;
+  height: 380px;
+  background-color: rgb(49, 52, 67);
+  position: absolute;
+  right: 35px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 40px;
 }
-.user-details-dropdown > button {
+.navbar_main_menu_blackbox_signup_items {
   width: 100%;
-  color: #fff;
-  font-size: 10px;
-  font-weight: 800;
-  padding: 10px 0;
-  border-radius: 5px;
-  margin-top: 20px;
+  margin-bottom: 15px;
 }
-.user-details-dropdown > button:hover {
-  background: linear-gradient(to right, rgb(149, 231, 211), rgb(10, 158, 207));
+.navbar_main_menu_blackbox_text_h4 {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
 }
-.user-details-dropdown > button:nth-child(3) {
-  background-color: #4296cb;
+.navbar_main_menu_blackbox_text_p {
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  margin-bottom: 40px;
 }
-.user-details-dropdown > button:nth-child(4) {
-  border: 2px solid #4296cb;
-  margin-bottom: 20px;
-}
-.user-details:hover .user-details-dropdown {
-  display: block;
-}
-
-.nav-cart {
-  display: flex;
-  font-size: 20px;
-  gap: 20px;
-}
-
