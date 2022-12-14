@@ -1,9 +1,6 @@
 import { Heading } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
-import Content from "./components/content/Content";
-import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./pages/Home";
+
 import AllRoutes from "./Routes/AllRoutes";
 
 function App() {
@@ -15,6 +12,7 @@ function App() {
       <AllRoutes />
       <Content />
       <Footer />
+      <Heading>Hello</Heading>
     </div>
   );
 }
