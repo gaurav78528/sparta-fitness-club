@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import AllRoutes from "./Routes/AllRoutes";
 =======
  
- 
+
 import AllRoutes from "./Routes/AllRoutes";
  
 >>>>>>> 756c32c46de4ba5fdf4ebb0ed328e7799cdd0463
@@ -23,7 +23,6 @@ function App() {
  
       <AllRoutes/>
  
->>>>>>> 756c32c46de4ba5fdf4ebb0ed328e7799cdd0463
     </div>
   );
 }

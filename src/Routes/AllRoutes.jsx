@@ -8,11 +8,9 @@ const AllRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />}></Route>
-<<<<<<<<< Temporary merge branch 1
+ 
       <Route path="/workout" element={<WorkOut />}></Route>
-=========
-      {/* <Route path="/workout" element={<WorkOut />}></Route> */}
->>>>>>>>> Temporary merge branch 2
+ 
     
     </Routes>
   );
