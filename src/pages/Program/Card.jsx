@@ -1,30 +1,30 @@
+import { Flex } from '@chakra-ui/layout'
 import { Box, Button, Image, Text } from '@chakra-ui/react'
 import React from 'react'
 
-const Card = () => {
+const Card = ({src, week, min, des, price,key }) => {
   return (
-    <Box w={"30%"}>
+    <Box w={"full"} border="1px solid black"   >
         <Box>
-            <Image w={"full"} src='https://d18zdz9g6n5za7.cloudfront.net/plan/1020/1020-9687-fb-just-your-body-2-week-no-equipment-challenge-b0df.jpg' alt="fitness"/>
+            <Image w={"full"} src={src} alt="fitness"/>
         </Box>
-        <Box>
-            <Text>2 WEEK CHALLENGE </Text>
-            <Text>34 MIN/DAY</Text>
-
+        <Flex justifyContent="space-around" p={2}>
+            <Text>{week}</Text>
+            <Text>{min}</Text>
+        </Flex>
+        <Box p={2}>
+            <Text>{des}</Text>
         </Box>
-        <Box>
-            <Text>FB Just Your Body: 2-Week No Equipment Challenge</Text>
-        </Box>
-        <Box>
+        <Flex justifyContent="space-between" p={2}>
             <Box>
             <Text>As Low As</Text>
-            <Text>$7.99</Text>
+            <Text>$ {price}</Text>
             </Box>
             <Box>
                 <Button>ADD TO BAG</Button>
             </Box>
 
-        </Box>
+        </Flex>
     </Box>
   )
 }

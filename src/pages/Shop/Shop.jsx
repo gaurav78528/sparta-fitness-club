@@ -1,3 +1,5 @@
+import { Card, CardFooter } from '@chakra-ui/card';
+import { Stack, Text } from '@chakra-ui/layout';
 import { Button, ButtonGroup, Divider ,CardBody,Image
     ,Heading, 
     SimpleGrid} from '@chakra-ui/react'
@@ -52,6 +54,7 @@ import { Button, ButtonGroup, Divider ,CardBody,Image
     </CardFooter>
   </Card>
    </SimpleGrid>
+ 
       </div>
     )
   }
