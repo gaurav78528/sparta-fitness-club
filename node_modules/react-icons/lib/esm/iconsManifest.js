@@ -143,13 +143,15 @@ export var IconsManifest = [
     "id": "im",
     "name": "IcoMoon Free",
     "projectUrl": "https://github.com/Keyamoon/IcoMoon-Free",
-    "license": "CC BY 4.0 License"
+    "license": "CC BY 4.0 License",
+    "licenseUrl": "https://github.com/Keyamoon/IcoMoon-Free/blob/master/License.txt"
   },
   {
     "id": "bi",
     "name": "BoxIcons",
     "projectUrl": "https://github.com/atisawd/boxicons",
-    "license": "CC BY 4.0 License"
+    "license": "CC BY 4.0 License",
+    "licenseUrl": "https://github.com/atisawd/boxicons/blob/master/LICENSE"
   },
   {
     "id": "cg",
@@ -178,5 +180,12 @@ export var IconsManifest = [
     "projectUrl": "https://github.com/lykmapipo/themify-icons",
     "license": "MIT",
     "licenseUrl": "https://github.com/thecreation/standard-icons/blob/master/modules/themify-icons/LICENSE"
+  },
+  {
+    "id": "rx",
+    "name": "Radix Icons",
+    "projectUrl": "https://icons.radix-ui.com",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/radix-ui/icons/blob/master/LICENSE"
   }
 ]

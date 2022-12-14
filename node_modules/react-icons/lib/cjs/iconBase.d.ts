@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 export interface IconTree {
     tag: string;
     attr: {
@@ -15,5 +15,5 @@ export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
 }
 export declare type IconType = (props: IconBaseProps) => JSX.Element;
 export declare function IconBase(props: IconBaseProps & {
-    attr?: {};
+    attr?: Record<string, string>;
 }): JSX.Element;
