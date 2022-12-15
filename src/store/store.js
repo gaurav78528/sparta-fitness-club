@@ -7,11 +7,13 @@ import {
 import { reducer as appReducer } from "./App/app.reducer";
 import { reducer as authReducer } from "./Auth/auth.reducer";
 import thunk from "redux-thunk";
+import { productReducer } from "./workout/work.reducers";
 import { reducer as giftReducer } from "./shop/reducer";
 const root_reducer = combineReducers({
   app: appReducer,
   auth: authReducer,
   gift: giftReducer,
+  prod: productReducer,
 });
 
 const composeEnhancers = window.REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose;

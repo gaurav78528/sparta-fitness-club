@@ -4,11 +4,11 @@ import AllRoutes from "./Routes/AllRoutes";
 import Footer from "./components/Footer/Footer";
 function App() {
   const { appData } = useSelector((store) => store.app);
-  console.log(appData);
+  // console.log(appData);
   return (
     <div>
+      <AllRoutes/>
       <Navbar />
-      <AllRoutes />
       <Footer />
     </div>
   );
