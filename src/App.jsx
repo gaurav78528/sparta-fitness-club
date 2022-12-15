@@ -7,8 +7,9 @@ function App() {
   // console.log(appData);
   return (
     <div>
-      <AllRoutes/>
       <Navbar />
+      <AllRoutes/>
+      
       <Footer />
     </div>
   );
