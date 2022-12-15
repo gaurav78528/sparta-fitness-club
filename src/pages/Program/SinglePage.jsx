@@ -19,6 +19,7 @@ import {
 import { useEffect, useState } from 'react';
   import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { MdLocalShipping } from 'react-icons/md';
+import { useParams } from 'react-router-dom';
   
 
 
@@ -30,18 +31,19 @@ import { useEffect, useState } from 'react';
 
   export default function SinglePage() {
    
-   const {id} = useParams()
+   const {user_id} = useParams()
    const [state, setState] = useState({})
 
 useEffect(() => {
-    getData(`http://localhost:8080/Products/${id}`).then((res) => 
+    getData(`http://localhost:8080/Products/${user_id}`).then((res) => 
     setState(res.data)
     )
-})
+},[user_id])
 
    
     return (
       <Container maxW={'7xl'}>
+        
         <SimpleGrid
           columns={{ base: 1, lg: 2 }}
           spacing={{ base: 8, md: 10 }}
@@ -65,13 +67,13 @@ useEffect(() => {
                 lineHeight={1.1}
                 fontWeight={600}
                 fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
-                Automatic Watch
+                 
               </Heading>
               <Text
                 color={useColorModeValue('gray.900', 'gray.400')}
                 fontWeight={300}
                 fontSize={'2xl'}>
-                $350.00 USD
+                {state.price}
               </Text>
             </Box>
   

@@ -25,7 +25,7 @@ const AllRoutes = () => {
       <Route path="/login" element={<Login />}></Route>
       <Route path="/join" element={<Join />}></Route>
       <Route path="/workout" element={<Workout />}></Route>
-      <Route path="/single" element={<SinglePage />}></Route>
+      <Route path="/Products/:user_id" element={<SinglePage />}></Route>
     </Routes>
   );
 };

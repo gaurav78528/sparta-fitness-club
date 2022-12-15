@@ -13,7 +13,7 @@ const root_reducer = combineReducers({
   app: appReducer,
   auth: authReducer,
   gift: giftReducer,
-  prod: productReducer,
+  product: productReducer,
 });
 
 const composeEnhancers = window.REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose;

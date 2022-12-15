@@ -33,20 +33,16 @@ import {
 import { Link } from "react-router-dom";
 
 const Plans = () => {
-  const [bata, setBata] = useState([]);
+  
 
-  const products = useSelector((store) => store.prod.products);
+  const products = useSelector((store) => store.product);
   const dispatch = useDispatch();
   const { isOpen, onToggle } = useDisclosure();
-  const { isLazy, onToggles } = useDisclosure();
-  const [styleSeachBar, setStyleSeachBar] = useState({ display: "none" });
+ 
 
   useEffect(() => {
-    axios.get("http://localhost:8080/Products").then((d) => {
-      setBata(d.data);
-    });
-  }, []);
-
+    dispatch(getProduct())
+  },[])
   return (
     <div>
       <Box marginLeft={20} marginTop={"100px"} marginBottom={"20px"}>
@@ -61,7 +57,7 @@ const Plans = () => {
       </Box>
       <Box w="full">
         <Flex h={"full"} border="1px solid gray">
-          <Box marginLeft={12} display="flex" alignItems={"center"}>
+          <Box marginLeft={12} display="flex" >
             <Box>
               <Button onClick={onToggle}>
                 Filter
@@ -126,11 +122,11 @@ const Plans = () => {
         }}
         gap={2}
       >
-        {bata.map((pro) => (
-          <GridItem p={2}>
-            <Link to={`/workout/${pro.id}`}>
+        {products.product[0] &&  products.product[0].map((pro) => (
+          <GridItem p={2} key={pro.id}>
+            <Link to={`/Products/${pro.id}`}>
               <Card
-                key={pro.id}
+                
                 min={pro.time}
                 price={pro.price}
                 des={pro.desc}
@@ -141,6 +137,7 @@ const Plans = () => {
           </GridItem>
         ))}
       </Grid>
+ 
     </div>
   );
 };
