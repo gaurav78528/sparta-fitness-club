@@ -11,8 +11,10 @@ export const reducer=(state=initstate,{type,payload})=>{
             return {...state,isloading:true}
         }
         case get_Gift_success:{
-          //  console.log(payload);
-            return {...state,isloading:false,gift:payload}
+          // console.log(payload);
+          const newdata=[...state.gift,payload]
+          
+            return {...state,isloading:false,gift:newdata}
         }
         
         case get_Gift_failure:{

@@ -106,6 +106,37 @@
       "price":"$100:00"
 
     }
+  ],"passes":[
+    {
+      "id":9,
+      "image":"https://d18zdz9g6n5za7.cloudfront.net/products/320/320-16-1-day-pass-a272.jpg",
+      "pass":"1-Day Pass",
+      "price":"$1.99"
+    },
+    {
+      "id":10,
+      "image":"https://d18zdz9g6n5za7.cloudfront.net/products/320/320-15-7-day-pass-8070.jpg",
+      "pass":"7-Day Pass",
+      "price":"$3.99"
+    },
+    {
+      "id":11,
+      "image":"https://d18zdz9g6n5za7.cloudfront.net/products/320/320-14-14-day-pass-b885.jpg",
+      "pass":"14-Day Pass",
+      "price":"$7.99"
+    },
+    {
+      "id":12,
+      "image":"https://d18zdz9g6n5za7.cloudfront.net/products/320/320-13-30-day-pass-9318.jpg",
+      "pass":"30-Day Pass",
+      "price":"$11.99"
+    },
+    {
+      "id":13,
+      "image":"https://d18zdz9g6n5za7.cloudfront.net/products/320/320-12-90-day-pass-89f6.jpg",
+      "pass":"90-Day Pass",
+      "price":"$29.99"
+    }
   ]
   
 
