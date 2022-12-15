@@ -1,20 +1,15 @@
-import { Heading } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
- 
- 
+import Navbar from "./components/Navbar/Navbar";
 import AllRoutes from "./Routes/AllRoutes";
- 
-
+import Footer from "./components/Footer/Footer";
 function App() {
   const { appData } = useSelector((store) => store.app);
   // console.log(appData);
   return (
     <div>
-      
-      <Heading>Hello</Heading>
- 
       <AllRoutes/>
- 
+      <Navbar />
+      <Footer />
     </div>
   );
 }
