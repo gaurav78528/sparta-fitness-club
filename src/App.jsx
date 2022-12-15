@@ -11,9 +11,9 @@ function App() {
     <div>
       <Navbar />
       <AllRoutes />
-      <Content />
+      {/* <Content /> */}
       <Footer />
-      <Heading>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut unde corrupti accusantium optio dolorum sit ipsam doloremque veritatis sint. Id maiores illum a nihil accusamus beatae inventore expedita, officiis illo.</Heading>
+      
     </div>
   );
 }
