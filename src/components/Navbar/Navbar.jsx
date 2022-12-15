@@ -88,7 +88,7 @@ const Navbar = () => {
                 setStyle({ display: "none" });
               }}
             >
-              <Link to="/workout">
+              <Link to="/">
                 <h4 className="navbar_main_menu_items_workout_text">
                   WORKOUTS
                 </h4>
