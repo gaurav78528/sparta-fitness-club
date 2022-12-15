@@ -3,11 +3,28 @@ import * as type from "./actionType";
 
  export const getAllgift=()=>(dispatch)=>{
    dispatch ({type:type.get_Gift_loading})
-   return axios.get("http://localhost:3001/gift")
+   return axios.get("http://localhost:8080/gift")
    .then((res)=>{
-    dispatch({type:type.get_Gift_Success,payload:res.data})
+   // console.log(res.data);
+    dispatch({type:type.get_Gift_success,payload:res.data})
+    
 })
+
     .catch((err)=>{
-        dispatch({type:type.get_Gift_Error})
+        dispatch({type:type.get_Gift_failure})
    })
  }
+
+ export const getAllpassess=()=>(dispatch)=>{
+  dispatch ({type:type.get_Gift_loading})
+  return axios.get("http://localhost:8080/passes")
+  .then((res)=>{
+  // console.log(res.data);
+   dispatch({type:type.get_Gift_success,payload:res.data})
+   
+})
+
+   .catch((err)=>{
+       dispatch({type:type.get_Gift_failure})
+  })
+}
