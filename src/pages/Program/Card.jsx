@@ -4,21 +4,21 @@ import React from 'react'
 
 const Card = ({src, week, min, des, price,key }) => {
   return (
-    <Box w={"full"} border="1px solid black"   >
+    <Box w={"full"} border="1px solid black"  >
         <Box>
             <Image w={"full"} src={src} alt="fitness"/>
         </Box>
-        <Flex justifyContent="space-around" p={2}>
-            <Text>{week}</Text>
-            <Text>{min}</Text>
+        <Flex  p={2}>
+            <Text>{week} - {min}</Text>
+            
         </Flex>
-        <Box p={2}>
+        <Box p={2} fontWeight="bold" fontSize={"20px"} h={150}>
             <Text>{des}</Text>
         </Box>
-        <Flex justifyContent="space-between" p={2}>
+        <Flex justifyContent="space-between" p={2} marginBottom={"20px"} >
             <Box>
             <Text>As Low As</Text>
-            <Text>$ {price}</Text>
+            <Text fontWeight="bold">$ {price}</Text>
             </Box>
             <Box>
                 <Button>ADD TO BAG</Button>
