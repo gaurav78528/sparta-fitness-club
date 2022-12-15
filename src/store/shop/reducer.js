@@ -1,4 +1,5 @@
-import * as types from "./actionType"
+import { get_Gift_failure, get_Gift_loading, get_Gift_success } from "./actionType";
+
 const initstate={
     isloading:false,
     isError:false,
@@ -6,13 +7,17 @@ const initstate={
 };
 export const reducer=(state=initstate,{type,payload})=>{
     switch(type){
-        case type.get_Gift_loading:{
+        case get_Gift_loading:{
             return {...state,isloading:true}
         }
-        case type.get_Gift_success:{
-            return {...state,isloading:false,gift:payload}
+        case get_Gift_success:{
+          // console.log(payload);
+          const newdata=[...state.gift,payload]
+          
+            return {...state,isloading:false,gift:newdata}
         }
-        case type.get_Gift_failure:{
+        
+        case get_Gift_failure:{
             return {...state,isError:true}
         }
         default:
