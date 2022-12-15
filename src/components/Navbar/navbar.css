@@ -307,6 +307,7 @@ navbar_mean_machine {
   padding-left: 32px;
   padding-right: 32px;
   padding-top: 40px;
+  z-index: 1;
 }
 .navbar_main_menu_blackbox_signup_items {
   width: 100%;

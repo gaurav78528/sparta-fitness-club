@@ -18,7 +18,7 @@
     {
       "id":1,
       "img":"https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-9958-fb-3-day-3-workouts-per-week-for-2-weeks-91fc.jpg",
-      "weak":"2 WEEK CHALLENGE",
+      "week":"2 WEEK CHALLENGE",
       "time":"44 MIN/DAY",
       "desc":"FB 3-Day: 3 Workouts Per Week for 2 Weeks",
       "price":"7.99"
@@ -26,7 +26,7 @@
     {
       "id":2,
       "img":"https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-9687-fb-just-your-body-2-week-no-equipment-challenge-b0df.jpg",
-      "weak":"2 WEEK CHALLENGE",
+      "week":"2 WEEK CHALLENGE",
       "time":"44 MIN/DAY",
       "desc":"FB Just Your Body: 2 Week No Equipment",
       "price":"7.99"
@@ -34,7 +34,7 @@
     {
       "id":3,
       "img":"https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-9443-fb-pilates-immersion-2-week-pilates-challenge-for-foundational-strength-and-stability-935e.jpg",
-      "weak":"2 WEEK CHALLENGE",
+      "week":"2 WEEK CHALLENGE",
       "time":"37 MIN/DAY",
       "desc":"FB Pilates Immersion: 2-Week Pilates Challenge for Foundational Strength and Stability",
       "price":"7.99"
@@ -42,18 +42,74 @@
     {
       "id":4,
       "img":"https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-8774-fb-reboot-8-week-program-to-jumpstart-your-fitness-routine-83b3.jpg",
-      "weak":"8 WEEK Program",
+      "week":"8 WEEK Program",
       "time":"35 MIN/DAY",
       "desc":"FB Reboot: 8-Week Program to Jumpstart Your Fitness Routine",
       "price":"7.99"
     },
     {
-      "id":1,
+      "id":5,
       "img":"https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-9958-fb-3-day-3-workouts-per-week-for-2-weeks-91fc.jpg",
-      "weak":"2 WEEK CHALLENGE",
+      "week":"2 WEEK CHALLENGE",
       "time":"44 MIN/DAY",
       "desc":"FB 3-Day: 3 Workouts Per Week for 2 Weeks",
       "price":"7.99"
+    },
+    {
+      "id":6,
+      "img":"https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-9958-fb-3-day-3-workouts-per-week-for-2-weeks-91fc.jpg",
+      "week":"2 WEEK CHALLENGE",
+      "time":"44 MIN/DAY",
+      "desc":"FB 3-Day: 3 Workouts Per Week for 2 Weeks",
+      "price":"8.99"
+    },
+    {
+      "id":7,
+      "img":"https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-9958-fb-3-day-3-workouts-per-week-for-2-weeks-91fc.jpg",
+      "week":"2 WEEK CHALLENGE",
+      "time":"44 MIN/DAY",
+      "desc":"FB 3-Day: 3 Workouts Per Week for 2 Weeks",
+      "price":"9.99"
+    },
+    {
+      "id":8,
+      "img":"https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-9958-fb-3-day-3-workouts-per-week-for-2-weeks-91fc.jpg",
+      "week":"2 WEEK CHALLENGE",
+      "time":"44 MIN/DAY",
+      "desc":"FB 3-Day: 3 Workouts Per Week for 2 Weeks",
+      "price":"5.99"
+    },
+    {
+      "id":9,
+      "img":"https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-9958-fb-3-day-3-workouts-per-week-for-2-weeks-91fc.jpg",
+      "week":"2 WEEK CHALLENGE",
+      "time":"44 MIN/DAY",
+      "desc":"FB 3-Day: 3 Workouts Per Week for 2 Weeks",
+      "price":"3.99"
+    },
+    {
+      "id":10,
+      "img":"https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-9958-fb-3-day-3-workouts-per-week-for-2-weeks-91fc.jpg",
+      "week":"2 WEEK CHALLENGE",
+      "time":"44 MIN/DAY",
+      "desc":"FB 3-Day: 3 Workouts Per Week for 2 Weeks",
+      "price":"8.99"
+    },
+    {
+      "id":11,
+      "img":"https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-9958-fb-3-day-3-workouts-per-week-for-2-weeks-91fc.jpg",
+      "week":"2 WEEK CHALLENGE",
+      "time":"44 MIN/DAY",
+      "desc":"FB 3-Day: 3 Workouts Per Week for 2 Weeks",
+      "price":"12.99"
+    },
+    {
+      "id":12,
+      "img":"https://d18zdz9g6n5za7.cloudfront.net/plan/640/640-9958-fb-3-day-3-workouts-per-week-for-2-weeks-91fc.jpg",
+      "week":"2 WEEK CHALLENGE",
+      "time":"44 MIN/DAY",
+      "desc":"FB 3-Day: 3 Workouts Per Week for 2 Weeks",
+      "price":"5.99"
     }
     
   ],
