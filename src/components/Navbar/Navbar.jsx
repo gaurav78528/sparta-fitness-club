@@ -41,6 +41,7 @@ import careers from "../../assets/careers.png";
 import tutorials from "../../assets/Tutorials.png";
 import ourTeam from "../../assets/our-team.png";
 import whatsNew from "../../assets/whats-new.png";
+import { useUserAuth } from "../../context/UserAuthContext";
 
 const Navbar = () => {
   const [styleworkout, setStyle] = useState({ display: "none" });
@@ -59,10 +60,26 @@ const Navbar = () => {
   const cartData = JSON.parse(localStorage.getItem("cartArray")) || [];
 
   useEffect(() => {}, [data]);
+  const { user, logOut } = useUserAuth();
+  console.log(user);
+  const handleLogout = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 
   return (
     <>
-      <Flex color="white" h={"100px"} pos="sticky" top={"0px"} zIndex="27">
+      <Flex
+        color="white"
+        h={"100px"}
+        pos="sticky"
+        top={"0px"}
+        zIndex="27"
+        boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
+      >
         <Box bg="rgb(255 255 255)" w={["34px", "34px", "34px", "74px", "74px"]}>
           <Text>Box 2</Text>
         </Box>
@@ -373,20 +390,38 @@ const Navbar = () => {
           <div
             className="navbar_main_menu_items_signup"
             onMouseEnter={(e) => {
-              setStyleSignUp({ display: "block" });
+              {
+                user
+                  ? setStyleSignUp({ display: "none" })
+                  : setStyleSignUp({ display: "block" });
+              }
             }}
             onMouseLeave={(e) => {
               setStyleSignUp({ display: "none" });
             }}
           >
             <h4 className="navbar_main_menu_items_hiSign_text">
-              Hi! {data.fname && data !== "" ? data.fname : "Sign In"}{" "}
+              Hi! {user ? user.email : "Sign In"}{" "}
             </h4>
             <div className="navbar_main_menu_items_myfitness_text_box">
-              <h4 className="navbar_main_menu_items_myfitness_text">
-                MY FITNESS
-              </h4>
-              <BsFillCaretDownFill color="rgb(66,150,203)" size={"10px"} />
+              {user ? (
+                <Button
+                  colorScheme="blue"
+                  bgColor="blue.400"
+                  size="sm"
+                  borderRadius="4px"
+                  onClick={handleLogout}
+                >
+                  Logout
+                </Button>
+              ) : (
+                <>
+                  <h4 className="navbar_main_menu_items_myfitness_text">
+                    MY FITNESS
+                  </h4>
+                  <BsFillCaretDownFill color="rgb(66,150,203)" size={"10px"} />
+                </>
+              )}
             </div>
           </div>
         </Box>
