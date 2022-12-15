@@ -8,9 +8,11 @@ import { reducer as appReducer } from "./App/app.reducer";
 import { reducer as authReducer } from "./Auth/auth.reducer";
 import thunk from "redux-thunk";
 
+import { reducer as giftReducer } from "./shop/reducer";
 const root_reducer = combineReducers({
   app: appReducer,
   auth: authReducer,
+  gift: giftReducer
 });
 
 const composeEnhancers = window._REDUX_DEVTOOLS_EXTENSION_COMPOSE_ || compose;
