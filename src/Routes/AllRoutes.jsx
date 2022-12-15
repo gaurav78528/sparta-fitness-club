@@ -4,10 +4,9 @@ import Home from "../pages/Home/Home";
 import Join from "../pages/Join/Join";
 import Login from "../pages/Login/Login";
 import SinglePage from "../pages/Program/SinglePage";
-import WorkOut from "../pages/Program/WorkOut";
+import Plans from "../pages/Program/Plans";
 import Shop from "../pages/Shop/Shop";
 import PrivateRoute from "./PrivateRoute";
-
 import Workout from "../pages/Workouts/Workout";
 
 const AllRoutes = () => {
@@ -21,18 +20,12 @@ const AllRoutes = () => {
           </PrivateRoute>
         }
       ></Route>
-      <Route path="/workout" element={<WorkOut />}></Route>
-      <Route path="/stor" element={<Shop />}>
-        Store
-      </Route>
+      <Route path="/plans" element={<Plans />}></Route>
+      <Route path="/store" element={<Shop />}></Route>
       <Route path="/login" element={<Login />}></Route>
       <Route path="/join" element={<Join />}></Route>
-      <Route path="/" element={<Home />}></Route>
- 
-      <Route path="/workout" ></Route>
-      <Route path="/stor" element={<Shop/>}>Store</Route>
-      <Route path="/single" element={<SinglePage/>}>Store</Route>
-      <Route path="/shop" element={<Shop/>}></Route>
+      <Route path="/workout" element={<Workout />}></Route>
+      <Route path="/single" element={<SinglePage />}></Route>
     </Routes>
   );
 };
