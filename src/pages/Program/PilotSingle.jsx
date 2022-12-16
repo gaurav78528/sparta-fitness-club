@@ -29,13 +29,13 @@ import { useParams } from 'react-router-dom';
   }
 
 
-  export default function SinglePage() {
+  export default function PilotSingle() {
    
    const {id} = useParams()
    const [state, setState] = useState({})
 
 useEffect(() => {
-    getData(`https://fitness-handler.vercel.app/Products/${id}`).then((res) => 
+    getData(`https://fitness-handler.vercel.app/Pilot/${id}`).then((res) => 
    setState(res)
    //console.log(res)
     )
@@ -92,7 +92,7 @@ useEffect(() => {
 
                   textTransform={'uppercase'}
                   mb={'4'}>
-                  Overview
+                  Pregnancy Series: Second Trimester
                 </Text>
               <VStack spacing={{ base: 4, sm: 6 }}>
              
@@ -102,9 +102,7 @@ useEffect(() => {
                   fontWeight={'300'}>
                    {state.over}
                 </Text>
-                {/* <Text fontSize={'lg'}>
-                   {state.difficult}
-                </Text> */}
+                 
               </VStack>
 
               <Text
@@ -113,15 +111,18 @@ useEffect(() => {
                   fontWeight={'500'}
                   textTransform={'uppercase'}
                   mb={'4'}>
-                  Methodology and difficulty
+                 Approach and Difficulty Level
                 </Text>
               <VStack spacing={{ base: 4, sm: 6 }}>
               
                 <Text fontSize={'lg'}>
                    {state.difficult}
                 </Text>
+
+                
               </VStack>
               
+             
               <Box>
                 <Text
                   fontSize={{ base: '16px', lg: '18px' }}
@@ -129,7 +130,7 @@ useEffect(() => {
                   fontWeight={'500'}
                   textTransform={'uppercase'}
                   mb={'4'}>
-                  Product Details
+                  PROGRAM DETAILS
                 </Text>
   
                 <List spacing={2}>
@@ -147,22 +148,12 @@ useEffect(() => {
                   </ListItem>
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
-                    Difficulty:
-                    </Text>{' '}
-                    3-4
-                  </ListItem>
-                  <ListItem>
-                    <Text as={'span'} fontWeight={'bold'}>
-                    Body Focus:
-                    </Text>{' '}
-                    Total Body
-                  </ListItem>
-                  <ListItem>
-                    <Text as={'span'} fontWeight={'bold'}>
                     Equipment:
                     </Text>{' '}
-                    Dumbbell, Mat
+                     {state.equipment}
                   </ListItem>
+                  
+                  
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
                     Training Type:

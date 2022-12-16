@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { useSelector, useDispatch } from "react-redux";
-import { getMeal, getProduct } from "../../store/workout/work.action";
+import { getMeal, getPilot, getProduct } from "../../store/workout/work.action";
 import {
   Grid,
   GridItem,
@@ -22,7 +22,7 @@ import {
   IconButton,
   Hide,
 } from "@chakra-ui/react";
-import axios from "axios";
+ 
 import { BiSearchAlt2 } from "react-icons/bi";
 import {
   AddIcon,
@@ -32,7 +32,7 @@ import {
 } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 
-const MealPlans = () => {
+const Pilot = () => {
 
     const products = useSelector((store) => store.product);
     const dispatch = useDispatch();
@@ -41,7 +41,7 @@ const MealPlans = () => {
   
     useEffect(() => {
       
-      dispatch(getMeal())
+      dispatch(getPilot())
     },[])
 
 
@@ -129,7 +129,7 @@ const MealPlans = () => {
     >
       {products.product[0] &&  products.product[0].map((pro) => (
         <GridItem  key={pro.id} >
-          <Link to={`/Meal/${pro.id}`}>
+          <Link to={`/Pilot/${pro.id}`}>
             <Card
               
               min={pro.time}
@@ -147,4 +147,4 @@ const MealPlans = () => {
   )
 }
 
-export default MealPlans
+export default Pilot
