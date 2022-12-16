@@ -1,0 +1,10 @@
+ .hov{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ }
+ .hov:hover{
+    box-shadow: #4296cb 0px 3px 8px;
+ box-shadow: #4296cb 0px 1px 4px, #4296cb 0px 0px 0px 3px;
+ box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+ box-shadow: #4296cb 6px 2px 16px 0px, #4296cb -6px -2px 16px 0px;
+
+ }

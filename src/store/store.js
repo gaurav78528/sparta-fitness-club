@@ -14,6 +14,7 @@ const root_reducer = combineReducers({
   auth: authReducer,
   gift: giftReducer,
   product: productReducer,
+    
 });
 
 const composeEnhancers = window.REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose;

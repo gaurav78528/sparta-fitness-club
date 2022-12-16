@@ -31,16 +31,18 @@ import { useParams } from 'react-router-dom';
 
   export default function SinglePage() {
    
-   const {user_id} = useParams()
+   const {id} = useParams()
    const [state, setState] = useState({})
 
 useEffect(() => {
-    getData(`http://localhost:8080/Products/${user_id}`).then((res) => 
-    setState(res.data)
+    getData(`https://sparta-fitness-database.vercel.app/Products/${id}`).then((res) => 
+   setState(res)
+   //console.log(res)
     )
-},[user_id])
+},[id])
+// const {img} = state
+//    console.log(state)
 
-   
     return (
       <Container maxW={'7xl'}>
         
@@ -52,9 +54,7 @@ useEffect(() => {
             <Image
               rounded={'md'}
               alt={'product image'}
-              src={
-                'https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080'
-              }
+              src={state.img}
               fit={'cover'}
               align={'center'}
               w={'100%'}
@@ -67,13 +67,13 @@ useEffect(() => {
                 lineHeight={1.1}
                 fontWeight={600}
                 fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
-                 
+                 {state.desc}
               </Heading>
               <Text
                 color={useColorModeValue('gray.900', 'gray.400')}
                 fontWeight={300}
                 fontSize={'2xl'}>
-                {state.price}
+               $ {state.price}
               </Text>
             </Box>
   
@@ -100,7 +100,7 @@ useEffect(() => {
                   reprehenderit velit? Natus, totam.
                 </Text>
               </VStack>
-              <Box>
+              {/* <Box>
                 <Text
                   fontSize={{ base: '16px', lg: '18px' }}
                   color={useColorModeValue('yellow.500', 'yellow.300')}
@@ -122,7 +122,7 @@ useEffect(() => {
                     <ListItem>Small seconds</ListItem>
                   </List>
                 </SimpleGrid>
-              </Box>
+              </Box> */}
               <Box>
                 <Text
                   fontSize={{ base: '16px', lg: '18px' }}
@@ -136,17 +136,17 @@ useEffect(() => {
                 <List spacing={2}>
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
-                      Between lugs:
+                      Weeks:
                     </Text>{' '}
-                    20 mm
+                     {state.week}
                   </ListItem>
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
-                      Bracelet:
+                      Time:
                     </Text>{' '}
-                    leather strap
+                    {state.time}
                   </ListItem>
-                  <ListItem>
+                  {/* <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
                       Case:
                     </Text>{' '}
@@ -163,8 +163,8 @@ useEffect(() => {
                       Dial color:
                     </Text>{' '}
                     Black
-                  </ListItem>
-                  <ListItem>
+                  </ListItem> */}
+                  {/* <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
                       Crystal:
                     </Text>{' '}
@@ -176,7 +176,7 @@ useEffect(() => {
                       Water resistance:
                     </Text>{' '}
                     5 bar (50 metres / 167 feet){' '}
-                  </ListItem>
+                  </ListItem> */}
                 </List>
               </Box>
             </Stack>

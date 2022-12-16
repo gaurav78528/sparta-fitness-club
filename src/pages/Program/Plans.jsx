@@ -114,16 +114,19 @@ const Plans = () => {
       </Box>
 
       <Grid
-        w={"full"}
+        w={"95%"}
+        m="auto"
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
           lg: "repeat(4, 1fr)",
         }}
-        gap={2}
+        gap={4}
+        marginTop="20px"
+        marginBottom={"20px"}
       >
         {products.product[0] &&  products.product[0].map((pro) => (
-          <GridItem p={2} key={pro.id}>
+          <GridItem  key={pro.id} >
             <Link to={`/Products/${pro.id}`}>
               <Card
                 
