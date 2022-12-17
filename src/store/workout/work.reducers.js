@@ -3,7 +3,7 @@ import { GET_PRODUCT_LOADING, GET_PRODUCT_SUCCESS, GET_PRODUCT_ERROR } from "./w
 
 const init = {
     loading: false,
-    error: "",
+    error: false,
     product: [],
 }
 
@@ -14,7 +14,7 @@ export const productReducer = (state = init, {type, payload}) => {
         return {
             ...state,
             loading:false,
-            error: payload,
+            error: true,
         }
     }
     case GET_PRODUCT_LOADING: {
@@ -25,10 +25,11 @@ export const productReducer = (state = init, {type, payload}) => {
         }
     }
     case GET_PRODUCT_SUCCESS: {
+        const newdata=[...state.product, payload]
         return {
             ...state,
             loading:false,
-            product: payload,
+            product: newdata,
         }
     }
     default: {

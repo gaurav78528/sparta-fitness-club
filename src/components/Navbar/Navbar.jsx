@@ -18,8 +18,16 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { BsFillCaretDownFill } from "react-icons/bs";
-import { BiSearchAlt2 } from "react-icons/bi";
-import { MdOutlineShoppingBag } from "react-icons/md";
+import { BiCalendar, BiHeart, BiSearchAlt2 } from "react-icons/bi";
+import {
+  MdAdd,
+  MdDashboard,
+  MdExitToApp,
+  MdFavorite,
+  MdNotifications,
+  MdOutlineShoppingBag,
+  MdSettings,
+} from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaRegUserCircle } from "react-icons/fa";
 import "./navbar.css";
@@ -105,7 +113,7 @@ const Navbar = () => {
                 setStyle({ display: "none" });
               }}
             >
-              <Link to="/">
+              <Link to="/workout">
                 <h4 className="navbar_main_menu_items_workout_text">
                   WORKOUTS
                 </h4>
@@ -137,9 +145,11 @@ const Navbar = () => {
                 setStyleHealthy_living({ display: "none" });
               }}
             >
-              <h4 className="navbar_main_menu_items_healthy_living_text">
-                HEALTHY LIVING
-              </h4>
+              <Link to="/healthy-living">
+                <h4 className="navbar_main_menu_items_healthy_living_text">
+                  HEALTHY LIVING
+                </h4>
+              </Link>
               <BsFillCaretDownFill color="rgb(66,150,203)" size={"10px"} />
             </div>
             <div
@@ -321,9 +331,12 @@ const Navbar = () => {
                 </Text>
               </Link>
               <Divider orientation="horizontal" w={"90%"} />
-              <Text color="rgb(255,255,255)" pt="10px" fontSize={"14px"}>
-                HEALTHY LIVING
-              </Text>
+              <Link to="/healthy-living">
+                <Text color="rgb(255,255,255)" pt="10px" fontSize={"14px"}>
+                  HEALTHY LIVING
+                </Text>
+              </Link>
+
               <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                 EXPERT ARTICLES
               </Text>
@@ -355,9 +368,11 @@ const Navbar = () => {
                 WHATS'S NEW
               </Text>
               <Divider orientation="horizontal" w={"90%"} />
-              <Text color="rgb(255,255,255)" pt="10px" fontSize={"14px"}>
-                ABOUT
-              </Text>
+              <Link to="/about">
+                <Text color="rgb(255,255,255)" pt="10px" fontSize={"14px"}>
+                  ABOUT
+                </Text>
+              </Link>
 
               <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                 CAREERS
@@ -732,65 +747,160 @@ const Navbar = () => {
         </div>
       </div>
       {/* membership */}
-      <div
-        className="navbar_main_menu_blackbox_signup"
-        style={styleSignUp}
-        onMouseEnter={(e) => {
-          setStyleSignUp({ display: "block" });
-        }}
-        onMouseLeave={(e) => {
-          setStyleSignUp({ display: "none" });
-        }}
-      >
-        <div className="navbar_main_menu_blackbox_signup_items">
-          <p className="navbar_main_menu_blackbox_text_h4">JOIN FOR FREE!</p>
-        </div>
-        <div className="navbar_main_menu_blackbox_signup_items">
-          <p className="navbar_main_menu_blackbox_text_p">
-            Join for free and start building and tracting your workouts, get
-            support from other Fitness Blender members and more!
-          </p>
-        </div>
-        <div className="navbar_main_menu_blackbox_signup_items_join_btn">
-          <Link to="/membership">
-            <Button
-              w="100%"
-              color={"rgb(255, 255, 255)"}
-              bgColor={"rgb(66,150,203)"}
-              mt="15px"
-              fontSize={"16px"}
-              letterSpacing="0.1px"
-              h="45px"
-              _hover={{
-                bgGradient: "linear(to right,rgb(48,179,205), rgb(63,154,203))",
-              }}
-            >
-              JOIN
-            </Button>
-          </Link>
-        </div>
-        <div className="navbar_main_menu_blackbox_signup_items_signin_btn">
-          <Link to="/login">
-            <Button
-              w="100%"
-              color={"rgb(255, 255, 255)"}
-              bgColor={"rgb(49,52,67)"}
-              border="1px"
-              borderColor={"rgb(66,150,203)"}
-              mt="15px"
-              fontSize={"16px"}
-              letterSpacing="0.1px"
-              h="45px"
-              _hover={{
-                bgGradient:
-                  "linear(to right, rgb(48,179,205), rgb(63,154,203))",
-              }}
-            >
-              SIGN IN
-            </Button>
-          </Link>
-        </div>
-      </div>
+      {user ? (
+        <>
+          <div
+            className="navbar_main_menu_blackbox_signup"
+            style={styleSignUp}
+            onMouseEnter={(e) => {
+              setStyleSignUp({ display: "block" });
+            }}
+            onMouseLeave={(e) => {
+              setStyleSignUp({ display: "none" });
+            }}
+          >
+            <div className="navbar_main_menu_blackbox_signup_items_join_btn">
+              <Flex
+                direction={"column"}
+                justify="center"
+                align="center"
+                gap={"15px"}
+              >
+                <Button
+                  w="100%"
+                  variant={"link"}
+                  color={"gray"}
+                  leftIcon={<MdDashboard />}
+                >
+                  DASHBOARD
+                </Button>
+                <Button
+                  w="100%"
+                  variant={"link"}
+                  color={"gray"}
+                  leftIcon={<BiCalendar fontSize={"30px"} />}
+                  textDecoration="none"
+                >
+                  CALENDAR
+                </Button>
+                <Button
+                  w="100%"
+                  variant={"link"}
+                  color={"gray"}
+                  leftIcon={<BiHeart />}
+                >
+                  MY PROGRAMS
+                </Button>
+                <Button
+                  w="100%"
+                  variant={"link"}
+                  color={"gray"}
+                  leftIcon={<MdFavorite />}
+                >
+                  FAVOURITES
+                </Button>
+                <Button
+                  w="100%"
+                  variant={"link"}
+                  color={"gray"}
+                  leftIcon={<MdNotifications />}
+                >
+                  NOTIFICATIONS
+                </Button>
+                <Button
+                  w="100%"
+                  variant={"link"}
+                  color={"gray"}
+                  leftIcon={<MdSettings />}
+                >
+                  ACCOUNT
+                </Button>
+                <Button
+                  w="100%"
+                  variant={"link"}
+                  color={"gray"}
+                  leftIcon={<MdAdd />}
+                >
+                  SFC PLUS
+                </Button>
+                <Button
+                  w="100%"
+                  variant={"link"}
+                  color={"gray"}
+                  leftIcon={<MdExitToApp />}
+                >
+                  SIGN OUT
+                </Button>
+              </Flex>
+            </div>
+          </div>
+        </>
+      ) : (
+        <>
+          <div
+            className="navbar_main_menu_blackbox_signup"
+            style={styleSignUp}
+            onMouseEnter={(e) => {
+              setStyleSignUp({ display: "block" });
+            }}
+            onMouseLeave={(e) => {
+              setStyleSignUp({ display: "none" });
+            }}
+          >
+            <div className="navbar_main_menu_blackbox_signup_items">
+              <p className="navbar_main_menu_blackbox_text_h4">
+                JOIN FOR FREE!
+              </p>
+            </div>
+            <div className="navbar_main_menu_blackbox_signup_items">
+              <p className="navbar_main_menu_blackbox_text_p">
+                Join for free and start building and tracting your workouts, get
+                support from other Fitness Blender members and more!
+              </p>
+            </div>
+            <div className="navbar_main_menu_blackbox_signup_items_join_btn">
+              <Link to="/membership">
+                <Button
+                  w="100%"
+                  color={"rgb(255, 255, 255)"}
+                  bgColor={"rgb(66,150,203)"}
+                  mt="15px"
+                  fontSize={"16px"}
+                  letterSpacing="0.1px"
+                  h="45px"
+                  _hover={{
+                    bgGradient:
+                      "linear(to right,rgb(48,179,205), rgb(63,154,203))",
+                  }}
+                >
+                  JOIN
+                </Button>
+              </Link>
+            </div>
+            <div className="navbar_main_menu_blackbox_signup_items_signin_btn">
+              <Link to="/login">
+                <Button
+                  w="100%"
+                  color={"rgb(255, 255, 255)"}
+                  bgColor={"rgb(49,52,67)"}
+                  border="1px"
+                  borderColor={"rgb(66,150,203)"}
+                  mt="15px"
+                  fontSize={"16px"}
+                  letterSpacing="0.1px"
+                  h="45px"
+                  _hover={{
+                    bgGradient:
+                      "linear(to right, rgb(48,179,205), rgb(63,154,203))",
+                  }}
+                >
+                  SIGN IN
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </>
+      )}
       <div
         className="navbar_main_menu_blackbox-community"
         style={styleSeachBar}

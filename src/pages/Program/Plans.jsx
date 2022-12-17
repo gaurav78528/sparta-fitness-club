@@ -33,20 +33,16 @@ import {
 import { Link } from "react-router-dom";
 
 const Plans = () => {
-  const [bata, setBata] = useState([]);
+  
 
-  const products = useSelector((store) => store.prod.products);
+  const products = useSelector((store) => store.product);
   const dispatch = useDispatch();
   const { isOpen, onToggle } = useDisclosure();
-  const { isLazy, onToggles } = useDisclosure();
-  const [styleSeachBar, setStyleSeachBar] = useState({ display: "none" });
+ 
 
   useEffect(() => {
-    axios.get("http://localhost:8080/Products").then((d) => {
-      setBata(d.data);
-    });
-  }, []);
-
+    dispatch(getProduct())
+  },[])
   return (
     <div>
       <Box marginLeft={20} marginTop={"100px"} marginBottom={"20px"}>
@@ -61,7 +57,7 @@ const Plans = () => {
       </Box>
       <Box w="full">
         <Flex h={"full"} border="1px solid gray">
-          <Box marginLeft={12} display="flex" alignItems={"center"}>
+          <Box marginLeft={12} display="flex" >
             <Box>
               <Button onClick={onToggle}>
                 Filter
@@ -118,19 +114,22 @@ const Plans = () => {
       </Box>
 
       <Grid
-        w={"full"}
+        w={"95%"}
+        m="auto"
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
           lg: "repeat(4, 1fr)",
         }}
-        gap={2}
+        gap={4}
+        marginTop="20px"
+        marginBottom={"20px"}
       >
-        {bata.map((pro) => (
-          <GridItem p={2}>
-            <Link to={`/workout/${pro.id}`}>
+        {products.product[0] &&  products.product[0].map((pro) => (
+          <GridItem  key={pro.id} >
+            <Link to={`/Products/${pro.id}`}>
               <Card
-                key={pro.id}
+                
                 min={pro.time}
                 price={pro.price}
                 des={pro.desc}
@@ -141,6 +140,7 @@ const Plans = () => {
           </GridItem>
         ))}
       </Grid>
+ 
     </div>
   );
 };
