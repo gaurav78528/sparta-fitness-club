@@ -15,6 +15,7 @@ const root_reducer = combineReducers({
   app: appReducer,
   auth: authReducer,
   gift: giftReducer,
+  product: productReducer,
   prod: productReducer,
   healthLiving: healthLivingReducer,
   workout:workoutReducer
