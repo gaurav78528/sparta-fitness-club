@@ -1,9 +1,9 @@
 import { Stack } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import Banner from "../../components/membership_components/Banner";
-import Features from "../../components/membership_components/Features";
-import MembershipJoin from "../../components/membership_components/memberShipJoin/MembershipJoin";
-import Passes from "../../components/membership_components/Passes";
+import Banner from "../../components/Membership/Banner";
+import Features from "../../components/Membership/Features";
+import MembershipJoin from "../../components/Membership/memberShipJoin/MembershipJoin";
+import Passes from "../../components/Membership/Passes";
 
 const MemberShip = () => {
   useEffect(() => {
