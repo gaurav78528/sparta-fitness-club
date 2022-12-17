@@ -936,19 +936,18 @@ const Navbar = () => {
           setStyleSeachBar({ display: "none" });
         }}
       >
-        <InputGroup>
+        <InputGroup w="40%">
           <Input
             variant="flushed"
             placeholder="KEYWORD SEARCH"
-            fontWeight={"600"}
-            w="100%"
+            fontWeight={400}
             h="70px"
             mt="20px"
             color={"rgb(255 255 255)"}
-            fontSize="20px"
+            fontSize="14px"
           />
           <InputRightElement
-            children={<BiSearchAlt2 color="rgb(255 255 255)" size={"25px"} />}
+            children={<BiSearchAlt2 color="rgb(255 255 255)" size={"20px"} />}
             mt="35px"
           />
         </InputGroup>

@@ -1,5 +1,6 @@
 navbar_mean_machine {
   position: sticky;
+  top: 0;
 }
 
 .navbar_main_menu_items {
@@ -132,6 +133,7 @@ navbar_mean_machine {
   gap: 15px;
   z-index: 20;
   position: absolute;
+  top: 100px;
   width: 100%;
   height: 150px;
   background-color: rgb(49, 52, 67);
