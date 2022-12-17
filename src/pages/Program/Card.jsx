@@ -23,6 +23,7 @@ const Card = ({src, week, min, des, price,key }) => {
             <Text fontWeight="bold">$ {price}</Text>
             </Box>
             <Box>
+                {/* //testing */}
                 <Button gap={2} bg={"blue.300"} color={"white"}><MdOutlineShoppingBag fontSize={"25px"}/>ADD TO BAG</Button>
             </Box>
 
