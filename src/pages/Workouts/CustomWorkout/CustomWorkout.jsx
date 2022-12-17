@@ -9,8 +9,18 @@ const CustomWorkout = () => {
           backgroundImage="url(https://cloudfront.fitnessblender.com/assets/img/fbplus/fingerprint.jpg)"
           backgroundSize='cover'
           backgroundRepeat="no-repeat"
-          w='100vw'
-          h="300px" >
+          bgPosition="center"
+          w={
+            {
+            base:"100%",
+            md:"100%",
+            xl:"100%"
+            }
+          }
+          h={{
+            base:"400px",
+            md:"600px",
+            xl:"600px" }}>
           hello
         </Box>
         <Box borderBottom="0.5px solid gray " textAlign='center' p={7} color='#4296cb'>
