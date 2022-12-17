@@ -8,6 +8,7 @@ import Plans from "../pages/Program/Plans";
 import Shop from "../pages/Shop/Shop";
 import PrivateRoute from "./PrivateRoute";
 import Workout from "../pages/Workouts/Workout";
+import Cart from "../pages/Cart/Cart";
 
 const AllRoutes = () => {
   return (
@@ -26,6 +27,7 @@ const AllRoutes = () => {
       <Route path="/join" element={<Join />}></Route>
       <Route path="/workout" element={<Workout />}></Route>
       <Route path="/single" element={<SinglePage />}></Route>
+      <Route path="/cart" element={<Cart />}></Route>
     </Routes>
   );
 };
