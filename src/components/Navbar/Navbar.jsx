@@ -65,7 +65,18 @@ const Navbar = () => {
   const btnRef = React.useRef();
   let data = JSON.parse(localStorage.getItem("auth")) || "";
 
-  const cartData = JSON.parse(localStorage.getItem("cartArray")) || [];
+  // const cartData = JSON.parse(localStorage.getItem("cartArray")) || [];
+  let cartData = [
+    {
+      id: 1,
+    },
+    {
+      id: 2,
+    },
+    {
+      id: 3,
+    },
+  ];
 
   useEffect(() => {}, [data]);
   const { user, logOut } = useUserAuth();
@@ -297,12 +308,12 @@ const Navbar = () => {
                   WORKOUTS
                 </Text>
               </Link>
-              <Link to="/workvideo">
+              <Link to="/workout-videos">
                 <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                   WORKOUT VIDEOS
                 </Text>
               </Link>
-              <Link to={"/customworkout"}>
+              <Link to={"/custom-workout"}>
                 <Text
                   color="rgb(167,170,174)"
                   pt="10px"
@@ -323,7 +334,7 @@ const Navbar = () => {
                   WORKOUT PROGRAMS
                 </Text>
               </Link>
-              <Link to="/meal">
+              <Link to="/meal-plan">
                 <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                   MEAL PLANS
                 </Text>
@@ -474,9 +485,9 @@ const Navbar = () => {
               <Link to={"/cart"}>
                 <MdOutlineShoppingBag color="black" size={"22px"} />
               </Link>
-              <p className="navbar_main_menu_items_shopping_bag_cart_number">
+              <span className="navbar_main_menu_items_shopping_bag_cart_number">
                 {cartData.length > 0 ? cartData.length : null}
-              </p>
+              </span>
             </div>
           </div>
         </Box>
@@ -492,7 +503,7 @@ const Navbar = () => {
           setStyle({ display: "none" });
         }}
       >
-        <Link to={"/workoutvideos"}>
+        <Link to={"/workout-videos"}>
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -507,7 +518,7 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <Link to={"/customworkout"}>
+        <Link to={"/custom-workout"}>
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -550,7 +561,7 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <Link to="/meal">
+        <Link to="/meal-plan">
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -580,22 +591,23 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <div className="navbar_main_menu_blackbox-workout_items">
-          <div className="navbar_main_menu_blackbox-workout_image_box">
-            <Image
-              src={customWorkouts}
-              alt="customWorkouts"
-              boxSize="50px"
-              objectFit="cover"
-            />
+        <Link to="/routine">
+          <div className="navbar_main_menu_blackbox-workout_items">
+            <div className="navbar_main_menu_blackbox-workout_image_box">
+              <Image
+                src={customWorkouts}
+                alt="customWorkouts"
+                boxSize="50px"
+                objectFit="cover"
+              />
+            </div>
+            <div className="navbar_main_menu_blackbox-workout_text_box">
+              <h4 className="navbar_main_menu_blackbox_h4">ROUTINES</h4>
+            </div>
           </div>
-          <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">ROUTINES</h4>
-          </div>
-        </div>
+        </Link>
       </div>
-
-      {/* about********************* */}
+      {/************************  about  ********************* */}
       <div
         className="navbar_main_menu_blackbox-about"
         style={styleAbout}
@@ -840,6 +852,7 @@ const Navbar = () => {
                   variant={"link"}
                   color={"gray"}
                   leftIcon={<MdExitToApp />}
+                  onClick={handleLogout}
                 >
                   SIGN OUT
                 </Button>

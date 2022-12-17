@@ -109,6 +109,10 @@ navbar_mean_machine {
   margin-left: 25px;
 }
 .navbar_main_menu_items_shopping_bag_cart_number {
+  position: relative;
+  bottom: 34px;
+  left: 12px;
+
   margin-left: 5px;
   font-size: 14px;
   font-weight: 700;
