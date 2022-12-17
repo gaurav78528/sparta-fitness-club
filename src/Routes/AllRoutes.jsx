@@ -19,6 +19,7 @@ import Cart from "../pages/Cart/Cart";
 import HealthLiving from "../pages/HealthyLiving/HealthLiving";
 import WorkoutVideos from "../pages/Workouts/WorkoutVideos";
 import CustomWorkout from "../pages/Workouts/CustomWorkout/CustomWorkout";
+import MemberShip from "../pages/membership/Membership";
 
 const AllRoutes = () => {
   return (
@@ -49,6 +50,7 @@ const AllRoutes = () => {
       <Route path="/cart" element={<Cart />}></Route>
       <Route path="/healthy-living" element={<HealthLiving />}></Route>
       <Route path="/custom-workout" element={<CustomWorkout />}></Route>
+      <Route path="/membership" element={<MemberShip />}></Route>
     </Routes>
   );
 };

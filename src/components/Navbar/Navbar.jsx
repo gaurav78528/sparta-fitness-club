@@ -35,7 +35,7 @@ import { json, Link } from "react-router-dom";
 
 import logo from "../../assets/logo.png";
 import customWorkouts from "../../assets/custom-workouts.png";
-import workoutVideo from "../../assets/workout-video.png";
+import workoutVideo from "../../assets/workout-videos.png";
 import workoutPrograms from "../../assets/workout-programs.png";
 import mealPlans from "../../assets/meal-plans.png";
 import pilotPrograms from "../../assets/pilot-programs.png";
@@ -454,8 +454,6 @@ const Navbar = () => {
                 >
                   Logout
                 </Button>
-
-                
               ) : (
                 <>
                   <div className="navbar_main_menu_items_myfitness_text">
