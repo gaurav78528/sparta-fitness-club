@@ -196,8 +196,11 @@ const Navbar = () => {
         {/* small screen */}
         <Box
           display={["flex", "flex", "flex", "none", "none"]}
-          pl="57%"
+          // pl="57%"
+          px={{ base: "30px", md: "50px", lg: "60px" }}
+          justifyContent="flex-end"
           bgColor="white"
+          w="100%"
         >
           <div
             className="navbar_main_menu_items_respons_signup"
@@ -289,7 +292,7 @@ const Navbar = () => {
                   WORKOUTS
                 </Text>
               </Link>
-              <Link to="/workoutvideos">
+              <Link to="/workvideo">
                 <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                   WORKOUT VIDEOS
                 </Text>
