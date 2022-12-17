@@ -103,7 +103,12 @@ const Navbar = () => {
           justifyContent={"space-between"}
           display={["none", "none", "none", "flex", "flex"]}
         >
-          <div className="navbar_main_menu_items">
+          <Flex
+            justify="center"
+            align="center"
+            gap="1.5rem"
+            className="navbar_main_menu_items"
+          >
             <div
               className="navbar_main_menu_items_workout"
               onMouseEnter={(e) => {
@@ -191,7 +196,7 @@ const Navbar = () => {
                 </h4>
               </Link>
             </div>
-          </div>
+          </Flex>
         </Box>
         {/* small screen */}
         <Box
@@ -401,7 +406,9 @@ const Navbar = () => {
           </DrawerContent>
         </Drawer>
         <Box
-          flex="1.5"
+          // flex="1.5"
+          // padding="32px 15px 0px 15px"
+          // margin="auto"
           display={["none", "none", "none", "flex", "flex"]}
           bgColor="white"
         >
@@ -425,7 +432,9 @@ const Navbar = () => {
               {user ? (
                 <Button
                   colorScheme="blue"
-                  bgColor="blue.400"
+                  variant="link"
+                  // bgColor="blue.400"
+                  mt="10px"
                   size="sm"
                   borderRadius="4px"
                   onClick={handleLogout}
