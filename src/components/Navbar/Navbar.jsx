@@ -191,7 +191,9 @@ const Navbar = () => {
                 setStyleAbout({ display: "none" });
               }}
             >
-              <h4 className="navbar_main_menu_items_about_text">ABOUT</h4>
+              <Link to="/about">
+                <h4 className="navbar_main_menu_items_about_text">ABOUT</h4>
+              </Link>
               <BsFillCaretDownFill color="rgb(66,150,203)" size={"10px"} />
             </div>
 
@@ -627,19 +629,21 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="navbar_main_menu_blackbox-workout_items">
-          <div className="navbar_main_menu_blackbox-workout_image_box">
-            <Image
-              src={careers}
-              alt="careers"
-              boxSize="50px"
-              objectFit="cover"
-            />
+        <Link to="/careers">
+          <div className="navbar_main_menu_blackbox-workout_items">
+            <div className="navbar_main_menu_blackbox-workout_image_box">
+              <Image
+                src={careers}
+                alt="careers"
+                boxSize="50px"
+                objectFit="cover"
+              />
+            </div>
+            <div className="navbar_main_menu_blackbox-workout_text_box">
+              <h4 className="navbar_main_menu_blackbox_h4">CAREERS</h4>
+            </div>
           </div>
-          <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">CAREERS</h4>
-          </div>
-        </div>
+        </Link>
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
             <Image

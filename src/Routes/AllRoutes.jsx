@@ -10,7 +10,6 @@ import Shop from "../pages/Shop/Shop";
 import PrivateRoute from "./PrivateRoute";
 import Workout from "../pages/Workouts/Workout";
 import Careers from "../pages/about/Careers";
-import Workout from "../pages/Workouts/Workout"; 
 import MealPlans from "../pages/Program/MealPlans";
 import MealSingle from "../pages/Program/MealSingle";
 import Pilot from "../pages/Program/Pilot";
@@ -41,7 +40,7 @@ const AllRoutes = () => {
       <Route path="/workout" element={<Workout />}></Route>
       <Route path="/pilot" element={<Pilot />}></Route>
       <Route path="/Pilot/:id" element={<PilotSingle />}></Route>
-      <Route path="/routine" element={<Routines />}></Route>  
+      <Route path="/routine" element={<Routines />}></Route>
       <Route path="/Products/:id" element={<SinglePage />}></Route>
       <Route path="/meal-plan" element={<MealPlans />}></Route>
       <Route path="/Meal/:id" element={<MealSingle />}></Route>
@@ -54,4 +53,4 @@ const AllRoutes = () => {
   );
 };
 
-export default AllRoutes
+export default AllRoutes;
