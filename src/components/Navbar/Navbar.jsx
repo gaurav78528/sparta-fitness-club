@@ -65,7 +65,18 @@ const Navbar = () => {
   const btnRef = React.useRef();
   let data = JSON.parse(localStorage.getItem("auth")) || "";
 
-  const cartData = JSON.parse(localStorage.getItem("cartArray")) || [];
+  // const cartData = JSON.parse(localStorage.getItem("cartArray")) || [];
+  let cartData = [
+    {
+      id: 1,
+    },
+    {
+      id: 2,
+    },
+    {
+      id: 3,
+    },
+  ];
 
   useEffect(() => {}, [data]);
   const { user, logOut } = useUserAuth();
@@ -103,7 +114,12 @@ const Navbar = () => {
           justifyContent={"space-between"}
           display={["none", "none", "none", "flex", "flex"]}
         >
-          <div className="navbar_main_menu_items">
+          <Flex
+            justify="center"
+            align="center"
+            gap="1.5rem"
+            className="navbar_main_menu_items"
+          >
             <div
               className="navbar_main_menu_items_workout"
               onMouseEnter={(e) => {
@@ -191,13 +207,16 @@ const Navbar = () => {
                 </h4>
               </Link>
             </div>
-          </div>
+          </Flex>
         </Box>
         {/* small screen */}
         <Box
           display={["flex", "flex", "flex", "none", "none"]}
-          pl="57%"
+          // pl="57%"
+          px={{ base: "30px", md: "50px", lg: "60px" }}
+          justifyContent="flex-end"
           bgColor="white"
+          w="100%"
         >
           <div
             className="navbar_main_menu_items_respons_signup"
@@ -289,12 +308,12 @@ const Navbar = () => {
                   WORKOUTS
                 </Text>
               </Link>
-              <Link to="/workoutvideos">
+              <Link to="/workout-videos">
                 <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                   WORKOUT VIDEOS
                 </Text>
               </Link>
-              <Link to={"/customworkout"}>
+              <Link to={"/custom-workout"}>
                 <Text
                   color="rgb(167,170,174)"
                   pt="10px"
@@ -315,7 +334,7 @@ const Navbar = () => {
                   WORKOUT PROGRAMS
                 </Text>
               </Link>
-              <Link to="/meal">
+              <Link to="/meal-plan">
                 <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                   MEAL PLANS
                 </Text>
@@ -398,7 +417,9 @@ const Navbar = () => {
           </DrawerContent>
         </Drawer>
         <Box
-          flex="1.5"
+          // flex="1.5"
+          // padding="32px 15px 0px 15px"
+          // margin="auto"
           display={["none", "none", "none", "flex", "flex"]}
           bgColor="white"
         >
@@ -422,7 +443,9 @@ const Navbar = () => {
               {user ? (
                 <Button
                   colorScheme="blue"
-                  bgColor="blue.400"
+                  variant="link"
+                  // bgColor="blue.400"
+                  mt="10px"
                   size="sm"
                   borderRadius="4px"
                   onClick={handleLogout}
@@ -462,9 +485,9 @@ const Navbar = () => {
               <Link to={"/cart"}>
                 <MdOutlineShoppingBag color="black" size={"22px"} />
               </Link>
-              <p className="navbar_main_menu_items_shopping_bag_cart_number">
+              <span className="navbar_main_menu_items_shopping_bag_cart_number">
                 {cartData.length > 0 ? cartData.length : null}
-              </p>
+              </span>
             </div>
           </div>
         </Box>
@@ -480,7 +503,7 @@ const Navbar = () => {
           setStyle({ display: "none" });
         }}
       >
-        <Link to={"/workoutvideos"}>
+        <Link to={"/workout-videos"}>
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -495,7 +518,7 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <Link to={"/customworkout"}>
+        <Link to={"/custom-workout"}>
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -538,7 +561,7 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <Link to="/meal">
+        <Link to="/meal-plan">
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -568,22 +591,23 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <div className="navbar_main_menu_blackbox-workout_items">
-          <div className="navbar_main_menu_blackbox-workout_image_box">
-            <Image
-              src={customWorkouts}
-              alt="customWorkouts"
-              boxSize="50px"
-              objectFit="cover"
-            />
+        <Link to="/routine">
+          <div className="navbar_main_menu_blackbox-workout_items">
+            <div className="navbar_main_menu_blackbox-workout_image_box">
+              <Image
+                src={customWorkouts}
+                alt="customWorkouts"
+                boxSize="50px"
+                objectFit="cover"
+              />
+            </div>
+            <div className="navbar_main_menu_blackbox-workout_text_box">
+              <h4 className="navbar_main_menu_blackbox_h4">ROUTINES</h4>
+            </div>
           </div>
-          <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">ROUTINES</h4>
-          </div>
-        </div>
+        </Link>
       </div>
-
-      {/* about********************* */}
+      {/************************  about  ********************* */}
       <div
         className="navbar_main_menu_blackbox-about"
         style={styleAbout}
@@ -828,6 +852,7 @@ const Navbar = () => {
                   variant={"link"}
                   color={"gray"}
                   leftIcon={<MdExitToApp />}
+                  onClick={handleLogout}
                 >
                   SIGN OUT
                 </Button>
@@ -911,19 +936,18 @@ const Navbar = () => {
           setStyleSeachBar({ display: "none" });
         }}
       >
-        <InputGroup>
+        <InputGroup w="40%">
           <Input
             variant="flushed"
             placeholder="KEYWORD SEARCH"
-            fontWeight={"600"}
-            w="100%"
+            fontWeight={400}
             h="70px"
             mt="20px"
             color={"rgb(255 255 255)"}
-            fontSize="20px"
+            fontSize="14px"
           />
           <InputRightElement
-            children={<BiSearchAlt2 color="rgb(255 255 255)" size={"25px"} />}
+            children={<BiSearchAlt2 color="rgb(255 255 255)" size={"20px"} />}
             mt="35px"
           />
         </InputGroup>

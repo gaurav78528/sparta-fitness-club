@@ -37,7 +37,7 @@ const AllRoutes = () => {
       <Route path="/store" element={<Shop />}></Route>
       <Route path="/login" element={<Login />}></Route>
       <Route path="/join" element={<Join />}></Route>
-      <Route path="/workvideo" element={<WorkoutVideos />}></Route>
+      <Route path="/workout-videos" element={<WorkoutVideos />}></Route>
       <Route path="/workout" element={<Workout />}></Route>
       <Route path="/pilot" element={<Pilot />}></Route>
       <Route path="/Pilot/:id" element={<PilotSingle />}></Route>
@@ -49,7 +49,7 @@ const AllRoutes = () => {
       <Route path="/careers" element={<Careers />}></Route>
       <Route path="/cart" element={<Cart />}></Route>
       <Route path="/healthy-living" element={<HealthLiving />}></Route>
-      <Route path="/custom" element={<CustomWorkout />}></Route>
+      <Route path="/custom-workout" element={<CustomWorkout />}></Route>
     </Routes>
   );
 };
