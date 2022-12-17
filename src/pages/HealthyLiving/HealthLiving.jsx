@@ -18,6 +18,8 @@ const getData = async () => {
 };
 export default function HealthLiving() {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   console.log(data);
   // const healthLivingData = useSelector((store) => store.healthLiving.data);
   // const dispatch = useDispatch();
@@ -25,9 +27,14 @@ export default function HealthLiving() {
   const getActualData = () => {
     getData().then((res) => setData(res));
   };
+
   useEffect(() => {
     getActualData();
   }, []);
+
+  // if (loading) {
+  //   return <h1>loading....</h1>;
+  // }
   return (
     <>
       <Flex

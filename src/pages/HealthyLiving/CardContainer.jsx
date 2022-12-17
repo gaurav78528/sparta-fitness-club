@@ -26,11 +26,11 @@ const CardContainer = ({ data }) => {
         // border="1px solid red"
         // margin={"auto"}
       >
-        <Heading as="h2" size="2xl" fontWeight={400}>
+        <Heading as="h2" size="2xl" fontWeight={400} textTransform="capitalize">
           {data[0].category}
         </Heading>
         <Link to="/">
-          <Text fontSize="md" color="#197bb9" fontWeight={500}>
+          <Text fontSize="md" color="#197bb9" fontWeight={500} textTransform="capitalize">
             {`View All 
             ${data[0].category}
               Articles`}
