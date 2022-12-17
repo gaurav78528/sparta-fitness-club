@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import About from "../pages/about/About";
-// import Plans from "../pages/Program/WorkOut";
 import Home from "../pages/Home/Home";
 import Join from "../pages/Join/Join";
 import Login from "../pages/Login/Login";
@@ -11,12 +10,21 @@ import Shop from "../pages/Shop/Shop";
 import PrivateRoute from "./PrivateRoute";
 import Workout from "../pages/Workouts/Workout";
 import Careers from "../pages/about/Careers";
+import Workout from "../pages/Workouts/Workout"; 
+import MealPlans from "../pages/Program/MealPlans";
+import MealSingle from "../pages/Program/MealSingle";
+import Pilot from "../pages/Program/Pilot";
+import PilotSingle from "../pages/Program/PilotSingle";
+import Routines from "../pages/Program/Routines";
+import Cart from "../pages/Cart/Cart";
+import HealthLiving from "../pages/HealthyLiving/HealthLiving";
+import WorkoutVideos from "../pages/Workouts/WorkoutVideos";
+import CustomWorkout from "../pages/Workouts/CustomWorkout/CustomWorkout";
 
 const AllRoutes = () => {
   return (
     <Routes>
-      {/* <Route path="/workout" element={<WorkOut />}></Route> */}
-      <Route path="/about" element={<About/>}></Route>
+      <Route path="/about" element={<About />}></Route>
       <Route
         path="/"
         element={
@@ -29,11 +37,21 @@ const AllRoutes = () => {
       <Route path="/store" element={<Shop />}></Route>
       <Route path="/login" element={<Login />}></Route>
       <Route path="/join" element={<Join />}></Route>
+      <Route path="/workvideo" element={<WorkoutVideos />}></Route>
       <Route path="/workout" element={<Workout />}></Route>
+      <Route path="/pilot" element={<Pilot />}></Route>
+      <Route path="/Pilot/:id" element={<PilotSingle />}></Route>
+      <Route path="/routine" element={<Routines />}></Route>  
+      <Route path="/Products/:id" element={<SinglePage />}></Route>
+      <Route path="/meal-plan" element={<MealPlans />}></Route>
+      <Route path="/Meal/:id" element={<MealSingle />}></Route>
       <Route path="/single" element={<SinglePage />}></Route>
       <Route path="/careers" element={<Careers />}></Route>
+      <Route path="/cart" element={<Cart />}></Route>
+      <Route path="/healthy-living" element={<HealthLiving />}></Route>
+      <Route path="/custom" element={<CustomWorkout />}></Route>
     </Routes>
   );
 };
 
-export default AllRoutes;
+export default AllRoutes

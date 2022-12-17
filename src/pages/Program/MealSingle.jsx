@@ -29,13 +29,13 @@ import { useParams } from 'react-router-dom';
   }
 
 
-  export default function SinglePage() {
+  export default function MealSingle() {
    
    const {id} = useParams()
    const [state, setState] = useState({})
 
 useEffect(() => {
-    getData(`https://fitness-handler.vercel.app/Products/${id}`).then((res) => 
+    getData(`https://fitness-handler.vercel.app/Meal/${id}`).then((res) => 
    setState(res)
    //console.log(res)
     )
@@ -102,9 +102,7 @@ useEffect(() => {
                   fontWeight={'300'}>
                    {state.over}
                 </Text>
-                {/* <Text fontSize={'lg'}>
-                   {state.difficult}
-                </Text> */}
+                 
               </VStack>
 
               <Text
@@ -113,15 +111,33 @@ useEffect(() => {
                   fontWeight={'500'}
                   textTransform={'uppercase'}
                   mb={'4'}>
-                  Methodology and difficulty
+                 Our goal is to teach you how to craft meals in a healthy, enjoyable, and optimal way.
                 </Text>
               <VStack spacing={{ base: 4, sm: 6 }}>
               
                 <Text fontSize={'lg'}>
-                   {state.difficult}
+                   {state.goal}
                 </Text>
+
+                
               </VStack>
               
+              <Text
+                  fontSize={{ base: '16px', lg: '18px' }}
+                  color={useColorModeValue('green.500', 'yellow.300')}
+                  fontWeight={'500'}
+                  textTransform={'uppercase'}
+                  mb={'4'}>
+                 Learning to Eat Well for the Rest of Your Life
+                </Text>
+              <VStack spacing={{ base: 4, sm: 6 }}>
+              
+                <Text fontSize={'lg'}>
+                   {state.learning}
+                </Text>
+
+                
+              </VStack>
               <Box>
                 <Text
                   fontSize={{ base: '16px', lg: '18px' }}
@@ -129,7 +145,7 @@ useEffect(() => {
                   fontWeight={'500'}
                   textTransform={'uppercase'}
                   mb={'4'}>
-                  Product Details
+                  PROGRAM DETAILS
                 </Text>
   
                 <List spacing={2}>
@@ -147,22 +163,17 @@ useEffect(() => {
                   </ListItem>
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
-                    Difficulty:
+                    Dietary Type:
                     </Text>{' '}
-                    3-4
+                     {state.dietary}
                   </ListItem>
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
-                    Body Focus:
+                    Meal Type:
                     </Text>{' '}
-                    Total Body
+                    {state.type}
                   </ListItem>
-                  <ListItem>
-                    <Text as={'span'} fontWeight={'bold'}>
-                    Equipment:
-                    </Text>{' '}
-                    Dumbbell, Mat
-                  </ListItem>
+                  
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
                     Training Type:

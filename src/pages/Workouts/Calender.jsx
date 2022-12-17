@@ -16,7 +16,7 @@ import { Icon } from '@chakra-ui/react'
 import Calender1 from './Calender1';
   export const Calender = () => {
     return (
-      <div><Popover>
+      <div><Popover placement='top-start'>
       <PopoverTrigger>
       <Icon as={CalendarIcon} boxSize={6} />
       </PopoverTrigger>
