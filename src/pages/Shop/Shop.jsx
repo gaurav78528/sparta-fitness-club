@@ -1,4 +1,9 @@
-import {
+
+
+
+ 
+
+import{
   Box,
   Button,
   Center,
@@ -73,6 +78,15 @@ const Shop = () => {
         </Box>
     <hr  style={{color:"white" ,height:"2px"}}/>
 
+      <Heading>FB Plus Passes</Heading>
+      <p>
+        Passes give you full access to everything FB Plus has to offer, without
+        a long-term subscription. Choose a pass that fits your budget and your
+        schedule, and extend your access with another pass at any time. Multiple
+        passes can be purchased at once for longer access.
+      </p>
+   
+
    
    <div style={{ padding: "20px", marginTop: "30px" ,width:"70%"}}>
    <Heading>Fitness Blender eGift Cards</Heading>
@@ -86,6 +100,7 @@ const Shop = () => {
   Plans, or a membership to FB Plus!
 </p>
    </div>
+
       <Grid
         w={"full"}
         templateColumns={{

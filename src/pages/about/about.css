@@ -1,0 +1,420 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.background_image {
+  /* border: 1px solid red; */
+  height: 600px;
+  width: 100%;
+  background: url("https://d18zdz9g6n5za7.cloudfront.net/about/masthead-xs@2X.jpg") no-repeat center;
+  background-size: 100% 100%;
+}
+.header_line h2 {
+  font-size: 40px;
+  margin-left: 15px;
+  color: #ffffff;
+}
+
+.header_line p {
+  margin-left: 18px;
+  color: aquamarine;
+}
+
+
+
+.third_section {
+  border: 1px solid;
+  width: 100%;
+  height: 100vh;
+  background: url("https://d18zdz9g6n5za7.cloudfront.net/about/video.jpg") no-repeat center;
+  background-size: 100% 100vh;
+}
+
+.third_section1 {
+  /* border: 1px solid blue; */
+  width: 100%;
+  height: 100vh;
+
+}
+
+.third_section2 {
+  /* border: 1px solid red; */
+  width: 60%;
+  height: 70vh;
+  margin-left: 300px;
+  margin-top: 100px
+}
+
+.second_section {
+  /* border: 1px solid rgb(64, 215, 26); */
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+}
+
+.second {
+  /* border: 1px solid red; */
+  width: 50vw;
+  text-align: center;
+  margin: auto;
+  gap: 20px;
+
+}
+
+.second h2 {
+  font-weight: 400;
+  line-height: 1.208em;
+  letter-spacing: -0.02em;
+  font-size: 40px;
+}
+
+
+
+.fourth_div {
+  border: 1px solid;
+  /* height: 110vh; */
+  width: 100%;
+  background-color: #212432;
+}
+
+.first_fourth {
+  margin-top: 100px;
+  /* border: 1px solid red; */
+  width: 800px;
+  text-align: center;
+  color: white;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.first_fourth h1 {
+  font-weight: 400;
+  line-height: 1.208em;
+  letter-spacing: -0.02em;
+  font-size: 45px;
+  color: #fff;
+}
+
+.paragraph_fourth {
+  margin-top: 30px;
+}
+
+.paragraph_fourth p {
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #ffffff;
+}
+
+.division_box {
+  /* border: 1px solid green; */
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 100px;
+
+
+
+}
+
+.small_division {
+  /* border: 1px solid red; */
+  width: 300px;
+
+
+}
+
+.small_division h4 {
+  margin-top: 150px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+
+}
+
+.small_division p {
+  color: #ced0db;
+  margin: 0px auto;
+
+}
+
+.paragraph_div {
+  margin-top: 15px;
+}
+
+.fifth_section {
+  /* border: 1px solid red; */
+  width: 100%;
+
+
+}
+
+.first_fifth_div {
+  /* border: 1px solid blue; */
+  width: 100%;
+  display: flex;
+}
+
+.second_fifth_div {
+  /* border: 1px solid green; */
+  width: 100%;
+  display: flex;
+}
+
+.first_first_div {
+  /* border: 1px solid red; */
+  width: 33.33%;
+}
+
+.second_first_div {
+  /* border: 1px solid red; */
+  width: 33.33%;
+}
+
+.first_fifth_div img {
+  width: 100%;
+}
+
+.second_first_div img {
+  width: 100%;
+}
+
+.sixth_section {
+  /* border: 1px solid white; */
+  width: 100%;
+
+}
+
+.sixth {
+  margin-top: 150px;
+  /* border: 1px solid yellow; */
+  width: 45vw;
+  height: 300px;
+  text-align: center;
+  margin: auto;
+
+}
+
+.sixth h2 {
+  font-weight: 400;
+  line-height: 1.208em;
+  letter-spacing: -0.02em;
+  font-size: 45px;
+}
+
+.sixth p{
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.seventh_section {
+  border: 1px solid white;
+  width: 100%;
+  height: 100vh;
+  background: url("https://d18zdz9g6n5za7.cloudfront.net/about/bio-daniel.jpg") no-repeat center;
+  background-size: 100% 100%;
+  
+}
+
+.seventh_headline {
+  /* border: 1px solid green; */
+  width: 100%;
+}
+
+.seventh_div {
+  /* border: 1px solid red; */
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 30%;
+
+}
+
+.seventh_div .seventh_small {
+  /* border: 1px solid blue; */
+  width: 440px;
+  background-color: #ffffff;
+  padding: 28px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.seventh_div .seventh_small h4 {
+  font-size: 1.2rem;
+  line-height: 28px;
+  font-weight: 600;
+  text-align: center;
+
+}
+
+.seventh_div .seventh_small {
+  text-align: center;
+}
+
+.anchor .anchor_tag {
+  font-size: 16px;
+
+}
+
+.eight {
+  /* border: 1px solid red; */
+  width: 70%;
+  height: 220px;
+  margin: auto;
+}
+
+.eight p {
+  text-align: center;
+  margin: 40px;
+}
+
+.eight_anchor {
+  /* border: 1px solid sienna; */
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.eight_anchor a {
+  text-decoration: none;
+}
+
+.eight_anchor .fitness {
+  font-size: 30px;
+  font-weight: 500;
+  color: black;
+}
+
+.eight_anchor .street {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+.eight_anchor .forbes {
+  font-size: 30px;
+  font-weight: 900;
+  color: black;
+
+}
+
+.eight_anchor .post {
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+}
+
+.eight_anchor .buzz {
+  font-size: 30px;
+  color: black;
+  font-weight: 900;
+}
+
+.ninth {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 200px;
+  background-color: #82C3EC;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.nnth_first {
+  /* border: 1px solid yellow; */
+  width: 70%;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.nnth_first p {
+  /* margin-left: 250px; */
+  margin-top: 10px;
+  width: 280px;
+  background-color: #212432;
+  padding: 10px;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.pspan {
+  /* border: 1px solid red; */
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+ 
+}
+
+
+
+
+@media (min-width:700px) and (max-width:3200px) {
+  .header_line {
+    /* border: 1px solid red; */
+    width: 45%;
+    height: 40vh;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    color: white;
+  }
+}
+
+
+
+@media (min-width:0px) and (max-width:700px) {
+  .header_line {
+    /* border: 1px solid red; */
+    width: 100%;
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin: auto;
+  }
+
+  .second_section {
+    /* border: 1px solid rgb(64, 215, 26); */
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  
+  }
+
+  .second {
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  
+  }
+
+  .sixth {
+    /* border: 1px solid yellow; */
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  
+  }
+}
