@@ -58,7 +58,7 @@ const Join = () => {
   const handleSubmit = async () => {
     console.log(userInput);
     try {
-      await signUp(email, username, password);
+      await signUp(email, password);
       navigate("/login");
     } catch (error) {
       setError(error.message);
