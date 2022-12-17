@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import About from "../pages/about/About";
-
 import Home from "../pages/Home/Home";
 import Join from "../pages/Join/Join";
 import Login from "../pages/Login/Login";
@@ -15,8 +14,7 @@ import CustomWorkout from "../pages/Workouts/CustomWorkout/CustomWorkout";
 const AllRoutes = () => {
   return (
     <Routes>
-      
-      <Route path="/about" element={<About/>}></Route>
+      <Route path="/about" element={<About />}></Route>
       <Route
         path="/"
         element={
