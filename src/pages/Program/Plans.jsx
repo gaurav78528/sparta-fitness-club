@@ -39,6 +39,9 @@ const Plans = () => {
   const dispatch = useDispatch();
   const { isOpen, onToggle } = useDisclosure();
  
+  const handleAdd = () => {
+     
+  }
 
   useEffect(() => {
     dispatch(getProduct())
@@ -132,6 +135,7 @@ const Plans = () => {
                 
                 min={pro.time}
                 price={pro.price}
+                
                 des={pro.desc}
                 src={pro.img}
                 week={pro.week}

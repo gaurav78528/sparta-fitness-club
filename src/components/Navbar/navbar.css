@@ -11,6 +11,7 @@ navbar_mean_machine {
   background-color: rgb(255, 255, 255);
   height: 100%;
   align-items: center;
+ 
 }
 .navbar_main_menu_items_workout {
   display: flex;
@@ -20,6 +21,7 @@ navbar_mean_machine {
   gap: 5px;
   height: 100%;
   border-bottom: 3px solid rgb(255, 255, 255);
+ 
 }
 .navbar_main_menu_items_workout:hover {
   border-bottom: 3px solid rgb(66, 150, 203);
@@ -28,6 +30,7 @@ navbar_mean_machine {
 .navbar_main_menu_items_workout_text {
   color: rgb(33, 36, 50);
   font-weight: 600;
+
 }
 .navbar_main_menu_items_programs {
   display: flex;
@@ -37,6 +40,7 @@ navbar_mean_machine {
   gap: 5px;
   height: 100%;
   border-bottom: 3px solid rgb(255, 255, 255);
+  
 }
 .navbar_main_menu_items_respons_signup {
   display: flex;
@@ -211,9 +215,8 @@ navbar_mean_machine {
   display: none;
   padding-left: 25%;
   padding-right: 25%;
-  justify-content: space-evenly;
   z-index: 20;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 150px;
   background-color: rgb(49, 52, 67);
@@ -221,10 +224,9 @@ navbar_mean_machine {
 .navbar_main_menu_blackbox-programs {
   display: none;
   padding-left: 25%;
-  padding-right: 25%;
-  justify-content: space-evenly;
+  padding-right: 25%; 
   z-index: 20;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 150px;
   background-color: rgb(49, 52, 67);
@@ -233,9 +235,9 @@ navbar_mean_machine {
   display: none;
   padding-left: 25%;
   padding-right: 25%;
-  justify-content: space-evenly;
+   
   z-index: 20;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 150px;
   background-color: rgb(49, 52, 67);
@@ -244,9 +246,9 @@ navbar_mean_machine {
   display: none;
   padding-left: 25%;
   padding-right: 25%;
-  justify-content: space-evenly;
+   
   z-index: 20;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 150px;
   background-color: rgb(49, 52, 67);
@@ -255,9 +257,9 @@ navbar_mean_machine {
   display: none;
   padding-left: 25%;
   padding-right: 25%;
-  justify-content: space-evenly;
+   
   z-index: 20;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 150px;
   background-color: rgb(49, 52, 67);
@@ -266,9 +268,9 @@ navbar_mean_machine {
   display: none;
   padding-left: 25%;
   padding-right: 25%;
-  justify-content: space-evenly;
+  
   z-index: 20;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 150px;
   background-color: rgb(49, 52, 67);
@@ -280,20 +282,25 @@ navbar_mean_machine {
   height: 100%;
   background-color: rgb(221, 217, 217);
   /* color: black; */
+  background-color: rgb(49, 52, 67);
+   
 }
 .navbar_main_menu_blackbox-workout_items:hover {
   /* background-color: rgb(34, 37, 51); */
   background-color: rgb(202, 207, 219);
+  background-color: #212432;
   /* color: rgb(34, 37, 51); */
 }
 .navbar_main_menu_blackbox-workout_image_box {
   padding: 35px 35px 12px 55px;
   width: 150px;
   margin: auto;
+   
 }
 .navbar_main_menu_blackbox_h4 {
   /* color: rgb(255, 255, 255); */
   color: rgb(49, 52, 67);
+  color: rgb(202, 207, 219);
   font-size: 14px;
   font-weight: 500;
 }
@@ -302,7 +309,7 @@ navbar_mean_machine {
   width: 281px;
   height: 380px;
   background-color: rgb(49, 52, 67);
-  position: absolute;
+  position: fixed;
   right: 35px;
   padding-left: 32px;
   padding-right: 32px;
@@ -316,6 +323,7 @@ navbar_mean_machine {
 .navbar_main_menu_blackbox_text_h4 {
   color: rgb(255, 255, 255);
   font-weight: 700;
+  
 }
 .navbar_main_menu_blackbox_text_p {
   color: rgb(255, 255, 255);

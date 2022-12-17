@@ -3,7 +3,7 @@ import * as type from "./work.types"
 
 export const getProduct = () =>(dispatch) => {
     dispatch({type: type.GET_PRODUCT_LOADING});
-        return axios.get("https://fitness-handler.vercel.app/Products")
+        return axios.get("https://fitness-handler.vercel.app/Products  ")
         .then((res) => {
             dispatch({type: type.GET_PRODUCT_SUCCESS, payload: res.data})
         })
@@ -14,7 +14,7 @@ export const getProduct = () =>(dispatch) => {
 
 export const getMeal = () =>(dispatch) => {
     dispatch({type: type.GET_PRODUCT_LOADING})  
-        return axios.get("https://fitness-handler.vercel.app/Meal")
+        return axios.get("https://fitness-handler.vercel.app/Meal?&_limit=10")
         .then((res) => {
             dispatch({type: type.GET_PRODUCT_SUCCESS, payload: res.data})
 
