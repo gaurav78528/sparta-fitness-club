@@ -454,12 +454,17 @@ const Navbar = () => {
                 >
                   Logout
                 </Button>
+
+                
               ) : (
                 <>
-                  <h4 className="navbar_main_menu_items_myfitness_text">
+                  <div className="navbar_main_menu_items_myfitness_text">
                     MY FITNESS
-                  </h4>
-                  <BsFillCaretDownFill color="rgb(66,150,203)" size={"10px"} />
+                    <BsFillCaretDownFill
+                      color="rgb(66,150,203)"
+                      size={"10px"}
+                    />
+                  </div>
                 </>
               )}
             </div>

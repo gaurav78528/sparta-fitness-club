@@ -52,6 +52,13 @@ navbar_mean_machine {
   color: rgb(33, 36, 50);
   font-weight: 600;
 }
+.navbar_main_menu_items_myfitness_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 .navbar_main_menu_items_store,
 .navbar_main_menu_items_membership {
   display: flex;
@@ -72,7 +79,6 @@ navbar_mean_machine {
   justify-content: center;
   text-align: center;
   border-bottom: 3px solid rgb(255, 255, 255);
-
   padding: 32px 15px 0px 15px;
   height: 100%;
   border-left: 1px solid rgb(233, 242, 244);
@@ -99,7 +105,9 @@ navbar_mean_machine {
   height: 100%;
   align-items: center;
   justify-content: space-around;
+  /* padding: 0 50px; */
   padding-top: 45px;
+
   border-left: 1px solid rgb(233, 242, 244);
 }
 .navbar_main_menu_items_search,
