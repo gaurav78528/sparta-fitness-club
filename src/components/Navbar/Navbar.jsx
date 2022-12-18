@@ -17,6 +17,7 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
+
 import { BsFillCaretDownFill } from "react-icons/bs";
 import { BiCalendar, BiHeart, BiSearchAlt2 } from "react-icons/bi";
 import {
@@ -65,9 +66,21 @@ const Navbar = () => {
   const [styleSeachBar, setStyleSeachBar] = useState({ display: "none" });
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-  let data = JSON.parse(localStorage.getItem("auth")) || "";
-
-  const cartData = JSON.parse(localStorage.getItem("cartArray")) || [];
+ 
+  // const cartData = JSON.parse(localStorage.getItem("cartArray")) || [];
+  let cartData = [
+    {
+      id: 1,
+    },
+    {
+      id: 2,
+    },
+    {
+      id: 3,
+    },
+  ];
+   
+  
 
   useEffect(() => {}, [data]);
   const { user, logOut } = useUserAuth();
