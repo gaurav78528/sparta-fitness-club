@@ -1,6 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+ 
 import About from "../pages/about/About";
+ 
 import Home from "../pages/Home/Home";
 import Join from "../pages/Join/Join";
 import Login from "../pages/Login/Login";
@@ -19,9 +21,11 @@ import Cart from "../pages/Cart/Cart";
 import HealthLiving from "../pages/HealthyLiving/HealthLiving";
 import WorkoutVideos from "../pages/Workouts/WorkoutVideos";
 import CustomWorkout from "../pages/Workouts/CustomWorkout/CustomWorkout";
+ 
 import WorkoutSingle from "../pages/Workouts/WorkoutSingle";
 import WorkSingleVideo from "../pages/Workouts/WorkSingleVideo";
 import MemberShip from "../pages/membership/Membership";
+ 
 const AllRoutes = () => {
   return (
     <Routes>
@@ -52,8 +56,13 @@ const AllRoutes = () => {
       <Route path="/careers" element={<Careers />}></Route>
       <Route path="/cart" element={<Cart />}></Route>
       <Route path="/healthy-living" element={<HealthLiving />}></Route>
+ 
+      
+      <Route path="/about" element={<About />}></Route>
+ 
       <Route path="/custom-workout" element={<CustomWorkout />}></Route>
       <Route path="/membership" element={<MemberShip />}></Route>
+ 
     </Routes>
   );
 };
