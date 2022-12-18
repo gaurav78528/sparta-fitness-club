@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import About from "../pages/about/About";
-
+ 
 import Home from "../pages/Home/Home";
 import Join from "../pages/Join/Join";
 import Login from "../pages/Login/Login";
@@ -19,6 +18,7 @@ import Cart from "../pages/Cart/Cart";
 import HealthLiving from "../pages/HealthyLiving/HealthLiving";
 import WorkoutVideos from "../pages/Workouts/WorkoutVideos";
 import CustomWorkout from "../pages/Workouts/CustomWorkout/CustomWorkout";
+import About from "../pages/AboutY/About";
 const AllRoutes = () => {
   return (
     <Routes>
@@ -48,6 +48,8 @@ const AllRoutes = () => {
       <Route path="/cart" element={<Cart />}></Route>
       <Route path="/healthy-living" element={<HealthLiving />}></Route>
       <Route path="/custom" element={<CustomWorkout />}></Route>
+      <Route path="/about" element={<About />}></Route>
+    
     </Routes>
   );
 };

@@ -486,15 +486,14 @@ const Navbar = () => {
         <Link to={"/workoutvideos"}>
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
-              {/* <Image
+              <Image
                 src={workoutVideo}
                 alt="workoutVideo"
                 boxSize="50px"
                 objectFit="cover"
                   
-              /> */}
-              <MdOutlineSelfImprovement color="white" fontSize={50} />
-              <i class="icon -workout-videos" aria-hidden="true"></i>
+              />
+           
             </div>
             <div className="navbar_main_menu_blackbox-workout_text_box">
               <h4 className="navbar_main_menu_blackbox_h4">WORKOUT VIDEOS</h4>
@@ -510,7 +509,7 @@ const Navbar = () => {
                 boxSize="50px"
                 objectFit="cover"
               />
-             <i class="icon -custom-workouts" aria-hidden="true"></i>
+             
             </div>
             <div className="navbar_main_menu_blackbox-workout_text_box">
               <h4 className="navbar_main_menu_blackbox_h4">CUSTOM WORKOUTS</h4>
@@ -533,14 +532,13 @@ const Navbar = () => {
         <Link to="/plans">
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
-              {/* <Image
+              <Image
                 src={workoutPrograms}
                 alt="workoutPrograms"
                 boxSize="50px"
                 objectFit="cover"
-              /> */}
-              <MdListAlt color="white" fontSize={50}/>
-              <i class="icon -workout-programs" aria-hidden="true"></i>
+              />
+          
                                         
               
             </div>
@@ -552,13 +550,13 @@ const Navbar = () => {
         <Link to="/meal">
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
-              {/* <Image
+              <Image
                 src={mealPlans}
                 alt="mealPlans"
                 boxSize="50px"
                 objectFit="cover"
-              /> */}
-              <i class="icon -nutrition-programs" aria-hidden="true"></i>
+              />
+              
                                        
             </div>
             <div className="navbar_main_menu_blackbox-workout_text_box">
@@ -569,13 +567,13 @@ const Navbar = () => {
         <Link to="/pilot">
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
-              {/* <Image
+              <Image
                 src={pilotPrograms}
                 alt="pilotPrograms"
                 boxSize="50px"
                 objectFit="cover"
-              /> */}
-              <i class="icon -pilot-programs" aria-hidden="true"></i>
+              />
+             
             </div>
             <div className="navbar_main_menu_blackbox-workout_text_box">
               <h4 className="navbar_main_menu_blackbox_h4">PILOT PROGRAMS</h4>
@@ -584,13 +582,13 @@ const Navbar = () => {
         </Link>
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
-            {/* <Image
+            <Image
               src={customWorkouts}
               alt="customWorkouts"
               boxSize="50px"
               objectFit="cover"
-            /> */}
-            <i class="icon -routines" aria-hidden="true"></i>
+            />
+             
                                         
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
@@ -621,13 +619,13 @@ const Navbar = () => {
 
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
-            {/* <Image
+            <Image
               src={careers}
               alt="careers"
               boxSize="50px"
               objectFit="cover"
-            /> */}
-            <i class="icon -careers" aria-hidden="true"></i>
+            />
+           
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
             <h4 className="navbar_main_menu_blackbox_h4">CAREERS</h4>
@@ -635,13 +633,13 @@ const Navbar = () => {
         </div>
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
-            {/* <Image
+            <Image
               src={tutorials}
               alt="tutorials"
               boxSize="50px"
               objectFit="cover"
-            /> */}
-            <i class="icon -tutorials" aria-hidden="true"></i>
+            />
+            
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
             <h4 className="navbar_main_menu_blackbox_h4">TUTORIALS</h4>
@@ -649,13 +647,13 @@ const Navbar = () => {
         </div>
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
-            {/* <Image
+            <Image
               src={ourTeam}
               alt="ourTeam"
               boxSize="50px"
               objectFit="cover"
-            /> */}
-            <i class="icon -team" aria-hidden="true"></i>
+            />
+            
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
             <h4 className="navbar_main_menu_blackbox_h4">OUR TEAM</h4>
@@ -675,13 +673,13 @@ const Navbar = () => {
       >
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
-            {/* <Image
+            <Image
               src={expertArticles}
               alt="expertArticles"
               boxSize="50px"
               objectFit="cover"
-            /> */}
-            <i class="icon -experts" aria-hidden="true"></i>
+            />
+           
                                        
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
@@ -690,13 +688,13 @@ const Navbar = () => {
         </div>
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
-            {/* <Image
+            <Image
               src={healthyRecipes}
               alt="healthyRecipes"
               boxSize="50px"
               objectFit="cover"
-            /> */}
-            <i class="icon -healthy-recipes" aria-hidden="true"></i>
+            />
+        
                                         
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
@@ -705,13 +703,13 @@ const Navbar = () => {
         </div>{" "}
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
-            {/* <Image
+            <Image
               src={wellnessVideos}
               alt="wellnessVideos"
               boxSize="50px"
               objectFit="cover"
-            /> */}
-            <i class="icon -health" aria-hidden="true"></i>
+            />
+            
                                        
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
@@ -733,13 +731,13 @@ const Navbar = () => {
       >
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
-            {/* <Image
+            <Image
               src={expertArticles}
               alt="expertArticles"
               boxSize="50px"
               objectFit="cover"
-            /> */}
-            <i class="icon -community" aria-hidden="true"></i>
+            />
+          
                                         
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
@@ -748,13 +746,13 @@ const Navbar = () => {
         </div>
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
-            {/* <Image
+            <Image
               src={community}
               alt="community"
               boxSize="50px"
               objectFit="cover"
-            /> */}
-            <i class="icon -blog" aria-hidden="true"></i>
+            />
+          
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
             <h4 className="navbar_main_menu_blackbox_h4">EXPERT ARTICLES</h4>
@@ -762,13 +760,13 @@ const Navbar = () => {
         </div>
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
-            {/* <Image
+            <Image
               src={whatsNew}
               alt="whatsNew"
               boxSize="50px"
               objectFit="cover"
-            /> */}
-            <i class="icon -whats-new" aria-hidden="true"></i>
+            />
+           
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
             <h4 className="navbar_main_menu_blackbox_h4">EXPERT ARTICLES</h4>

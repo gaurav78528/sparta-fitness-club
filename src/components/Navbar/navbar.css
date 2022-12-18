@@ -13,6 +13,7 @@ navbar_mean_machine {
   align-items: center;
  
 }
+
 .navbar_main_menu_items_workout {
   display: flex;
   position: relative;
@@ -21,7 +22,7 @@ navbar_mean_machine {
   gap: 5px;
   height: 100%;
   border-bottom: 3px solid rgb(255, 255, 255);
- 
+
 }
 .navbar_main_menu_items_workout:hover {
   border-bottom: 3px solid rgb(66, 150, 203);
