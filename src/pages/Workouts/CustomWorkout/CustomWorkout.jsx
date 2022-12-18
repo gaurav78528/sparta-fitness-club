@@ -1,18 +1,26 @@
 import React from 'react'
 import { AspectRatio,Box, Grid, GridItem ,Heading,Image,Link,Text} from '@chakra-ui/react'
 import "./CustomWorkout.css"
+import { CheckCircleIcon } from '@chakra-ui/icons';
+import {
+   
+    Button,
+    
+    Flex,
+    
+    
+    Stack,
+    
+    useBreakpointValue,
+  } from '@chakra-ui/react';
+import Slide from "./Slide"
 const CustomWorkout = () => {
   return (
     <Box fontFamily='Maison Neue","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif' w="100%">
-        <Box className='Cwork' 
+       
+         <Slide/>
         
-          backgroundImage="url(https://cloudfront.fitnessblender.com/assets/img/fbplus/fingerprint.jpg)"
-          backgroundSize='cover'
-          backgroundRepeat="no-repeat"
-          w='100vw'
-          h="300px" >
-          hello
-        </Box>
+        
         <Box borderBottom="0.5px solid gray " textAlign='center' p={7} color='#4296cb'>
            <Link >Walkthrough</Link>
         </Box>
