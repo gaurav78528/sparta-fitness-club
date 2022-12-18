@@ -14,6 +14,7 @@ import{
   Image,
   Text,
 } from "@chakra-ui/react";
+import {  getCart } from "../../store/Cart/CartAction";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllgift, getAllpassess } from "../../store/shop/action";
@@ -21,8 +22,8 @@ import { getAllgift, getAllpassess } from "../../store/shop/action";
 const Shop = () => {
   const dispatch = useDispatch();
   const giftstore = useSelector((store) => store.gift);
-  console.log(giftstore.gift[0], "rtyukl");
-  console.log(giftstore.gift[1], "Alaha");
+  // console.log(giftstore.gift[0], "rtyukl");
+  // console.log(giftstore.gift[1], "Alaha");
   useEffect(() => {
     dispatch(getAllpassess());
     dispatch(getAllgift());
@@ -34,6 +35,18 @@ const Shop = () => {
   //   .then((res)=>setdata(res.data))
 
   // },[])
+
+  const handelCart=(el)=>{
+    //dispatch(cart_length_fn())
+    dispatch(getCart(el))
+  }
+  const cartdata=useSelector((store)=>store.product)
+
+  useEffect(()=>{
+    console.log(cartdata);
+  },[cartdata])
+  
+
   return (
     <div style={{ backgroundColor: "rgb(241,245,246)" }}>
       <div style={{ padding: "100px",width:"70%"}}>
@@ -64,8 +77,8 @@ const Shop = () => {
                 <div style={{ display: "flex",
                     justifyContent: "space-between",
                     marginTop: "20px", }}>
-                  <p>{el.price}</p>
-                  <Button bg={"rgb(62,156,204)"}>ADD TO BAG</Button>
+                  <p>${el.price}</p>
+                  <Button bg={"rgb(62,156,204)"}   onClick={()=>handelCart(el)}>ADD TO BAG</Button>
                 </div>
               </Box>
             </Center>
@@ -78,13 +91,7 @@ const Shop = () => {
         </Box>
     <hr  style={{color:"white" ,height:"2px"}}/>
 
-      <Heading>FB Plus Passes</Heading>
-      <p>
-        Passes give you full access to everything FB Plus has to offer, without
-        a long-term subscription. Choose a pass that fits your budget and your
-        schedule, and extend your access with another pass at any time. Multiple
-        passes can be purchased at once for longer access.
-      </p>
+    
    
 
    
@@ -122,8 +129,8 @@ const Shop = () => {
                     marginTop: "20px",
                   }}
                 >
-                  <p style={{ marginTop: "15px" }}>{el.price}</p>
-                  <Button bg={"rgb(62,156,204)"} colorScheme={"gray"} color={"white"}>ADD TO BAG</Button>
+                  <p style={{ marginTop: "15px" }}>${el.price}</p>
+                  <Button bg={"rgb(62,156,204)"} colorScheme={"gray"} color={"white"}  onClick={()=>handelCart(el)}>ADD TO BAG</Button>
                 </Box>
               </Box>
             </Center>

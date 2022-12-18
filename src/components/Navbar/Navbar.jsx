@@ -17,6 +17,7 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
+
 import { BsFillCaretDownFill } from "react-icons/bs";
 import { BiCalendar, BiHeart, BiSearchAlt2 } from "react-icons/bi";
 import {
@@ -77,7 +78,8 @@ const Navbar = () => {
       id: 3,
     },
   ];
-
+   
+  
   useEffect(() => {}, [data]);
   const { user, logOut } = useUserAuth();
   console.log(user);
