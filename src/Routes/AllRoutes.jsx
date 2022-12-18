@@ -22,10 +22,10 @@ import CustomWorkout from "../pages/Workouts/CustomWorkout/CustomWorkout";
 import WorkoutSingle from "../pages/Workouts/WorkoutSingle";
 import WorkSingleVideo from "../pages/Workouts/WorkSingleVideo";
 import MemberShip from "../pages/membership/Membership";
+import AboutY from "../pages/AboutY/AboutY";
 import Checkout from "../pages/checkout/Checkout";
 import Payment from "../pages/Payment/Payment";
 import OrderSuccess from "../pages/OrderSuccess/OrderSuccess";
-
 const AllRoutes = () => {
   return (
     <Routes>
@@ -57,7 +57,9 @@ const AllRoutes = () => {
       ></Route>
       <Route path="/healthy-living" element={<HealthLiving />}></Route>
       <Route path="/about" element={<About />}></Route>
+      <Route path="/abouty" element={<AboutY />}></Route>
       <Route path="/custom-workouts" element={<CustomWorkout />}></Route>
+>
       <Route path="/membership" element={<MemberShip />}></Route>
       <Route path="/checkout" element={<Checkout />}></Route>
       <Route path="/checkout/payment" element={<Payment />}></Route>
