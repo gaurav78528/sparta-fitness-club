@@ -25,6 +25,8 @@ import CustomWorkout from "../pages/Workouts/CustomWorkout/CustomWorkout";
 import WorkoutSingle from "../pages/Workouts/WorkoutSingle";
 import WorkSingleVideo from "../pages/Workouts/WorkSingleVideo";
 import MemberShip from "../pages/membership/Membership";
+import AboutY from "../pages/AboutY/AboutY";
+
  
 const AllRoutes = () => {
   return (
@@ -59,6 +61,7 @@ const AllRoutes = () => {
  
       
       <Route path="/about" element={<About />}></Route>
+      <Route path="/abouty" element={<AboutY />}></Route>
  
       <Route path="/custom-workout" element={<CustomWorkout />}></Route>
       <Route path="/membership" element={<MemberShip />}></Route>
