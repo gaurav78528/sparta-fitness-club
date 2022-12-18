@@ -1,10 +1,12 @@
-import { Wrap } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Wrap } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
 import { useUserAuth } from "../../context/UserAuthContext";
 import "./Home.css";
 import UserAvatar from "./UserAvatar";
 const Home = () => {
   const { user } = useUserAuth();
+  console.log(user);
   let homearr = [
     {
       name: "Perfect for Beginners",
@@ -42,29 +44,33 @@ const Home = () => {
   return (
     <div>
       {/* Top section  */}
-      <div className="TopMain">
-        <div className="TopFlex">
+      <Flex justify="center" align="center" className="TopMain">
+        <Flex w="80%" align="center" justify="space-between">
           {user ? (
-            <div className="TopFlex1">
-              <div>
-                <div className="TopHeading">
-                  <h2>
-                    Welcome
-                    <br />
-                    {user.email}
-                  </h2>
-                  <p style={{ fontSize: "17px" }}>
-                    Your free membership gives you access to hundreds of videos,
-                    articles, and recipes as well as a positive and supportive
-                    community to help you reach and maintain your fitness and
-                    wellness goals.
-                  </p>
-                </div>
-              </div>
-              <div className="TopFlex2">
+            <Flex
+              justify={"space-between"}
+              align="center"
+              direction={{ base: "column", sm: "column", md: "row", lg: "row" }}
+              gap="30px"
+            >
+              <Box w={{ base: "100%", sm: "80%", md: "50%", lg: "40%" }}>
+                <Heading as="h2" size="xl" fontWeight={500}>
+                  Welcome
+                  <br />
+                  {user.email}
+                </Heading>
+                <Text mt="20px" fontSize="17px">
+                  Your free membership gives you access to hundreds of videos,
+                  articles, and recipes as well as a positive and supportive
+                  community to help you reach and maintain your fitness and
+                  wellness goals.
+                </Text>
+              </Box>
+
+              <Box>
                 <UserAvatar size="2xl" />
-              </div>
-            </div>
+              </Box>
+            </Flex>
           ) : (
             <div className="TopFlex1">
               <div>
@@ -80,7 +86,7 @@ const Home = () => {
                     approach to feeling great.
                   </p>
                   <div className="TopAnchor">
-                    <a>JOIN NOW</a>
+                    <Link to="/membership">JOIN NOW</Link>
                   </div>
                 </div>
               </div>
@@ -93,8 +99,8 @@ const Home = () => {
               </div>
             </div>
           )}
-        </div>
-      </div>
+        </Flex>
+      </Flex>
       {/* Top section end */}
 
       {/* Top section 2nd */}
