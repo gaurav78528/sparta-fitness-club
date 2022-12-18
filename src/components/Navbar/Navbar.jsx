@@ -24,7 +24,9 @@ import {
   MdDashboard,
   MdExitToApp,
   MdFavorite,
+  MdListAlt,
   MdNotifications,
+  MdOutlineSelfImprovement,
   MdOutlineShoppingBag,
   MdSettings,
 } from "react-icons/md";
@@ -35,7 +37,7 @@ import { json, Link } from "react-router-dom";
 
 import logo from "../../assets/logo.png";
 import customWorkouts from "../../assets/custom-workouts.png";
-import workoutVideo from "../../assets/workout-video.png";
+import workoutVideo from "../../assets/workout-videos.png";
 import workoutPrograms from "../../assets/workout-programs.png";
 import mealPlans from "../../assets/meal-plans.png";
 import pilotPrograms from "../../assets/pilot-programs.png";
@@ -196,8 +198,12 @@ const Navbar = () => {
         {/* small screen */}
         <Box
           display={["flex", "flex", "flex", "none", "none"]}
-          pl="57%"
+          // pl="57%"
+          alignItems="center"
+          justifyContent="flex-end"
           bgColor="white"
+          w="100%"
+          // border="1px solid red"
         >
           <div
             className="navbar_main_menu_items_respons_signup"
@@ -709,19 +715,6 @@ const Navbar = () => {
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
             <Image
-              src={expertArticles}
-              alt="expertArticles"
-              boxSize="50px"
-              objectFit="cover"
-            />
-          </div>
-          <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">EXPERT ARTICLES</h4>
-          </div>
-        </div>
-        <div className="navbar_main_menu_blackbox-workout_items">
-          <div className="navbar_main_menu_blackbox-workout_image_box">
-            <Image
               src={community}
               alt="community"
               boxSize="50px"
@@ -729,7 +722,15 @@ const Navbar = () => {
             />
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">EXPERT ARTICLES</h4>
+            <h4 className="navbar_main_menu_blackbox_h4">COMMUNITY</h4>
+          </div>
+        </div>
+        <div className="navbar_main_menu_blackbox-workout_items">
+          <div className="navbar_main_menu_blackbox-workout_image_box">
+            <Image src={blog} alt="blog" boxSize="50px" objectFit="cover" />
+          </div>
+          <div className="navbar_main_menu_blackbox-workout_text_box">
+            <h4 className="navbar_main_menu_blackbox_h4">BLOG</h4>
           </div>
         </div>
         <div className="navbar_main_menu_blackbox-workout_items">
@@ -742,14 +743,14 @@ const Navbar = () => {
             />
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">EXPERT ARTICLES</h4>
+            <h4 className="navbar_main_menu_blackbox_h4">WHAT'S NEW</h4>
           </div>
         </div>
       </div>
       {/* membership */}
       {user ? (
         <>
-          <div
+          <Box
             className="navbar_main_menu_blackbox_signup"
             style={styleSignUp}
             onMouseEnter={(e) => {
@@ -833,7 +834,7 @@ const Navbar = () => {
                 </Button>
               </Flex>
             </div>
-          </div>
+          </Box>
         </>
       ) : (
         <>

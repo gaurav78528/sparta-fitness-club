@@ -2,13 +2,14 @@ import { Flex } from '@chakra-ui/layout'
 import { Box, Button, Image, Text } from '@chakra-ui/react'
 import React from 'react'
 import { MdOutlineShoppingBag } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 import "./Plans.css"
 
-const Card = ({src, week, min, des, price,key }) => {
+const Card = ({src, week, min, des, price,key,handleAdd }) => {
   return (
     <Box w={"full"}    className="hov" >
-        <Box>
-            <Image w={"full"} src={src} alt="fitness"/>
+        <Box>    
+             <Image w={"full"} src={src} alt="fitness"/>           
         </Box>
         <Flex  p={2}>
             <Text>{week} - {min}</Text>
@@ -23,6 +24,7 @@ const Card = ({src, week, min, des, price,key }) => {
             <Text fontWeight="bold">$ {price}</Text>
             </Box>
             <Box>
+                <Button gap={2} bg={"blue.300"} color={"white"} onClick={handleAdd}><MdOutlineShoppingBag fontSize={"25px"}/>ADD TO BAG</Button>
                 <Button gap={2} bg={"blue.300"} color={"white"}><MdOutlineShoppingBag fontSize={"25px"}/>ADD TO BAG</Button>
             </Box>
 

@@ -435,7 +435,7 @@
       "week": "2 WEEK CHALLENGE",
       "time": "44 MIN/DAY",
       "desc": "FB 3-Day: 3 Workouts Per Week for 2 Weeks",
-      "price": "7.99"
+      "price": 7.99
     },
     {
       "id": 2,
@@ -443,7 +443,7 @@
       "week": "2 WEEK CHALLENGE",
       "time": "44 MIN/DAY",
       "desc": "FB Just Your Body: 2 Week No Equipment",
-      "price": "7.99"
+      "price": 7.99
     },
     {
       "id": 3,
@@ -451,7 +451,7 @@
       "week": "2 WEEK CHALLENGE",
       "time": "37 MIN/DAY",
       "desc": "FB Pilates Immersion: 2-Week Pilates Challenge for Foundational Strength and Stability",
-      "price": "7.99"
+      "price": 7.99
     },
     {
       "id": 4,
@@ -459,7 +459,7 @@
       "week": "8 WEEK Program",
       "time": "35 MIN/DAY",
       "desc": "FB Reboot: 8-Week Program to Jumpstart Your Fitness Routine",
-      "price": "7.99"
+      "price": 7.99
     },
     {
       "id": 5,
@@ -467,7 +467,7 @@
       "week": "2 WEEK CHALLENGE",
       "time": "44 MIN/DAY",
       "desc": "FB 3-Day: 3 Workouts Per Week for 2 Weeks",
-      "price": "7.99"
+      "price": 7.99
     },
     {
       "id": 6,
@@ -475,7 +475,7 @@
       "week": "2 WEEK CHALLENGE",
       "time": "44 MIN/DAY",
       "desc": "FB 3-Day: 3 Workouts Per Week for 2 Weeks",
-      "price": "8.99"
+      "price": 8.99
     },
     {
       "id": 7,
@@ -483,7 +483,7 @@
       "week": "2 WEEK CHALLENGE",
       "time": "44 MIN/DAY",
       "desc": "FB 3-Day: 3 Workouts Per Week for 2 Weeks",
-      "price": "9.99"
+      "price": 9.99
     },
     {
       "id": 8,
@@ -491,7 +491,7 @@
       "week": "2 WEEK CHALLENGE",
       "time": "44 MIN/DAY",
       "desc": "FB 3-Day: 3 Workouts Per Week for 2 Weeks",
-      "price": "5.99"
+      "price": 5.99
     },
     {
       "id": 9,
@@ -499,7 +499,7 @@
       "week": "2 WEEK CHALLENGE",
       "time": "44 MIN/DAY",
       "desc": "FB 3-Day: 3 Workouts Per Week for 2 Weeks",
-      "price": "3.99"
+      "price": 3.99
     },
     {
       "id": 10,
@@ -507,7 +507,7 @@
       "week": "2 WEEK CHALLENGE",
       "time": "44 MIN/DAY",
       "desc": "FB 3-Day: 3 Workouts Per Week for 2 Weeks",
-      "price": "8.99"
+      "price": 8.99
     },
     {
       "id": 11,
@@ -515,7 +515,7 @@
       "week": "2 WEEK CHALLENGE",
       "time": "44 MIN/DAY",
       "desc": "FB 3-Day: 3 Workouts Per Week for 2 Weeks",
-      "price": "12.99"
+      "price": 12.99
     },
     {
       "id": 12,
@@ -523,49 +523,49 @@
       "week": "2 WEEK CHALLENGE",
       "time": "44 MIN/DAY",
       "desc": "FB 3-Day: 3 Workouts Per Week for 2 Weeks",
-      "price": "5.99"
+      "price": 5.99
     }
   ],
   "gift": [
     {
       "id": 1,
       "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-1-10-egift-card-84c3.jpg",
-      "price": "$10:00"
+      "price": 10
     },
     {
       "id": 2,
       "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-2-20-egift-card-a464.jpg",
-      "price": "$20:00"
+      "price": 20
     },
     {
       "id": 3,
       "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-3-30-egift-card-a760.jpg",
-      "price": "$30:00"
+      "price": 30
     },
     {
       "id": 4,
       "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-4-40-egift-card-a504.jpg",
-      "price": "$40:00"
+      "price": 40
     },
     {
       "id": 5,
       "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-5-50-egift-card-8e17.jpg",
-      "price": "$50:00"
+      "price": 50
     },
     {
       "id": 6,
       "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-6-75-egift-card-b723.jpg",
-      "price": "$75:00"
+      "price": 75
     },
     {
       "id": 7,
       "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-8-7999-egift-card-limited-bece.jpg",
-      "price": "$79:00"
+      "price": 79
     },
     {
       "id": 8,
       "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-7-100-egift-card-8673.jpg",
-      "price": "$100:00"
+      "price": 100
     }
   ],
   "passes": [
@@ -573,19 +573,19 @@
       "id": 9,
       "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-16-1-day-pass-a272.jpg",
       "pass": "1-Day Pass",
-      "price": "$1.99"
+      "price": 1.99
     },
     {
       "id": 10,
       "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-15-7-day-pass-8070.jpg",
       "pass": "7-Day Pass",
-      "price": "$3.99"
+      "price": 3.99
     },
     {
       "id": 11,
       "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-14-14-day-pass-b885.jpg",
       "pass": "14-Day Pass",
-      "price": "$7.99"
+      "price": 7.99
     },
     {
       "id": 12,
@@ -597,261 +597,217 @@
       "id": 13,
       "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-12-90-day-pass-89f6.jpg",
       "pass": "90-Day Pass",
-      "price": "$29.99"
+      "price": 29.99
     }
   ],
-  "articles": [
+"fitness": [
     {
-      "cat": [
-        {
-          "id": 1,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1195-what-is-rib-flare-and-how-to-tell-if-you-have-it-9bb4.jpg",
-          "label": "Free",
-          "time": 7,
-          "description": "What is Rib Flare and How to Tell if You Have It",
-          "category": "fitness"
-        },
-        {
-          "id": 2,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1126-looking-to-start-a-family-what-you-need-to-know-about-exercise-and-fertility-a2cc.jpg",
-          "label": "",
-          "time": 9,
-          "description": "Looking to Start a Family? What You Need to Know About Exercise and Fertility",
-          "category": "fitness"
-        },
-        {
-          "id": 3,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1125-how-to-do-a-burpee-fitnessblenders-comprehensive-guide-846b.jpg",
-          "label": "Free",
-          "time": 7,
-          "description": "How to Do A Burpee: FitnessBlender’s Comprehensive Guide",
-          "category": "fitness"
-        },
-        {
-          "id": 4,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1039-new-to-running-heres-what-you-should-know-a558.jpg",
-          "label": "Free",
-          "time": 9,
-          "description": "New to Running? Here’s What You Should Know",
-          "category": "fitness"
-        }
-      ]
+      "id": 1,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1195-what-is-rib-flare-and-how-to-tell-if-you-have-it-9bb4.jpg",
+      "label": "Free",
+      "time": 7,
+      "description": "What is Rib Flare and How to Tell if You Have It"
     },
     {
-      "cat": [
-        {
-          "id": 5,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1130-understanding-the-importance-of-the-pelvic-floor-during-pregnancy-9207.jpg",
-          "label": "",
-          "time": 6,
-          "description": "Understanding the Importance of the Pelvic Floor During Pregnancy",
-          "category": "health"
-        },
-        {
-          "id": 6,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1039-new-to-running-heres-what-you-should-know-a558.jpg",
-          "label": "Free",
-          "time": 9,
-          "description": "New to Running? Here’s What You Should Know",
-          "category": "health"
-        },
-        {
-          "id": 7,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1030-10-exercises-you-can-do-at-work-b9c7.jpg",
-          "label": "Free",
-          "time": 8,
-          "description": "10 Exercises You Can Do At Work",
-          "category": "health"
-        },
-        {
-          "id": 8,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1024-helpful-exercises-for-knee-valgus-ae6d.jpg",
-          "label": "",
-          "time": 9,
-          "description": "Helpful Exercises for Knee Valgus",
-          "category": "health"
-        }
-      ]
+      "id": 2,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1126-looking-to-start-a-family-what-you-need-to-know-about-exercise-and-fertility-a2cc.jpg",
+      "label": "",
+      "time": 9,
+      "description": "Looking to Start a Family? What You Need to Know About Exercise and Fertility"
     },
     {
-      "cat": [
-        {
-          "id": 9,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1134-the-relationship-between-food-and-mood-9c6d.jpg",
-          "label": "Free",
-          "time": 15,
-          "description": "The Relationship Between Food and Mood",
-          "category": "nutrition"
-        },
-        {
-          "id": 10,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-994-7-health-benefits-to-eating-meals-as-a-family-8390.jpg",
-          "label": "Free",
-          "time": 9,
-          "description": "7 Health Benefits to Eating Meals as a Family",
-          "category": "nutrition"
-        },
-        {
-          "id": 11,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-944-eating-disorders-explained-contributing-factors-and-lived-experiences-ade2.jpg",
-          "label": "Free",
-          "time": 11,
-          "description": "Eating Disorders Explained, Contributing Factors, and Lived Experiences",
-          "category": "nutrition"
-        },
-        {
-          "id": 12,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-908-understanding-sugar-addiction-and-ways-to-moderate-sugar-consumption-92d4.jpg",
-          "label": "",
-          "time": 8,
-          "description": "Understanding Sugar Addiction and Ways to Moderate Sugar Consumption",
-          "category": "nutrition"
-        }
-      ]
+      "id": 3,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1125-how-to-do-a-burpee-fitnessblenders-comprehensive-guide-846b.jpg",
+      "label": "Free",
+      "time": 7,
+      "description": "How to Do A Burpee: FitnessBlender’s Comprehensive Guide"
     },
     {
-      "cat": [
-        {
-          "id": 13,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1085-tandoori-style-chicken-skewers-b77b.jpg",
-          "label": "Free",
-          "time": 7,
-          "description": "Tandoori-Style Chicken Skewers With Curry Sauce and Brown Rice",
-          "category": "healthy recipes"
-        },
-        {
-          "id": 14,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1269-banana-and-almond-snack-ab08.jpg",
-          "label": "Free",
-          "time": 7,
-          "description": "Banana and Almond Snack",
-          "category": "healthy recipes"
-        },
-        {
-          "id": 15,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1081-shakshuka-breakfast-pizza-aea2.jpg",
-          "label": "Free",
-          "time": 7,
-          "description": "Shakshuka Breakfast Pizza North-African and Middle Eastern Inspired Breakfast",
-          "category": "healthy recipes"
-        },
-        {
-          "id": 16,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1219-bbq-chicken-sandwich-9bef.jpg",
-          "label": "Free",
-          "time": 7,
-          "description": "BBQ Chicken Sandwich With Kale, Tomatoes, and Cheddar",
-          "category": "healthy recipes"
-        }
-      ]
+      "id": 4,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1039-new-to-running-heres-what-you-should-know-a558.jpg",
+      "label": "Free",
+      "time": 9,
+      "description": "New to Running? Here’s What You Should Know"
+    }
+  ],
+  "health": [
+    {
+      "id": 1,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1130-understanding-the-importance-of-the-pelvic-floor-during-pregnancy-9207.jpg",
+      "label": "",
+      "time": 6,
+      "description": "Understanding the Importance of the Pelvic Floor During Pregnancy"
     },
     {
-      "cat": [
-        {
-          "id": 17,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1126-looking-to-start-a-family-what-you-need-to-know-about-exercise-and-fertility-a2cc.jpg",
-          "label": "",
-          "time": 9,
-          "description": "Looking to Start a Family? What You Need to Know About Exercise and Fertility",
-          "category": "experts"
-        },
-        {
-          "id": 18,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1039-new-to-running-heres-what-you-should-know-a558.jpg",
-          "label": "Free",
-          "time": 9,
-          "description": "New to Running? Here’s What You Should Know",
-          "category": "experts"
-        },
-        {
-          "id": 19,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1030-10-exercises-you-can-do-at-work-b9c7.jpg",
-          "label": "Free",
-          "time": 8,
-          "description": "10 Exercises You Can Do At Work",
-          "category": "experts"
-        },
-        {
-          "id": 20,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1031-6-ways-to-overcome-gym-anxiety-9733.jpg",
-          "label": "",
-          "time": 11,
-          "description": "6 Ways to Overcome Gym Anxiety",
-          "category": "experts"
-        }
-      ]
+      "id": 2,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1039-new-to-running-heres-what-you-should-know-a558.jpg",
+      "label": "Free",
+      "time": 9,
+      "description": "New to Running? Here’s What You Should Know"
     },
     {
-      "cat": [
-        {
-          "id": 21,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1316-the-role-of-exercise-in-addiction-treatment-a022.jpg",
-          "label": "Free",
-          "time": 8,
-          "description": "The Role of Exercise in Addiction Treatment How Fitness Can Help With Recovery",
-          "category": "mental health"
-        },
-        {
-          "id": 22,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1314-how-to-promote-a-positive-body-image-in-your-children-b97e.jpg",
-          "label": "Free",
-          "time": 12,
-          "description": "How to Promote a Positive Body Image in Your Child(ren) Practical Tips, Support, and Good Behaviors to Model",
-          "category": "mental health"
-        },
-        {
-          "id": 23,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1315-how-personality-traits-shape-exercise-behaviors-b45e.jpg",
-          "label": "Free",
-          "time": 10,
-          "description": "How Personality Traits Shape Exercise Behaviors 5 Factors That Impact Your Fitness and Health Habits",
-          "category": "mental health"
-        },
-        {
-          "id": 24,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1313-when-rest-is-more-important-than-working-out-9898.jpg",
-          "label": "Free",
-          "time": 10,
-          "description": "When Rest is More Important Than Working Out Tips for Managing Rest Days",
-          "category": "mental health"
-        }
-      ]
+      "id": 3,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1030-10-exercises-you-can-do-at-work-b9c7.jpg",
+      "label": "Free",
+      "time": 8,
+      "description": "10 Exercises You Can Do At Work"
     },
     {
-      "cat": [
-        {
-          "id": 25,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/wellness-videos/640/640-69-mindfulness-for-cooking-9617.jpg",
-          "label": "",
-          "time": 8,
-          "description": "Mindfulness for Cooking Mindful Food Preparation to Support Mindful Eating",
-          "category": "wellness"
-        },
-        {
-          "id": 26,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/wellness-videos/640/640-68-meditation-to-prepare-for-childbirth-9834.jpg",
-          "label": "",
-          "time": 12,
-          "description": "Meditation to Prepare for Childbirth Mindfulness Practice for Pregnancy",
-          "category": "wellness"
-        },
-        {
-          "id": 27,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/wellness-videos/640/640-65-bedtime-stress-reduction-9b19.jpg",
-          "label": "",
-          "time": 20,
-          "description": "Bedtime Stress Reduction Guided Meditation for Better Sleep",
-          "category": "wellness"
-        },
-        {
-          "id": 28,
-          "image": "https://d18zdz9g6n5za7.cloudfront.net/wellness-videos/640/640-67-guided-practice-to-embrace-vulnerability-96cb.jpg",
-          "label": "",
-          "time": 10,
-          "description": "Guided Practice to Embrace Vulnerability Mindfulness for Overcoming Fear of Vulnerability",
-          "category": "wellness"
-        }
-      ]
+      "id": 4,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1024-helpful-exercises-for-knee-valgus-ae6d.jpg",
+      "label": "",
+      "time": 9,
+      "description": "Helpful Exercises for Knee Valgus"
+    }
+  ],
+  "nutrition": [
+    {
+      "id": 1,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1134-the-relationship-between-food-and-mood-9c6d.jpg",
+      "label": "Free",
+      "time": 15,
+      "description": "The Relationship Between Food and Mood"
+    },
+    {
+      "id": 2,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-994-7-health-benefits-to-eating-meals-as-a-family-8390.jpg",
+      "label": "Free",
+      "time": 9,
+      "description": "7 Health Benefits to Eating Meals as a Family"
+    },
+    {
+      "id": 3,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-944-eating-disorders-explained-contributing-factors-and-lived-experiences-ade2.jpg",
+      "label": "Free",
+      "time": 11,
+      "description": "Eating Disorders Explained, Contributing Factors, and Lived Experiences"
+    },
+    {
+      "id": 4,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-908-understanding-sugar-addiction-and-ways-to-moderate-sugar-consumption-92d4.jpg",
+      "label": "",
+      "time": 8,
+      "description": "Understanding Sugar Addiction and Ways to Moderate Sugar Consumption"
+    }
+  ],
+  "healthy-recipes": [
+    {
+      "id": 1,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1085-tandoori-style-chicken-skewers-b77b.jpg",
+      "label": "Free",
+      "time": 7,
+      "description": "Tandoori-Style Chicken Skewers With Curry Sauce and Brown Rice"
+    },
+    {
+      "id": 2,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1269-banana-and-almond-snack-ab08.jpg",
+      "label": "Free",
+      "time": 7,
+      "description": "Banana and Almond Snack"
+    },
+    {
+      "id": 3,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1081-shakshuka-breakfast-pizza-aea2.jpg",
+      "label": "Free",
+      "time": 7,
+      "description": "Shakshuka Breakfast Pizza North-African and Middle Eastern Inspired Breakfast"
+    },
+    {
+      "id": 4,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1219-bbq-chicken-sandwich-9bef.jpg",
+      "label": "Free",
+      "time": 7,
+      "description": "BBQ Chicken Sandwich With Kale, Tomatoes, and Cheddar"
+    }
+  ],
+  "experts": [
+    {
+      "id": 1,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1126-looking-to-start-a-family-what-you-need-to-know-about-exercise-and-fertility-a2cc.jpg",
+      "label": "",
+      "time": 9,
+      "description": "Looking to Start a Family? What You Need to Know About Exercise and Fertility"
+    },
+    {
+      "id": 2,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1039-new-to-running-heres-what-you-should-know-a558.jpg",
+      "label": "Free",
+      "time": 9,
+      "description": "New to Running? Here’s What You Should Know"
+    },
+    {
+      "id": 3,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1030-10-exercises-you-can-do-at-work-b9c7.jpg",
+      "label": "Free",
+      "time": 8,
+      "description": "10 Exercises You Can Do At Work"
+    },
+    {
+      "id": 4,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1031-6-ways-to-overcome-gym-anxiety-9733.jpg",
+      "label": "",
+      "time": 11,
+      "description": "6 Ways to Overcome Gym Anxiety"
+    }
+  ],
+  "mental health": [
+    {
+      "id": 1,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1316-the-role-of-exercise-in-addiction-treatment-a022.jpg",
+      "label": "Free",
+      "time": 8,
+      "description": "The Role of Exercise in Addiction Treatment How Fitness Can Help With Recovery"
+    },
+    {
+      "id": 2,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1314-how-to-promote-a-positive-body-image-in-your-children-b97e.jpg",
+      "label": "Free",
+      "time": 12,
+      "description": "How to Promote a Positive Body Image in Your Child(ren) Practical Tips, Support, and Good Behaviors to Model"
+    },
+    {
+      "id": 3,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1315-how-personality-traits-shape-exercise-behaviors-b45e.jpg",
+      "label": "Free",
+      "time": 10,
+      "description": "How Personality Traits Shape Exercise Behaviors 5 Factors That Impact Your Fitness and Health Habits"
+    },
+    {
+      "id": 4,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1313-when-rest-is-more-important-than-working-out-9898.jpg",
+      "label": "Free",
+      "time": 10,
+      "description": "When Rest is More Important Than Working Out Tips for Managing Rest Days"
+    }
+  ],
+  "wellness videos": [
+    {
+      "id": 1,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/wellness-videos/640/640-69-mindfulness-for-cooking-9617.jpg",
+      "label": "",
+      "time": 8,
+      "description": "Mindfulness for Cooking Mindful Food Preparation to Support Mindful Eating"
+    },
+    {
+      "id": 2,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/wellness-videos/640/640-68-meditation-to-prepare-for-childbirth-9834.jpg",
+      "label": "Meditation to Prepare for Childbirth Mindfulness Practice for Pregnancy",
+      "time": 12,
+      "description": ""
+    },
+    {
+      "id": 3,
+      "image": "",
+      "label": "",
+      "time": 20,
+      "description": "Bedtime Stress Reduction Guided Meditation for Better Sleep"
+    },
+    {
+      "id": 4,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/wellness-videos/640/640-67-guided-practice-to-embrace-vulnerability-96cb.jpg",
+      "label": "",
+      "time": 10,
+      "description": "Guided Practice to Embrace Vulnerability Mindfulness for Overcoming Fear of Vulnerability"
     }
   ],
    "work" : [
@@ -893,4 +849,3 @@
     }
   ]
 }
-
