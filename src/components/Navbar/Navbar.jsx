@@ -25,7 +25,9 @@ import {
   MdDashboard,
   MdExitToApp,
   MdFavorite,
+  MdListAlt,
   MdNotifications,
+  MdOutlineSelfImprovement,
   MdOutlineShoppingBag,
   MdSettings,
 } from "react-icons/md";
@@ -36,7 +38,7 @@ import { json, Link } from "react-router-dom";
 
 import logo from "../../assets/logo.png";
 import customWorkouts from "../../assets/custom-workouts.png";
-import workoutVideo from "../../assets/workout-video.png";
+import workoutVideo from "../../assets/workout-videos.png";
 import workoutPrograms from "../../assets/workout-programs.png";
 import mealPlans from "../../assets/meal-plans.png";
 import pilotPrograms from "../../assets/pilot-programs.png";
@@ -64,8 +66,7 @@ const Navbar = () => {
   const [styleSeachBar, setStyleSeachBar] = useState({ display: "none" });
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-  let data = JSON.parse(localStorage.getItem("auth")) || "";
-
+ 
   // const cartData = JSON.parse(localStorage.getItem("cartArray")) || [];
   let cartData = [
     {
@@ -80,6 +81,7 @@ const Navbar = () => {
   ];
    
   
+
   useEffect(() => {}, [data]);
   const { user, logOut } = useUserAuth();
   console.log(user);
@@ -116,12 +118,7 @@ const Navbar = () => {
           justifyContent={"space-between"}
           display={["none", "none", "none", "flex", "flex"]}
         >
-          <Flex
-            justify="center"
-            align="center"
-            gap="1.5rem"
-            className="navbar_main_menu_items"
-          >
+          <div className="navbar_main_menu_items">
             <div
               className="navbar_main_menu_items_workout"
               onMouseEnter={(e) => {
@@ -193,9 +190,7 @@ const Navbar = () => {
                 setStyleAbout({ display: "none" });
               }}
             >
-              <Link to="/about">
-                <h4 className="navbar_main_menu_items_about_text">ABOUT</h4>
-              </Link>
+              <h4 className="navbar_main_menu_items_about_text">ABOUT</h4>
               <BsFillCaretDownFill color="rgb(66,150,203)" size={"10px"} />
             </div>
 
@@ -211,16 +206,17 @@ const Navbar = () => {
                 </h4>
               </Link>
             </div>
-          </Flex>
+          </div>
         </Box>
         {/* small screen */}
         <Box
           display={["flex", "flex", "flex", "none", "none"]}
           // pl="57%"
-          px={{ base: "30px", md: "50px", lg: "60px" }}
+          alignItems="center"
           justifyContent="flex-end"
           bgColor="white"
           w="100%"
+          // border="1px solid red"
         >
           <div
             className="navbar_main_menu_items_respons_signup"
@@ -312,12 +308,12 @@ const Navbar = () => {
                   WORKOUTS
                 </Text>
               </Link>
-              <Link to="/workout-videos">
+              <Link to="/workoutvideos">
                 <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                   WORKOUT VIDEOS
                 </Text>
               </Link>
-              <Link to={"/custom-workout"}>
+              <Link to={"/customworkout"}>
                 <Text
                   color="rgb(167,170,174)"
                   pt="10px"
@@ -338,7 +334,7 @@ const Navbar = () => {
                   WORKOUT PROGRAMS
                 </Text>
               </Link>
-              <Link to="/meal-plan">
+              <Link to="/meal">
                 <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                   MEAL PLANS
                 </Text>
@@ -421,9 +417,7 @@ const Navbar = () => {
           </DrawerContent>
         </Drawer>
         <Box
-          // flex="1.5"
-          // padding="32px 15px 0px 15px"
-          // margin="auto"
+          flex="1.5"
           display={["none", "none", "none", "flex", "flex"]}
           bgColor="white"
         >
@@ -447,26 +441,19 @@ const Navbar = () => {
               {user ? (
                 <Button
                   colorScheme="blue"
-                  variant="link"
-                  // bgColor="blue.400"
-                  mt="10px"
+                  bgColor="blue.400"
                   size="sm"
                   borderRadius="4px"
                   onClick={handleLogout}
                 >
                   Logout
                 </Button>
-
-                
               ) : (
                 <>
-                  <div className="navbar_main_menu_items_myfitness_text">
+                  <h4 className="navbar_main_menu_items_myfitness_text">
                     MY FITNESS
-                    <BsFillCaretDownFill
-                      color="rgb(66,150,203)"
-                      size={"10px"}
-                    />
-                  </div>
+                  </h4>
+                  <BsFillCaretDownFill color="rgb(66,150,203)" size={"10px"} />
                 </>
               )}
             </div>
@@ -494,9 +481,9 @@ const Navbar = () => {
               <Link to={"/cart"}>
                 <MdOutlineShoppingBag color="black" size={"22px"} />
               </Link>
-              <span className="navbar_main_menu_items_shopping_bag_cart_number">
+              <p className="navbar_main_menu_items_shopping_bag_cart_number">
                 {cartData.length > 0 ? cartData.length : null}
-              </span>
+              </p>
             </div>
           </div>
         </Box>
@@ -512,7 +499,7 @@ const Navbar = () => {
           setStyle({ display: "none" });
         }}
       >
-        <Link to={"/workout-videos"}>
+        <Link to={"/workoutvideos"}>
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -527,7 +514,7 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <Link to={"/custom-workout"}>
+        <Link to={"/customworkout"}>
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -570,7 +557,7 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <Link to="/meal-plan">
+        <Link to="/meal">
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -600,23 +587,22 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <Link to="/routine">
-          <div className="navbar_main_menu_blackbox-workout_items">
-            <div className="navbar_main_menu_blackbox-workout_image_box">
-              <Image
-                src={customWorkouts}
-                alt="customWorkouts"
-                boxSize="50px"
-                objectFit="cover"
-              />
-            </div>
-            <div className="navbar_main_menu_blackbox-workout_text_box">
-              <h4 className="navbar_main_menu_blackbox_h4">ROUTINES</h4>
-            </div>
+        <div className="navbar_main_menu_blackbox-workout_items">
+          <div className="navbar_main_menu_blackbox-workout_image_box">
+            <Image
+              src={customWorkouts}
+              alt="customWorkouts"
+              boxSize="50px"
+              objectFit="cover"
+            />
           </div>
-        </Link>
+          <div className="navbar_main_menu_blackbox-workout_text_box">
+            <h4 className="navbar_main_menu_blackbox_h4">ROUTINES</h4>
+          </div>
+        </div>
       </div>
-      {/************************  about  ********************* */}
+
+      {/* about********************* */}
       <div
         className="navbar_main_menu_blackbox-about"
         style={styleAbout}
@@ -636,21 +622,19 @@ const Navbar = () => {
           </div>
         </div>
 
-        <Link to="/careers">
-          <div className="navbar_main_menu_blackbox-workout_items">
-            <div className="navbar_main_menu_blackbox-workout_image_box">
-              <Image
-                src={careers}
-                alt="careers"
-                boxSize="50px"
-                objectFit="cover"
-              />
-            </div>
-            <div className="navbar_main_menu_blackbox-workout_text_box">
-              <h4 className="navbar_main_menu_blackbox_h4">CAREERS</h4>
-            </div>
+        <div className="navbar_main_menu_blackbox-workout_items">
+          <div className="navbar_main_menu_blackbox-workout_image_box">
+            <Image
+              src={careers}
+              alt="careers"
+              boxSize="50px"
+              objectFit="cover"
+            />
           </div>
-        </Link>
+          <div className="navbar_main_menu_blackbox-workout_text_box">
+            <h4 className="navbar_main_menu_blackbox_h4">CAREERS</h4>
+          </div>
+        </div>
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
             <Image
@@ -744,19 +728,6 @@ const Navbar = () => {
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
             <Image
-              src={expertArticles}
-              alt="expertArticles"
-              boxSize="50px"
-              objectFit="cover"
-            />
-          </div>
-          <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">EXPERT ARTICLES</h4>
-          </div>
-        </div>
-        <div className="navbar_main_menu_blackbox-workout_items">
-          <div className="navbar_main_menu_blackbox-workout_image_box">
-            <Image
               src={community}
               alt="community"
               boxSize="50px"
@@ -764,7 +735,15 @@ const Navbar = () => {
             />
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">EXPERT ARTICLES</h4>
+            <h4 className="navbar_main_menu_blackbox_h4">COMMUNITY</h4>
+          </div>
+        </div>
+        <div className="navbar_main_menu_blackbox-workout_items">
+          <div className="navbar_main_menu_blackbox-workout_image_box">
+            <Image src={blog} alt="blog" boxSize="50px" objectFit="cover" />
+          </div>
+          <div className="navbar_main_menu_blackbox-workout_text_box">
+            <h4 className="navbar_main_menu_blackbox_h4">BLOG</h4>
           </div>
         </div>
         <div className="navbar_main_menu_blackbox-workout_items">
@@ -777,14 +756,14 @@ const Navbar = () => {
             />
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">EXPERT ARTICLES</h4>
+            <h4 className="navbar_main_menu_blackbox_h4">WHAT'S NEW</h4>
           </div>
         </div>
       </div>
       {/* membership */}
       {user ? (
         <>
-          <div
+          <Box
             className="navbar_main_menu_blackbox_signup"
             style={styleSignUp}
             onMouseEnter={(e) => {
@@ -863,13 +842,12 @@ const Navbar = () => {
                   variant={"link"}
                   color={"gray"}
                   leftIcon={<MdExitToApp />}
-                  onClick={handleLogout}
                 >
                   SIGN OUT
                 </Button>
               </Flex>
             </div>
-          </div>
+          </Box>
         </>
       ) : (
         <>
@@ -947,18 +925,19 @@ const Navbar = () => {
           setStyleSeachBar({ display: "none" });
         }}
       >
-        <InputGroup w="40%">
+        <InputGroup>
           <Input
             variant="flushed"
             placeholder="KEYWORD SEARCH"
-            fontWeight={400}
+            fontWeight={"600"}
+            w="100%"
             h="70px"
             mt="20px"
             color={"rgb(255 255 255)"}
-            fontSize="14px"
+            fontSize="20px"
           />
           <InputRightElement
-            children={<BiSearchAlt2 color="rgb(255 255 255)" size={"20px"} />}
+            children={<BiSearchAlt2 color="rgb(255 255 255)" size={"25px"} />}
             mt="35px"
           />
         </InputGroup>

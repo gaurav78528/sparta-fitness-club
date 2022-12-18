@@ -129,7 +129,7 @@ const MealPlans = () => {
     >
       {products.product[0] &&  products.product[0].map((pro) => (
         <GridItem  key={pro.id} >
-          <Link to={`/Meal/${pro.id}`}>
+          {/* <Link to={`/Meal/${pro.id}`}> */}
             <Card
               
               min={pro.time}
@@ -137,8 +137,9 @@ const MealPlans = () => {
               des={pro.desc}
               src={pro.img}
               week={pro.week}
+              id={pro.id}
             />
-          </Link>
+          {/* </Link> */}
         </GridItem>
       ))}
     </Grid>

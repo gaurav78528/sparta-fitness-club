@@ -19,7 +19,9 @@ import Cart from "../pages/Cart/Cart";
 import HealthLiving from "../pages/HealthyLiving/HealthLiving";
 import WorkoutVideos from "../pages/Workouts/WorkoutVideos";
 import CustomWorkout from "../pages/Workouts/CustomWorkout/CustomWorkout";
-
+import WorkoutSingle from "../pages/Workouts/WorkoutSingle";
+import WorkSingleVideo from "../pages/Workouts/WorkSingleVideo";
+import MemberShip from "../pages/membership/Membership";
 const AllRoutes = () => {
   return (
     <Routes>
@@ -42,6 +44,8 @@ const AllRoutes = () => {
       <Route path="/Pilot/:id" element={<PilotSingle />}></Route>
       <Route path="/routine" element={<Routines />}></Route>
       <Route path="/Products/:id" element={<SinglePage />}></Route>
+      <Route path="/workoutsingle/:id" element={< WorkoutSingle/>}></Route>
+      <Route path="/worksinglevideo/:id" element={<WorkSingleVideo/>}></Route>
       <Route path="/meal-plan" element={<MealPlans />}></Route>
       <Route path="/Meal/:id" element={<MealSingle />}></Route>
       <Route path="/single" element={<SinglePage />}></Route>
@@ -49,6 +53,7 @@ const AllRoutes = () => {
       <Route path="/cart" element={<Cart />}></Route>
       <Route path="/healthy-living" element={<HealthLiving />}></Route>
       <Route path="/custom-workout" element={<CustomWorkout />}></Route>
+      <Route path="/membership" element={<MemberShip />}></Route>
     </Routes>
   );
 };
