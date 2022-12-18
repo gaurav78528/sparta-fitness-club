@@ -4,34 +4,43 @@ import { useState } from "react";
 import { Calender } from "./Calender";
 import { Flex, Spacer, Box, Heading, Text, Image } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 const Workout = () => {
   const [liked, setLiked] = useState(null);
-
+  const [showvideo,setShowVideo]=useState([])
   let work = [
     {
+      id:1,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1167-kickboxing-kettlebell-and-core-b94e.jpg",
+        url:"https://www.youtube.com/embed/vDXICApDZSI" ,
       name: "Kickboxing, Kettlebell, and Core ",
       des: "Bored Easily Combo Workout",
       day: "38 Min • Total Body ",
     },
     {
+      id:2,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1022-beginner-friendly-cardio-warm-up-bae7.jpg",
+        url:"https://www.youtube.com/embed/zdXZDuVX0nU",
       name: "Beginner-Friendly Cardio Warm Up  ",
       des: "Low-Impact Feel-Good Exercises ",
       day: "10 Min • Total Body ",
     },
     {
+      id:3,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1083-restorative-bodyweight-workout-ac41.jpg",
+        url:"https://www.youtube.com/embed/V8QQ_bYgWUw" ,
       name: "Restorative Bodyweight Workout  ",
       des: "Low Impact Exercises for Sore Muscles ",
       day: "24 Min • Total Body ",
     },
     {
+      id:4,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1133-single-weight-upper-body-a19e.jpg",
+        url:"https://www.youtube.com/embed/AhR9_YAKJcs" ,
       name: "Single Weight Upper Body  ",
       des: "Quick Strength Training Circuit  ",
       day: "23 Min • Upper Body  ",
@@ -158,6 +167,7 @@ const Workout = () => {
       day: "38 Min • Total Body ",
     },
   ];
+ 
   return (
     <div>
       {/* top image */}
@@ -194,8 +204,10 @@ const Workout = () => {
           </Flex>
           <Grid templateColumns="repeat(4, 1fr)" gap={4}>
             {work.map((e) => (
-              <GridItem h="auto" pb={5} bg="#fff">
+              <GridItem h="auto" pb={5} bg="#fff" className="effect" key={e.id}>
+                <Link to={`/worksinglevideo/${e.id}`}>
                 <Image src={e.image} />
+                </Link>
                 <Box color="white" className="Free">
                   <div>Free</div>
                 </Box>
@@ -242,7 +254,7 @@ const Workout = () => {
           </Flex>
           <Grid templateColumns="repeat(4, 1fr)" gap={4}>
             {work.map((e) => (
-              <GridItem h="auto" pb={5} bg="#fff">
+              <GridItem h="auto" pb={5} bg="#fff" className="effect1">
                 <Image src={e.image} />
 
                 <Box p={2} marginTop={2}>
@@ -288,7 +300,7 @@ const Workout = () => {
           </Flex>
           <Grid templateColumns="repeat(4, 1fr)" gap={4}>
             {work3.map((e) => (
-              <GridItem h="auto" pb={5} bg="#fff">
+              <GridItem h="auto" pb={5} bg="#fff" className="effect">
                 <Image src={e.image} />
 
                 <Box p={2} marginTop={2}>
@@ -334,7 +346,7 @@ const Workout = () => {
           </Flex>
           <Grid templateColumns="repeat(4, 1fr)" gap={4}>
             {work4.map((e) => (
-              <GridItem h="auto" pb={5} bg="#fff">
+              <GridItem h="auto" pb={5} bg="#fff" className="effect1">
                 <Image src={e.image} />
 
                 <Box p={2} marginTop={2}>
@@ -380,7 +392,7 @@ const Workout = () => {
           </Flex>
           <Grid templateColumns="repeat(4, 1fr)" gap={4}>
             {work5.map((e) => (
-              <GridItem h="auto" pb={5} bg="#fff">
+              <GridItem h="auto" pb={5} bg="#fff" className="effect">
                 <Image src={e.image} />
 
                 <Box p={2} marginTop={2}>
