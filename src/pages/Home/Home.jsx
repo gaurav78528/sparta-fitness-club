@@ -204,8 +204,8 @@ const Home = () => {
             keep you on track.
           </p>
           <div className="flex1">
-            {homearr.map((e) => (
-              <div className="flex2">
+            {homearr.map((e, id) => (
+              <div className="flex2" key={id}>
                 <h2>{e.name}</h2>
                 <div className="back">
                   <img src={e.image} />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -34,8 +34,7 @@ import {
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaRegUserCircle } from "react-icons/fa";
 import "./navbar.css";
-import { json, Link } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import customWorkouts from "../../assets/custom-workouts.png";
 import workoutVideo from "../../assets/workout-videos.png";
@@ -66,8 +65,7 @@ const Navbar = () => {
   const [styleSeachBar, setStyleSeachBar] = useState({ display: "none" });
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
- 
-  // const cartData = JSON.parse(localStorage.getItem("cartArray")) || [];
+
   let cartData = [
     {
       id: 1,
@@ -79,12 +77,8 @@ const Navbar = () => {
       id: 3,
     },
   ];
-   
-  
-
-  useEffect(() => {}, [data]);
   const { user, logOut } = useUserAuth();
-  console.log(user);
+  // console.log(user);
   const handleLogout = async () => {
     try {
       await logOut();
