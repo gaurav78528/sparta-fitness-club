@@ -8,11 +8,8 @@ import "./Plans.css"
 const Card = ({src, week, min, des, price,key,handleAdd }) => {
   return (
     <Box w={"full"}    className="hov" >
-        <Box>
-            
-             <Image w={"full"} src={src} alt="fitness"/>
-             
-           
+        <Box>    
+             <Image w={"full"} src={src} alt="fitness"/>           
         </Box>
         <Flex  p={2}>
             <Text>{week} - {min}</Text>
@@ -28,6 +25,7 @@ const Card = ({src, week, min, des, price,key,handleAdd }) => {
             </Box>
             <Box>
                 <Button gap={2} bg={"blue.300"} color={"white"} onClick={handleAdd}><MdOutlineShoppingBag fontSize={"25px"}/>ADD TO BAG</Button>
+                <Button gap={2} bg={"blue.300"} color={"white"}><MdOutlineShoppingBag fontSize={"25px"}/>ADD TO BAG</Button>
             </Box>
 
         </Flex>

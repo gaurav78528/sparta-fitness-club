@@ -1,3 +1,12 @@
+.effect:hover{
+    box-shadow: #4296cb 0px 3px 8px;
+ box-shadow: #4296cb 0px 1px 4px, #4296cb 0px 0px 0px 3px;
+ box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+ box-shadow: #4296cb 6px 2px 16px 0px, #4296cb -6px -2px 16px 0px;
+}
+.effect1:hover{
+    box-shadow: 	-6px -6px 11px 0px rgba(207,  52 ,  118 ,0.34);
+}
 .WorkTop
 {
     width: 100%;

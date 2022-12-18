@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -17,6 +17,7 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
+
 import { BsFillCaretDownFill } from "react-icons/bs";
 import { BiCalendar, BiHeart, BiSearchAlt2 } from "react-icons/bi";
 import {
@@ -33,11 +34,10 @@ import {
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaRegUserCircle } from "react-icons/fa";
 import "./navbar.css";
-import { json, Link } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import customWorkouts from "../../assets/custom-workouts.png";
-import workoutVideo from "../../assets/workout-video.png";
+import workoutVideo from "../../assets/workout-videos.png";
 import workoutPrograms from "../../assets/workout-programs.png";
 import mealPlans from "../../assets/meal-plans.png";
 import pilotPrograms from "../../assets/pilot-programs.png";
@@ -52,7 +52,6 @@ import tutorials from "../../assets/Tutorials.png";
 import ourTeam from "../../assets/our-team.png";
 import whatsNew from "../../assets/whats-new.png";
 import { useUserAuth } from "../../context/UserAuthContext";
- 
 
 const Navbar = () => {
   const [styleworkout, setStyle] = useState({ display: "none" });
@@ -66,13 +65,20 @@ const Navbar = () => {
   const [styleSeachBar, setStyleSeachBar] = useState({ display: "none" });
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-  let data = JSON.parse(localStorage.getItem("auth")) || "";
 
-  const cartData = JSON.parse(localStorage.getItem("cartArray")) || [];
-
-  useEffect(() => {}, [data]);
+  let cartData = [
+    {
+      id: 1,
+    },
+    {
+      id: 2,
+    },
+    {
+      id: 3,
+    },
+  ];
   const { user, logOut } = useUserAuth();
-  console.log(user);
+  // console.log(user);
   const handleLogout = async () => {
     try {
       await logOut();
@@ -199,8 +205,12 @@ const Navbar = () => {
         {/* small screen */}
         <Box
           display={["flex", "flex", "flex", "none", "none"]}
-          pl="57%"
+          // pl="57%"
+          alignItems="center"
+          justifyContent="flex-end"
           bgColor="white"
+          w="100%"
+          // border="1px solid red"
         >
           <div
             className="navbar_main_menu_items_respons_signup"
@@ -288,12 +298,12 @@ const Navbar = () => {
               </Link>
               <Divider orientation="horizontal" w={"90%"} />
               <Link to={"/workout"}>
-                <Text color="rgb(255,255,255)" pt="10px" fontSize={"14px"} >
+                <Text color="rgb(255,255,255)" pt="10px" fontSize={"14px"}>
                   WORKOUTS
                 </Text>
               </Link>
               <Link to="/workoutvideos">
-                <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}  >
+                <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                   WORKOUT VIDEOS
                 </Text>
               </Link>
@@ -491,9 +501,7 @@ const Navbar = () => {
                 alt="workoutVideo"
                 boxSize="50px"
                 objectFit="cover"
-                  
               />
-           
             </div>
             <div className="navbar_main_menu_blackbox-workout_text_box">
               <h4 className="navbar_main_menu_blackbox_h4">WORKOUT VIDEOS</h4>
@@ -509,7 +517,6 @@ const Navbar = () => {
                 boxSize="50px"
                 objectFit="cover"
               />
-             
             </div>
             <div className="navbar_main_menu_blackbox-workout_text_box">
               <h4 className="navbar_main_menu_blackbox_h4">CUSTOM WORKOUTS</h4>
@@ -538,9 +545,6 @@ const Navbar = () => {
                 boxSize="50px"
                 objectFit="cover"
               />
-          
-                                        
-              
             </div>
             <div className="navbar_main_menu_blackbox-workout_text_box">
               <h4 className="navbar_main_menu_blackbox_h4">WORKOUT PROGRAMS</h4>
@@ -556,8 +560,6 @@ const Navbar = () => {
                 boxSize="50px"
                 objectFit="cover"
               />
-              
-                                       
             </div>
             <div className="navbar_main_menu_blackbox-workout_text_box">
               <h4 className="navbar_main_menu_blackbox_h4">MEAL PLANS</h4>
@@ -573,7 +575,6 @@ const Navbar = () => {
                 boxSize="50px"
                 objectFit="cover"
               />
-             
             </div>
             <div className="navbar_main_menu_blackbox-workout_text_box">
               <h4 className="navbar_main_menu_blackbox_h4">PILOT PROGRAMS</h4>
@@ -588,8 +589,6 @@ const Navbar = () => {
               boxSize="50px"
               objectFit="cover"
             />
-             
-                                        
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
             <h4 className="navbar_main_menu_blackbox_h4">ROUTINES</h4>
@@ -610,7 +609,7 @@ const Navbar = () => {
       >
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
-          <i class="icon -about" aria-hidden="true"></i>
+            <Image src={about} alt="about" boxSize="50px" objectFit="cover" />
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
             <h4 className="navbar_main_menu_blackbox_h4">ABOUT</h4>
@@ -625,7 +624,6 @@ const Navbar = () => {
               boxSize="50px"
               objectFit="cover"
             />
-           
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
             <h4 className="navbar_main_menu_blackbox_h4">CAREERS</h4>
@@ -639,7 +637,6 @@ const Navbar = () => {
               boxSize="50px"
               objectFit="cover"
             />
-            
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
             <h4 className="navbar_main_menu_blackbox_h4">TUTORIALS</h4>
@@ -653,7 +650,6 @@ const Navbar = () => {
               boxSize="50px"
               objectFit="cover"
             />
-            
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
             <h4 className="navbar_main_menu_blackbox_h4">OUR TEAM</h4>
@@ -679,8 +675,6 @@ const Navbar = () => {
               boxSize="50px"
               objectFit="cover"
             />
-           
-                                       
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
             <h4 className="navbar_main_menu_blackbox_h4">EXPERT ARTICLES</h4>
@@ -694,8 +688,6 @@ const Navbar = () => {
               boxSize="50px"
               objectFit="cover"
             />
-        
-                                        
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
             <h4 className="navbar_main_menu_blackbox_h4">HEALTHY RECIPES</h4>
@@ -709,8 +701,6 @@ const Navbar = () => {
               boxSize="50px"
               objectFit="cover"
             />
-            
-                                       
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
             <h4 className="navbar_main_menu_blackbox_h4">WELLNESS VIDEOS</h4>
@@ -732,30 +722,22 @@ const Navbar = () => {
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
             <Image
-              src={expertArticles}
-              alt="expertArticles"
-              boxSize="50px"
-              objectFit="cover"
-            />
-          
-                                        
-          </div>
-          <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">EXPERT ARTICLES</h4>
-          </div>
-        </div>
-        <div className="navbar_main_menu_blackbox-workout_items">
-          <div className="navbar_main_menu_blackbox-workout_image_box">
-            <Image
               src={community}
               alt="community"
               boxSize="50px"
               objectFit="cover"
             />
-          
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">EXPERT ARTICLES</h4>
+            <h4 className="navbar_main_menu_blackbox_h4">COMMUNITY</h4>
+          </div>
+        </div>
+        <div className="navbar_main_menu_blackbox-workout_items">
+          <div className="navbar_main_menu_blackbox-workout_image_box">
+            <Image src={blog} alt="blog" boxSize="50px" objectFit="cover" />
+          </div>
+          <div className="navbar_main_menu_blackbox-workout_text_box">
+            <h4 className="navbar_main_menu_blackbox_h4">BLOG</h4>
           </div>
         </div>
         <div className="navbar_main_menu_blackbox-workout_items">
@@ -766,17 +748,16 @@ const Navbar = () => {
               boxSize="50px"
               objectFit="cover"
             />
-           
           </div>
           <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">EXPERT ARTICLES</h4>
+            <h4 className="navbar_main_menu_blackbox_h4">WHAT'S NEW</h4>
           </div>
         </div>
       </div>
       {/* membership */}
       {user ? (
         <>
-          <div
+          <Box
             className="navbar_main_menu_blackbox_signup"
             style={styleSignUp}
             onMouseEnter={(e) => {
@@ -860,7 +841,7 @@ const Navbar = () => {
                 </Button>
               </Flex>
             </div>
-          </div>
+          </Box>
         </>
       ) : (
         <>

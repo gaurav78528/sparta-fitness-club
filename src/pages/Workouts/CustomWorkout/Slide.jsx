@@ -9,12 +9,10 @@ import {
   Container,
   Button,
 } from '@chakra-ui/react';
-// Here we have used react-icons package for the icons
+import "./Slider.css"
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
-// And react-slick as our Carousel Lib
- //import Slider from 'react-slick';
 
-// Settings for the slider
+import Slider from 'react-slick';
 const settings = {
   dots: true,
   arrows: false,
@@ -27,40 +25,45 @@ const settings = {
   slidesToScroll: 1,
 };
 
-export default function SlideCard() {
-  // As we have used custom buttons, we need a reference variable to
-  // change the state
+export default function Slide() {
+  
   const [slider, setSlider] = React.useState(null);
 
-  // These are the breakpoints which changes the position of the
-  // buttons as the screen size changes
+ 
   const top = useBreakpointValue({ base: '90%', md: '50%' });
   const side = useBreakpointValue({ base: '30%', md: '40px' });
 
-  // This list contains all the data for carousels
-  // This can be static or loaded from a server
+
   const cards = [
     {
-      title: 'Routines FB Plus',
+      title: 'Custom Workouts',
       text:
-        "Routines allow you to build your own workout plans that you can save and schedule on the calendar. With access to our entire workout library,",
+        "FB Plus",
       image:
-        'https://cloudfront.fitnessblender.com/assets/img/fbplus/routines.jpg',
+        'https://cloudfront.fitnessblender.com/assets/img/fbplus/fingerprint.jpg',
     },
     {
-      title: 'Routines FB Plus',
+        title: 'Custom Workouts',
+        text:
+          "FB Plus",
+        image:
+          'https://d18zdz9g6n5za7.cloudfront.net/workouts_programs/masthead-workouts.jpg',
+      },
+    {
+      title: 'Custom Workouts',
       text:
-        "Whether you want to save time scheduling your favorite morning warm-up each week, or you want to create a comprehensive fitness plan",
+        "FB Plus",
       image:
         'https://d18zdz9g6n5za7.cloudfront.net/wellness-videos/67-guided-practice-to-embrace-vulnerability-96cb.jpg',
     },
     {
-      title: 'Routines FB Plus',
+      title: 'Custom Workouts',
       text:
-        "Routines wouldn't be complete without the ability to add your own workouts.",
+        "FB Plus",
       image:
         'https://d18zdz9g6n5za7.cloudfront.net/wellness-videos/64-guided-meditation-for-grief-9028.jpg',
     },
+   
   ];
 
   return (
@@ -127,11 +130,12 @@ export default function SlideCard() {
                 top="50%"
                 transform="translate(0, -50%)">
                 <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} color="white">
-                  {card.title} <Button bg={"green.400"}>ALL ACCESS</Button>
+                  {card.title} 
                 </Heading>
-                <Text fontSize={{ base: 'md', lg: 'lg' }} color="white">
-                  {card.text}
-                </Text>
+                <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} color="rgba(255,255,255,0.5)" mt={-10}>
+                  {card.text} <Button bg={"green.400"}>ALL ACCESS</Button>
+                </Heading>
+                <Text color={"white"} p={3} border="1px solid #4296cb" w={"50%"} textAlign="center" className="text"> Join All Access Now</Text>
               </Stack>
             </Container>
           </Box>
