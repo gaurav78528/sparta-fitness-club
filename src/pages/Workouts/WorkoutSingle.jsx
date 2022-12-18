@@ -37,10 +37,7 @@ const WorkoutSingle = () => {
     )
 },[id])
   return (
-    <div>
-     
-        
-      
+    <div> 
              <Box w={"80%"}
              m="auto"
              mt={4}
