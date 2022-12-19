@@ -22,7 +22,7 @@ import {
   IconButton,
   Hide,
 } from "@chakra-ui/react";
- 
+
 import { BiSearchAlt2 } from "react-icons/bi";
 import {
   AddIcon,
@@ -33,7 +33,11 @@ import {
 import { Link } from "react-router-dom";
 
 const Pilot = () => {
+  const products = useSelector((store) => store.prod);
+  const dispatch = useDispatch();
+  const { isOpen, onToggle } = useDisclosure();
 
+<<<<<<< HEAD
     const pilots = useSelector((store) => store.pilot);
     const dispatch = useDispatch();
     const { isOpen, onToggle } = useDisclosure();
@@ -65,56 +69,83 @@ const Pilot = () => {
               Filter
               <TriangleDownIcon marginLeft={2} />
             </Button>
+=======
+  useEffect(() => {
+    dispatch(getPilot());
+  }, []);
 
-            <Collapse in={isOpen} animateOpacity>
-              <Box
-                p="40px"
-                color="black"
-                mt="4"
-                bg="gray.300"
-                rounded="md"
-                shadow="md"
-              >
-                <h1>Hello Its Me!</h1>
-              </Box>
-            </Collapse>
+  return (
+    <div>
+      <Box marginLeft={20} marginTop={"100px"} marginBottom={"20px"}>
+        <Heading
+          fontFamily={
+            "Maison Neue,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif"
+          }
+          fontSize={"40px"}
+        >
+          Pilot Programs
+        </Heading>
+      </Box>
+      <Box w="full">
+        <Flex h={"full"} border="1px solid gray">
+          <Box marginLeft={12} display="flex">
+            <Box>
+              <Button onClick={onToggle}>
+                Filter
+                <TriangleDownIcon marginLeft={2} />
+              </Button>
+>>>>>>> b6156edae45204181f88c514f0c43d8d3a04f6ef
+
+              <Collapse in={isOpen} animateOpacity>
+                <Box
+                  p="40px"
+                  color="black"
+                  mt="4"
+                  bg="gray.300"
+                  rounded="md"
+                  shadow="md"
+                >
+                  <h1>Hello Its Me!</h1>
+                </Box>
+              </Collapse>
+            </Box>
           </Box>
-        </Box>
-        <Box>
-          <Accordion allowMultiple>
-            <AccordionItem>
-              {({ isExpanded }) => (
-                <>
-                  <h2>
-                    <AccordionButton>
-                      <SearchIcon fontSize="20px" />
-                      <Box as="span" flex="1" textAlign="left" marginLeft={2}>
-                        <Hide below="1000px">
-                          <Text fontSize={"20px"}>Search</Text>
-                        </Hide>
-                      </Box>
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4}>
-                    <Flex>
-                      <Input
-                        w={{ base: "100px", md: "300px", lg: "400px" }}
-                        placeholder="Search Item"
-                      />
-                      <IconButton
-                        aria-label="Search database"
-                        icon={<SearchIcon />}
-                      />
-                    </Flex>
-                  </AccordionPanel>
-                </>
-              )}
-            </AccordionItem>
-          </Accordion>
-        </Box>
-      </Flex>
-    </Box>
+          <Box>
+            <Accordion allowMultiple>
+              <AccordionItem>
+                {({ isExpanded }) => (
+                  <>
+                    <h2>
+                      <AccordionButton>
+                        <SearchIcon fontSize="20px" />
+                        <Box as="span" flex="1" textAlign="left" marginLeft={2}>
+                          <Hide below="1000px">
+                            <Text fontSize={"20px"}>Search</Text>
+                          </Hide>
+                        </Box>
+                      </AccordionButton>
+                    </h2>
+                    <AccordionPanel pb={4}>
+                      <Flex>
+                        <Input
+                          w={{ base: "100px", md: "300px", lg: "400px" }}
+                          placeholder="Search Item"
+                        />
+                        <IconButton
+                          aria-label="Search database"
+                          icon={<SearchIcon />}
+                        />
+                      </Flex>
+                    </AccordionPanel>
+                  </>
+                )}
+              </AccordionItem>
+            </Accordion>
+          </Box>
+        </Flex>
+      </Box>
 
+<<<<<<< HEAD
     <Grid
       w={"95%"}
       m="auto"
@@ -142,9 +173,37 @@ const Pilot = () => {
         </GridItem>
       ))}
     </Grid>
+=======
+      <Grid
+        w={"95%"}
+        m="auto"
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+        gap={4}
+        marginTop="20px"
+        marginBottom={"20px"}
+      >
+        {products.product[0] &&
+          products.product[0].map((pro) => (
+            <GridItem key={pro.id}>
+              <Link to={`/Pilot/${pro.id}`}>
+                <Card
+                  min={pro.time}
+                  price={pro.price}
+                  des={pro.desc}
+                  src={pro.img}
+                  week={pro.week}
+                />
+              </Link>
+            </GridItem>
+          ))}
+      </Grid>
+    </div>
+  );
+};
+>>>>>>> b6156edae45204181f88c514f0c43d8d3a04f6ef
 
-  </div>
-  )
-}
-
-export default Pilot
+export default Pilot;

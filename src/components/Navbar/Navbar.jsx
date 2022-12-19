@@ -52,6 +52,7 @@ import tutorials from "../../assets/Tutorials.png";
 import ourTeam from "../../assets/our-team.png";
 import whatsNew from "../../assets/whats-new.png";
 import { useUserAuth } from "../../context/UserAuthContext";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [styleworkout, setStyle] = useState({ display: "none" });
@@ -65,18 +66,11 @@ const Navbar = () => {
   const [styleSeachBar, setStyleSeachBar] = useState({ display: "none" });
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const Productarray = useSelector((store) => store.Product);
 
-  let cartData = [
-    {
-      id: 1,
-    },
-    {
-      id: 2,
-    },
-    {
-      id: 3,
-    },
-  ];
+  let totalCartItems = Productarray.product.length;
+  console.log(totalCartItems);
+
   const { user, logOut } = useUserAuth();
   // console.log(user);
   const handleLogout = async () => {
@@ -184,7 +178,9 @@ const Navbar = () => {
                 setStyleAbout({ display: "none" });
               }}
             >
-              <h4 className="navbar_main_menu_items_about_text">ABOUT</h4>
+              <Link to="/about">
+                <h4 className="navbar_main_menu_items_about_text">ABOUT</h4>
+              </Link>
               <BsFillCaretDownFill color="rgb(66,150,203)" size={"10px"} />
             </div>
 
@@ -302,12 +298,12 @@ const Navbar = () => {
                   WORKOUTS
                 </Text>
               </Link>
-              <Link to="/workoutvideos">
+              <Link to="/workout-videos">
                 <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                   WORKOUT VIDEOS
                 </Text>
               </Link>
-              <Link to={"/customworkout"}>
+              <Link to={"/custom-workout"}>
                 <Text
                   color="rgb(167,170,174)"
                   pt="10px"
@@ -381,11 +377,10 @@ const Navbar = () => {
                 WHATS'S NEW
               </Text>
               <Divider orientation="horizontal" w={"90%"} />
-              <Link to="/about">
-                <Text color="rgb(255,255,255)" pt="10px" fontSize={"14px"}>
-                  ABOUT
-                </Text>
-              </Link>
+
+              <Text color="rgb(255,255,255)" pt="10px" fontSize={"14px"}>
+                ABOUT
+              </Text>
 
               <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                 CAREERS
@@ -476,7 +471,7 @@ const Navbar = () => {
                 <MdOutlineShoppingBag color="black" size={"22px"} />
               </Link>
               <p className="navbar_main_menu_items_shopping_bag_cart_number">
-                {cartData.length > 0 ? cartData.length : null}
+                {totalCartItems > 0 ? totalCartItems : null}
               </p>
             </div>
           </div>
@@ -493,7 +488,7 @@ const Navbar = () => {
           setStyle({ display: "none" });
         }}
       >
-        <Link to={"/workoutvideos"}>
+        <Link to={"/workout-videos"}>
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -508,7 +503,7 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <Link to={"/customworkout"}>
+        <Link to={"/custom-workouts"}>
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -582,6 +577,7 @@ const Navbar = () => {
           </div>
         </Link>
         <Link to="/routine">
+ 
        
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
@@ -596,6 +592,22 @@ const Navbar = () => {
             <h4 className="navbar_main_menu_blackbox_h4">ROUTINES</h4>
           </div>
         </div>
+=======
+          <div className="navbar_main_menu_blackbox-workout_items">
+            <div className="navbar_main_menu_blackbox-workout_image_box">
+              <Image
+                src={customWorkouts}
+                alt="customWorkouts"
+                boxSize="50px"
+                objectFit="cover"
+              />
+            </div>
+
+            <div className="navbar_main_menu_blackbox-workout_text_box">
+              <h4 className="navbar_main_menu_blackbox_h4">ROUTINES</h4>
+            </div>
+          </div>
+ 
         </Link>
       </div>
 
@@ -610,28 +622,32 @@ const Navbar = () => {
           setStyleAbout({ display: "none" });
         }}
       >
-        <div className="navbar_main_menu_blackbox-workout_items">
-          <div className="navbar_main_menu_blackbox-workout_image_box">
-            <Image src={about} alt="about" boxSize="50px" objectFit="cover" />
+        <Link to="/about">
+          <div className="navbar_main_menu_blackbox-workout_items">
+            <div className="navbar_main_menu_blackbox-workout_image_box">
+              <Image src={about} alt="about" boxSize="50px" objectFit="cover" />
+            </div>
+            <div className="navbar_main_menu_blackbox-workout_text_box">
+              <h4 className="navbar_main_menu_blackbox_h4">ABOUT</h4>
+            </div>
           </div>
-          <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">ABOUT</h4>
-          </div>
-        </div>
+        </Link>
 
-        <div className="navbar_main_menu_blackbox-workout_items">
-          <div className="navbar_main_menu_blackbox-workout_image_box">
-            <Image
-              src={careers}
-              alt="careers"
-              boxSize="50px"
-              objectFit="cover"
-            />
+        <Link to="/careers">
+          <div className="navbar_main_menu_blackbox-workout_items">
+            <div className="navbar_main_menu_blackbox-workout_image_box">
+              <Image
+                src={careers}
+                alt="careers"
+                boxSize="50px"
+                objectFit="cover"
+              />
+            </div>
+            <div className="navbar_main_menu_blackbox-workout_text_box">
+              <h4 className="navbar_main_menu_blackbox_h4">CAREERS</h4>
+            </div>
           </div>
-          <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">CAREERS</h4>
-          </div>
-        </div>
+        </Link>
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
             <Image

@@ -1,26 +1,46 @@
-import { get_Gift_failure, get_Gift_loading, get_Gift_success } from "./actionType";
+import {
+  GET_GIFT_FAILURE,
+  GET_GIFT_LOADING,
+  GET_GIFT_SUCCESS,
+  GET_PASSES_FAILURE,
+  GET_PASSES_LOADING,
+  GET_PASSES_SUCCESS,
+} from "./actionType";
 
-const initstate={
-    isloading:false,
-    isError:false,
-    gift:[]
+// reducer
+const initstate = {
+  isloading: false,
+  isError: false,
+  gift: [],
 };
-export const reducer=(state=initstate,{type,payload})=>{
-    switch(type){
-        case get_Gift_loading:{
-            return {...state,isloading:true}
-        }
-        case get_Gift_success:{
-          // console.log(payload);
-          const newdata=[...state.gift,payload]
-          
-            return {...state,isloading:false,gift:newdata}
-        }
-        
-        case get_Gift_failure:{
-            return {...state,isError:true}
-        }
-        default:
-    return state;
+export const reducer = (state = initstate, { type, payload }) => {
+  switch (type) {
+    case GET_GIFT_LOADING: {
+      return { ...state, isloading: true };
     }
-}
+    case GET_GIFT_SUCCESS: {
+      const newdata = [...state.gift, payload];
+
+      return { ...state, isloading: false, gift: newdata };
+    }
+
+    case GET_GIFT_FAILURE: {
+      return { ...state, isError: true };
+    }
+    case GET_PASSES_LOADING: {
+      return { ...state, isloading: true };
+    }
+    case GET_PASSES_SUCCESS: {
+      // console.log(payload);
+      const newdata = [...state.gift, payload];
+
+      return { ...state, isloading: false, gift: newdata };
+    }
+
+    case GET_PASSES_FAILURE: {
+      return { ...state, isError: true };
+    }
+    default:
+      return state;
+  }
+};

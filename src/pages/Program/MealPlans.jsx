@@ -31,10 +31,14 @@ import {
   TriangleDownIcon,
 } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
-
+// hello
 const MealPlans = () => {
 
+<<<<<<< HEAD
     const meals = useSelector((store) => store.meal);
+=======
+    const products = useSelector((store) => store.prod);
+>>>>>>> b6156edae45204181f88c514f0c43d8d3a04f6ef
     const dispatch = useDispatch();
     const { isOpen, onToggle } = useDisclosure();
    

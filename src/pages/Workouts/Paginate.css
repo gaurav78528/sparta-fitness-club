@@ -1,0 +1,30 @@
+.pagination{
+
+    color: black;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+   text-align: center;
+    
+}
+.pagination li{
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+.pagination li:hover{
+    color: blue;
+    font-size: 25px;
+    font-weight: bold;
+    
+    
+}
+.pagination li :active{
+    color: rgb(156, 3, 161);
+}

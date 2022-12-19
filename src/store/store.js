@@ -11,7 +11,6 @@ import {workoutReducer} from "../pages/Workouts/REDUX/workout.reducer"
 import thunk from "redux-thunk";
 import { mealReducer, pilotReducer, productReducer } from "./workout/work.reducers";
 import { reducer as giftReducer } from "./shop/reducer";
-import { healthLivingReducer } from "./healthyLiving/healthyLiving.reducer";
 import {reducer as cartReducer} from "./Cart/reducer"
 const root_reducer = combineReducers({
   app: appReducer,
@@ -19,7 +18,6 @@ const root_reducer = combineReducers({
   gift: giftReducer,
   // product: productReducer,
   prod: productReducer,
-  healthLiving: healthLivingReducer,
   workout:workoutReducer,
   Product:cartReducer,
   meal:mealReducer,

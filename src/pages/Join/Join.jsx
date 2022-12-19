@@ -36,27 +36,14 @@ const Join = () => {
     passwordConfirm: "",
   });
   const [error, setError] = useState("");
-  // const dispatch = useDispatch();
-  // const { currentUser } = useSelector((state) => state.auth);
-  // const history = unstable_HistoryRouter();
   const navigate = useNavigate();
   const { firstName, lastName, email, username, password, passwordConfirm } =
     userInput;
 
   const { signUp } = useUserAuth();
-  // useEffect(() => {
-  //   if (currentUser) {
-  //     navigate("/");
-  //   }
-  // }, [currentUser]);
-  // const handleSubmit = () => {
-  //   if (password !== passwordConfirm) {
-  //     return;
-  //   }
-  //   dispatch(registerInitiate(email, password, username));
-  // };
+
   const handleSubmit = async () => {
-    console.log(userInput);
+    // console.log(userInput);
     try {
       await signUp(email, password);
       navigate("/login");

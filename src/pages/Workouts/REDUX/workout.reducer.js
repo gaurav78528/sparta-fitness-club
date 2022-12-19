@@ -28,7 +28,18 @@ export const workoutReducer = (state = initialState, action) => {
 				loading: false,
 				error: action.payload,
 			};
-		
+			case actions.SORT_POSTS_ASC:
+				const sortAsc = action.payload.sort((a, b) => (a.time < b.time ? 1 : a.time > b.time ? -1 : 0));
+				return {
+					...state,
+					posts: sortAsc,
+				};
+				case actions.SORT_POSTS_DESC:
+			              const sortDesc = action.payload.sort((a, b) => (a.time < b.time ? -1 : a.time > b.time ? 1 : 0));
+			             return {
+				         ...state,
+				          posts: sortDesc,
+			        };
 		
 		case actions.SEARCH_POSTS:
 			return {
