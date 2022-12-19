@@ -7,6 +7,7 @@ import {
   GET_PASSES_SUCCESS,
 } from "./actionType";
 
+// reducer
 const initstate = {
   isloading: false,
   isError: false,
@@ -18,7 +19,6 @@ export const reducer = (state = initstate, { type, payload }) => {
       return { ...state, isloading: true };
     }
     case GET_GIFT_SUCCESS: {
-      // console.log(payload);
       const newdata = [...state.gift, payload];
 
       return { ...state, isloading: false, gift: newdata };
