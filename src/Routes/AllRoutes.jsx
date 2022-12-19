@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import About from "../pages/about/About";
 import Home from "../pages/Home/Home";
 import Join from "../pages/Join/Join";
 import Login from "../pages/Login/Login";
@@ -22,14 +21,13 @@ import CustomWorkout from "../pages/Workouts/CustomWorkout/CustomWorkout";
 import WorkoutSingle from "../pages/Workouts/WorkoutSingle";
 import WorkSingleVideo from "../pages/Workouts/WorkSingleVideo";
 import MemberShip from "../pages/membership/Membership";
-import AboutY from "../pages/AboutY/AboutY";
 import Checkout from "../pages/checkout/Checkout";
 import Payment from "../pages/Payment/Payment";
 import OrderSuccess from "../pages/OrderSuccess/OrderSuccess";
+import About from "../pages/AboutY/AboutY";
 const AllRoutes = () => {
   return (
     <Routes>
-      <Route path="/about" element={<About />}></Route>
       <Route path="/" element={<Home />}></Route>
       <Route path="/plans" element={<Plans />}></Route>
       <Route path="/store" element={<Shop />}></Route>
@@ -57,9 +55,7 @@ const AllRoutes = () => {
       ></Route>
       <Route path="/healthy-living" element={<HealthLiving />}></Route>
       <Route path="/about" element={<About />}></Route>
-      <Route path="/abouty" element={<AboutY />}></Route>
       <Route path="/custom-workouts" element={<CustomWorkout />}></Route>
->
       <Route path="/membership" element={<MemberShip />}></Route>
       <Route path="/checkout" element={<Checkout />}></Route>
       <Route path="/checkout/payment" element={<Payment />}></Route>

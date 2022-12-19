@@ -178,7 +178,9 @@ const Navbar = () => {
                 setStyleAbout({ display: "none" });
               }}
             >
-              <h4 className="navbar_main_menu_items_about_text">ABOUT</h4>
+              <Link to="/about">
+                <h4 className="navbar_main_menu_items_about_text">ABOUT</h4>
+              </Link>
               <BsFillCaretDownFill color="rgb(66,150,203)" size={"10px"} />
             </div>
 
@@ -375,11 +377,10 @@ const Navbar = () => {
                 WHATS'S NEW
               </Text>
               <Divider orientation="horizontal" w={"90%"} />
-              <Link to="/about">
-                <Text color="rgb(255,255,255)" pt="10px" fontSize={"14px"}>
-                  ABOUT
-                </Text>
-              </Link>
+
+              <Text color="rgb(255,255,255)" pt="10px" fontSize={"14px"}>
+                ABOUT
+              </Text>
 
               <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                 CAREERS
@@ -575,19 +576,22 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <div className="navbar_main_menu_blackbox-workout_items">
-          <div className="navbar_main_menu_blackbox-workout_image_box">
-            <Image
-              src={customWorkouts}
-              alt="customWorkouts"
-              boxSize="50px"
-              objectFit="cover"
-            />
+        <Link to="/routine">
+          <div className="navbar_main_menu_blackbox-workout_items">
+            <div className="navbar_main_menu_blackbox-workout_image_box">
+              <Image
+                src={customWorkouts}
+                alt="customWorkouts"
+                boxSize="50px"
+                objectFit="cover"
+              />
+            </div>
+
+            <div className="navbar_main_menu_blackbox-workout_text_box">
+              <h4 className="navbar_main_menu_blackbox_h4">ROUTINES</h4>
+            </div>
           </div>
-          <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">ROUTINES</h4>
-          </div>
-        </div>
+        </Link>
       </div>
 
       {/* about********************* */}
@@ -601,28 +605,32 @@ const Navbar = () => {
           setStyleAbout({ display: "none" });
         }}
       >
-        <div className="navbar_main_menu_blackbox-workout_items">
-          <div className="navbar_main_menu_blackbox-workout_image_box">
-            <Image src={about} alt="about" boxSize="50px" objectFit="cover" />
+        <Link to="/about">
+          <div className="navbar_main_menu_blackbox-workout_items">
+            <div className="navbar_main_menu_blackbox-workout_image_box">
+              <Image src={about} alt="about" boxSize="50px" objectFit="cover" />
+            </div>
+            <div className="navbar_main_menu_blackbox-workout_text_box">
+              <h4 className="navbar_main_menu_blackbox_h4">ABOUT</h4>
+            </div>
           </div>
-          <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">ABOUT</h4>
-          </div>
-        </div>
+        </Link>
 
-        <div className="navbar_main_menu_blackbox-workout_items">
-          <div className="navbar_main_menu_blackbox-workout_image_box">
-            <Image
-              src={careers}
-              alt="careers"
-              boxSize="50px"
-              objectFit="cover"
-            />
+        <Link to="/careers">
+          <div className="navbar_main_menu_blackbox-workout_items">
+            <div className="navbar_main_menu_blackbox-workout_image_box">
+              <Image
+                src={careers}
+                alt="careers"
+                boxSize="50px"
+                objectFit="cover"
+              />
+            </div>
+            <div className="navbar_main_menu_blackbox-workout_text_box">
+              <h4 className="navbar_main_menu_blackbox_h4">CAREERS</h4>
+            </div>
           </div>
-          <div className="navbar_main_menu_blackbox-workout_text_box">
-            <h4 className="navbar_main_menu_blackbox_h4">CAREERS</h4>
-          </div>
-        </div>
+        </Link>
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
             <Image
