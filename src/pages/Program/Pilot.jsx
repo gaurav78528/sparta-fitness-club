@@ -34,7 +34,7 @@ import { Link } from "react-router-dom";
 
 const Pilot = () => {
 
-    const products = useSelector((store) => store.prod);
+    const pilots = useSelector((store) => store.pilot);
     const dispatch = useDispatch();
     const { isOpen, onToggle } = useDisclosure();
    
@@ -54,7 +54,7 @@ const Pilot = () => {
         }
         fontSize={"40px"}
       >
-        Meal Plans
+        Pilot Program
       </Heading>
     </Box>
     <Box w="full">
@@ -127,7 +127,7 @@ const Pilot = () => {
       marginTop="20px"
       marginBottom={"20px"}
     >
-      {products.product[0] &&  products.product[0].map((pro) => (
+      {pilots.pilot[0] &&  pilots.pilot[0].map((pro) => (
         <GridItem  key={pro.id} >
           <Link to={`/Pilot/${pro.id}`}>
             <Card

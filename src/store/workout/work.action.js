@@ -13,28 +13,28 @@ export const getProduct = () =>(dispatch) => {
 }
 
 export const getMeal = () =>(dispatch) => {
-    dispatch({type: type.GET_PRODUCT_LOADING})  
-        return axios.get("https://fitness-handler.vercel.app/Meal?&_limit=10")
+    dispatch({type: type.GET_MEAL_LOADING})  
+        return axios.get("https://fitness-handler.vercel.app/Meal")
         .then((res) => {
-            dispatch({type: type.GET_PRODUCT_SUCCESS, payload: res.data})
+            dispatch({type: type.GET_MEAL_SUCCESS, payload: res.data})
 
         })
         .catch((err) => {
-            dispatch({type: type.GET_PRODUCT_ERROR});
+            dispatch({type: type.GET_MEAL_ERROR});
 
         })
 
 }
 
 export const getPilot = () =>(dispatch) => {
-    dispatch({type: type.GET_PRODUCT_LOADING})  
+    dispatch({type: type.GET_PILOT_LOADING})  
         return axios.get("https://fitness-handler.vercel.app/Pilot")
         .then((res) => {
-            dispatch({type: type.GET_PRODUCT_SUCCESS, payload: res.data})
+            dispatch({type: type.GET_PILOT_SUCCESS, payload: res.data})
 
         })
         .catch((err) => {
-            dispatch({type: type.GET_PRODUCT_ERROR});
+            dispatch({type: type.GET_PILOT_ERROR});
 
         })
 

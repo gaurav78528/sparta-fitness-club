@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { useSelector, useDispatch } from "react-redux";
-import { getMeal, getProduct } from "../../store/workout/work.action";
+import { getMeal} from "../../store/workout/work.action";
 import {
   Grid,
   GridItem,
@@ -34,7 +34,7 @@ import { Link } from "react-router-dom";
 
 const MealPlans = () => {
 
-    const products = useSelector((store) => store.product);
+    const meals = useSelector((store) => store.meal);
     const dispatch = useDispatch();
     const { isOpen, onToggle } = useDisclosure();
    
@@ -127,7 +127,7 @@ const MealPlans = () => {
       marginTop="20px"
       marginBottom={"20px"}
     >
-      {products.product[0] &&  products.product[0].map((pro) => (
+      {meals.meal[0] &&  meals.meal[0].map((pro) => (
         <GridItem  key={pro.id} >
           {/* <Link to={`/Meal/${pro.id}`}> */}
             <Card

@@ -328,7 +328,7 @@ const Navbar = () => {
                   WORKOUT PROGRAMS
                 </Text>
               </Link>
-              <Link to="/meal">
+              <Link to="/meal-plan">
                 <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                   MEAL PLANS
                 </Text>
@@ -551,7 +551,7 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <Link to="/meal">
+        <Link to="/meal-plan">
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -581,6 +581,8 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
+        <Link to="/routine">
+       
         <div className="navbar_main_menu_blackbox-workout_items">
           <div className="navbar_main_menu_blackbox-workout_image_box">
             <Image
@@ -594,6 +596,7 @@ const Navbar = () => {
             <h4 className="navbar_main_menu_blackbox_h4">ROUTINES</h4>
           </div>
         </div>
+        </Link>
       </div>
 
       {/* about********************* */}
