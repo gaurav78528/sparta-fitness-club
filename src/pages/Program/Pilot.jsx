@@ -37,10 +37,8 @@ const Pilot = () => {
   const dispatch = useDispatch();
   const { isOpen, onToggle } = useDisclosure();
 
-<<<<<<< HEAD
     const pilots = useSelector((store) => store.pilot);
-    const dispatch = useDispatch();
-    const { isOpen, onToggle } = useDisclosure();
+    
    
   
     useEffect(() => {
@@ -69,11 +67,7 @@ const Pilot = () => {
               Filter
               <TriangleDownIcon marginLeft={2} />
             </Button>
-=======
-  useEffect(() => {
-    dispatch(getPilot());
-  }, []);
-
+ 
   return (
     <div>
       <Box marginLeft={20} marginTop={"100px"} marginBottom={"20px"}>
@@ -94,7 +88,6 @@ const Pilot = () => {
                 Filter
                 <TriangleDownIcon marginLeft={2} />
               </Button>
->>>>>>> b6156edae45204181f88c514f0c43d8d3a04f6ef
 
               <Collapse in={isOpen} animateOpacity>
                 <Box
@@ -145,7 +138,6 @@ const Pilot = () => {
         </Flex>
       </Box>
 
-<<<<<<< HEAD
     <Grid
       w={"95%"}
       m="auto"
@@ -173,8 +165,8 @@ const Pilot = () => {
         </GridItem>
       ))}
     </Grid>
-=======
-      <Grid
+
+    <Grid
         w={"95%"}
         m="auto"
         templateColumns={{
@@ -204,6 +196,6 @@ const Pilot = () => {
     </div>
   );
 };
->>>>>>> b6156edae45204181f88c514f0c43d8d3a04f6ef
+
 
 export default Pilot;
