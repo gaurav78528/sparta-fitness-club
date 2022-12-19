@@ -33,12 +33,11 @@ import {
 import { Link } from "react-router-dom";
 
 const Pilot = () => {
-  const products = useSelector((store) => store.prod);
-  const dispatch = useDispatch();
-  const { isOpen, onToggle } = useDisclosure();
-
+  
+ 
     const pilots = useSelector((store) => store.pilot);
-    
+    const dispatch = useDispatch();
+    const { isOpen, onToggle } = useDisclosure();
    
   
     useEffect(() => {
@@ -47,27 +46,31 @@ const Pilot = () => {
     },[])
 
 
-  return (
-    <div>
-    <Box marginLeft={20} marginTop={"100px"} marginBottom={"20px"}>
-      <Heading
-        fontFamily={
-          "Maison Neue,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif"
-        }
-        fontSize={"40px"}
-      >
-        Pilot Program
-      </Heading>
-    </Box>
-    <Box w="full">
-      <Flex h={"full"} border="1px solid gray">
-        <Box marginLeft={12} display="flex" >
-          <Box>
-            <Button onClick={onToggle}>
-              Filter
-              <TriangleDownIcon marginLeft={2} />
-            </Button>
+  // return (
+  //   <div>
+  //   <Box marginLeft={20} marginTop={"100px"} marginBottom={"20px"}>
+  //     <Heading
+  //       fontFamily={
+  //         "Maison Neue,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif"
+  //       }
+  //       fontSize={"40px"}
+  //     >
+  //       Pilot Program
+  //     </Heading>
+  //   </Box>
+  //   <Box w="full">
+  //     <Flex h={"full"} border="1px solid gray">
+  //       <Box marginLeft={12} display="flex" >
+  //         <Box>
+  //           <Button onClick={onToggle}>
+  //             Filter
+  //             <TriangleDownIcon marginLeft={2} />
+  //           </Button>
  
+  // useEffect(() => {
+  //   dispatch(getPilot());
+  // }, []);
+
   return (
     <div>
       <Box marginLeft={20} marginTop={"100px"} marginBottom={"20px"}>
@@ -88,6 +91,7 @@ const Pilot = () => {
                 Filter
                 <TriangleDownIcon marginLeft={2} />
               </Button>
+ 
 
               <Collapse in={isOpen} animateOpacity>
                 <Box
@@ -137,7 +141,7 @@ const Pilot = () => {
           </Box>
         </Flex>
       </Box>
-
+ 
     <Grid
       w={"95%"}
       m="auto"
@@ -165,37 +169,11 @@ const Pilot = () => {
         </GridItem>
       ))}
     </Grid>
-
-    <Grid
-        w={"95%"}
-        m="auto"
-        templateColumns={{
-          base: "repeat(1, 1fr)",
-          md: "repeat(2, 1fr)",
-          lg: "repeat(4, 1fr)",
-        }}
-        gap={4}
-        marginTop="20px"
-        marginBottom={"20px"}
-      >
-        {products.product[0] &&
-          products.product[0].map((pro) => (
-            <GridItem key={pro.id}>
-              <Link to={`/Pilot/${pro.id}`}>
-                <Card
-                  min={pro.time}
-                  price={pro.price}
-                  des={pro.desc}
-                  src={pro.img}
-                  week={pro.week}
-                />
-              </Link>
-            </GridItem>
-          ))}
-      </Grid>
+ 
+      
     </div>
   );
 };
-
+ 
 
 export default Pilot;
