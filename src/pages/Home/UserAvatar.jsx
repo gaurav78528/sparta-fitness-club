@@ -11,6 +11,9 @@ const UserAvatar = ({size}) => {
           border="4px solid #e7e4e4"
           bgColor={"rgb(66, 150, 203)"}
           size={size}
+          h={{ base: "100px", md: "150px", lg: "200px" }}
+        w={{ base: "100px", md: "150px", lg: "200px" }}
+          m="auto"
           name={user.email.charAt(0)}
         />{" "}
       </WrapItem>

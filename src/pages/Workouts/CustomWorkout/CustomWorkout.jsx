@@ -10,22 +10,24 @@ import {
   Text,
 } from "@chakra-ui/react";
 import "./CustomWorkout.css";
+import Slide from "./Slide"
 const CustomWorkout = () => {
   return (
     <Box
       fontFamily='Maison Neue","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif'
       w="100%"
     >
-      <Box
+      {/* <Box
         className="Cwork"
         backgroundImage="url(https://cloudfront.fitnessblender.com/assets/img/fbplus/fingerprint.jpg)"
         backgroundSize="cover"
         backgroundRepeat="no-repeat"
         w="100vw"
         h="300px"
-      ></Box>
+      ></Box> */}
+      <Slide />
       <Box
-        borderBottom="0.5px solid gray "
+          borderBottom='1px' borderColor='gray.200'
         textAlign="center"
         p={7}
         color="#4296cb"
@@ -91,7 +93,7 @@ const CustomWorkout = () => {
           </GridItem>
         </Grid>
       </Box>
-      <Box borderTop="1px solid gray" mt={5}>
+      <Box  borderTop='1px' borderColor='gray.200' mt={5}>
         <Grid
           w={"full"}
           templateColumns={{
