@@ -58,7 +58,7 @@ const Cart = () => {
           </Flex>
     {/* <Flex >   */}
       <Button variant="ghost" onClick={()=>dispatch(deletecart(el.id))} mt={5} mr="350px" fontWeight={"bold"}><AiOutlineClose fontWeight="800" /></Button>
-      <p style={{marginTop:"25px"}}>{el.price}</p>
+      <p style={{marginTop:"25px"}}> ${el.price}</p>
       {/* </Flex> */}
       </Flex>
       
