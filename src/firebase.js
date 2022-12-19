@@ -15,15 +15,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const auth= getAuth(app)
 export default app
-// const app = initializeApp(firebaseConfig);
 
-// firebase.initializeApp(firebaseConfig);
-
-// const auth = firebase.auth();
-// const goggleAuthProvider = new firebase.auth.GoogleAuthProvider();
-// const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
-
-// export { auth, goggleAuthProvider, facebookAuthProvider };
-
-// export { goggleAuthProvider, facebookAuthProvider };
-// export default auth;

@@ -52,6 +52,7 @@ import tutorials from "../../assets/Tutorials.png";
 import ourTeam from "../../assets/our-team.png";
 import whatsNew from "../../assets/whats-new.png";
 import { useUserAuth } from "../../context/UserAuthContext";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [styleworkout, setStyle] = useState({ display: "none" });
@@ -65,18 +66,11 @@ const Navbar = () => {
   const [styleSeachBar, setStyleSeachBar] = useState({ display: "none" });
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const Productarray = useSelector((store) => store.Product);
 
-  let cartData = [
-    {
-      id: 1,
-    },
-    {
-      id: 2,
-    },
-    {
-      id: 3,
-    },
-  ];
+  let totalCartItems = Productarray.product.length;
+  console.log(totalCartItems);
+
   const { user, logOut } = useUserAuth();
   // console.log(user);
   const handleLogout = async () => {
@@ -302,12 +296,12 @@ const Navbar = () => {
                   WORKOUTS
                 </Text>
               </Link>
-              <Link to="/workoutvideos">
+              <Link to="/workout-videos">
                 <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                   WORKOUT VIDEOS
                 </Text>
               </Link>
-              <Link to={"/customworkout"}>
+              <Link to={"/custom-workout"}>
                 <Text
                   color="rgb(167,170,174)"
                   pt="10px"
@@ -328,7 +322,7 @@ const Navbar = () => {
                   WORKOUT PROGRAMS
                 </Text>
               </Link>
-              <Link to="/meal">
+              <Link to="/meal-plan">
                 <Text color="rgb(167,170,174)" pt="10px" fontSize={"14px"}>
                   MEAL PLANS
                 </Text>
@@ -476,7 +470,7 @@ const Navbar = () => {
                 <MdOutlineShoppingBag color="black" size={"22px"} />
               </Link>
               <p className="navbar_main_menu_items_shopping_bag_cart_number">
-                {cartData.length > 0 ? cartData.length : null}
+                {totalCartItems > 0 ? totalCartItems : null}
               </p>
             </div>
           </div>
@@ -493,7 +487,7 @@ const Navbar = () => {
           setStyle({ display: "none" });
         }}
       >
-        <Link to={"/workoutvideos"}>
+        <Link to={"/workout-videos"}>
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -508,7 +502,7 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <Link to={"/customworkout"}>
+        <Link to={"/custom-workouts"}>
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -551,7 +545,7 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
-        <Link to="/meal">
+        <Link to="/meal-plan">
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image

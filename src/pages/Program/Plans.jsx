@@ -35,13 +35,11 @@ import { Link } from "react-router-dom";
 const Plans = () => {
   
 
-  const products = useSelector((store) => store.product);
+  const products = useSelector((store) => store.prod);
   const dispatch = useDispatch();
   const { isOpen, onToggle } = useDisclosure();
  
-  const handleAdd = () => {
-     
-  }
+ 
 
   useEffect(() => {
     dispatch(getProduct())

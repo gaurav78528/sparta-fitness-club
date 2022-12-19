@@ -41,25 +41,25 @@ export default function AboutSlide() {
   // This can be static or loaded from a server
   const cards = [
     {
-      title: 'Routines FB Plus',
+      title: 'ABOUT FITNESS BLENDER',
       text:
-        "Routines allow you to build your own workout plans that you can save and schedule on the calendar. With access to our entire workout library,",
+        "Our goal is to make health and fitness attainable, affordable and approachable.",
       image:
-        'https://cloudfront.fitnessblender.com/assets/img/fbplus/routines.jpg',
+        'https://d18zdz9g6n5za7.cloudfront.net/about/masthead-xs@2X.jpg',
     },
     {
-      title: 'Routines FB Plus',
+      title: '',
       text:
-        "Whether you want to save time scheduling your favorite morning warm-up each week, or you want to create a comprehensive fitness plan",
+        "Come Join the FB Family.",
       image:
-        'https://d18zdz9g6n5za7.cloudfront.net/wellness-videos/67-guided-practice-to-embrace-vulnerability-96cb.jpg',
+        'https://cloudfront.fitnessblender.com/assets/img/careers/careers-hero-xs@2X.jpg',
     },
     {
-      title: 'Routines FB Plus',
+      title: '',
       text:
-        "Routines wouldn't be complete without the ability to add your own workouts.",
+        "Come Join the FB Family. ",
       image:
-        'https://d18zdz9g6n5za7.cloudfront.net/wellness-videos/64-guided-meditation-for-grief-9028.jpg',
+        'https://d18zdz9g6n5za7.cloudfront.net/about/video.jpg',
     },
   ];
 
@@ -68,7 +68,8 @@ export default function AboutSlide() {
       position={'relative'}
       height={'600px'}
       width={'full'}
-      overflow={'hidden'}>
+      overflow={'hidden'}
+      >
       {/* CSS files for react-slick */}
       <link
         rel="stylesheet"
@@ -112,7 +113,7 @@ export default function AboutSlide() {
             key={index}
             height={'full'}
             position="relative"
-            backgroundPosition="center"
+            backgroundPosition="top"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
             backgroundImage={`url(${card.image})`}>
@@ -126,12 +127,14 @@ export default function AboutSlide() {
                 position="absolute"
                 top="50%"
                 transform="translate(0, -50%)">
-                <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} color="white">
-                  {card.title} <Button bg={"green.400"}>ALL ACCESS</Button>
-                </Heading>
-                <Text fontSize={{ base: 'md', lg: 'lg' }} color="white">
-                  {card.text}
+               
+                <Text fontWeight={"bold"} fontSize={{ base: 'md', lg: 'lg' }} color="green.200">
+              
+                {card.title}       
                 </Text>
+                 <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} color="white">
+                 {card.text}  
+                </Heading>
               </Stack>
             </Container>
           </Box>

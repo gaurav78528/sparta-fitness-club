@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Workout.css";
 import { useState ,useEffect} from "react";
 import { Calender } from "./Calender";
@@ -20,44 +20,45 @@ console.log(showvideo)
   useEffect(() => {
     getActualData1();
   }, []);
-  // let work = [
-  //   {
-  //     id:1,
-  //     image:
-  //       "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1167-kickboxing-kettlebell-and-core-b94e.jpg",
-  //       url:"https://www.youtube.com/embed/vDXICApDZSI" ,
-  //     name: "Kickboxing, Kettlebell, and Core ",
-  //     des: "Bored Easily Combo Workout",
-  //     day: "38 Min • Total Body ",
-  //   },
-  //   {
-  //     id:2,
-  //     image:
-  //       "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1022-beginner-friendly-cardio-warm-up-bae7.jpg",
-  //       url:"https://www.youtube.com/embed/zdXZDuVX0nU",
-  //     name: "Beginner-Friendly Cardio Warm Up  ",
-  //     des: "Low-Impact Feel-Good Exercises ",
-  //     day: "10 Min • Total Body ",
-  //   },
-  //   {
-  //     id:3,
-  //     image:
-  //       "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1083-restorative-bodyweight-workout-ac41.jpg",
-  //       url:"https://www.youtube.com/embed/V8QQ_bYgWUw" ,
-  //     name: "Restorative Bodyweight Workout  ",
-  //     des: "Low Impact Exercises for Sore Muscles ",
-  //     day: "24 Min • Total Body ",
-  //   },
-  //   {
-  //     id:4,
-  //     image:
-  //       "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1133-single-weight-upper-body-a19e.jpg",
-  //       url:"https://www.youtube.com/embed/AhR9_YAKJcs" ,
-  //     name: "Single Weight Upper Body  ",
-  //     des: "Quick Strength Training Circuit  ",
-  //     day: "23 Min • Upper Body  ",
-  //   },
-  // ];
+  const [showvideo, setShowVideo] = useState([]);
+  let work = [
+    {
+      id: 1,
+      image:
+        "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1167-kickboxing-kettlebell-and-core-b94e.jpg",
+      url: "https://www.youtube.com/embed/vDXICApDZSI",
+      name: "Kickboxing, Kettlebell, and Core ",
+      des: "Bored Easily Combo Workout",
+      day: "38 Min • Total Body ",
+    },
+    {
+      id: 2,
+      image:
+        "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1022-beginner-friendly-cardio-warm-up-bae7.jpg",
+      url: "https://www.youtube.com/embed/zdXZDuVX0nU",
+      name: "Beginner-Friendly Cardio Warm Up  ",
+      des: "Low-Impact Feel-Good Exercises ",
+      day: "10 Min • Total Body ",
+    },
+    {
+      id: 3,
+      image:
+        "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1083-restorative-bodyweight-workout-ac41.jpg",
+      url: "https://www.youtube.com/embed/V8QQ_bYgWUw",
+      name: "Restorative Bodyweight Workout  ",
+      des: "Low Impact Exercises for Sore Muscles ",
+      day: "24 Min • Total Body ",
+    },
+    {
+      id: 4,
+      image:
+        "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1133-single-weight-upper-body-a19e.jpg",
+      url: "https://www.youtube.com/embed/AhR9_YAKJcs",
+      name: "Single Weight Upper Body  ",
+      des: "Quick Strength Training Circuit  ",
+      day: "23 Min • Upper Body  ",
+    },
+  ];
 
   let work1 = [
     {
@@ -195,7 +196,11 @@ console.log(showvideo)
       day: "38 Min • Total Body ",
     },
   ];
- 
+
+  useEffect(() => {
+    document.title = "Workout";
+  }, []);
+
   return (
     <div>
       {/* top image */}
@@ -247,7 +252,7 @@ console.log(showvideo)
             {showvideo.map((e) => (
               <GridItem h="auto" pb={5} bg="#fff" className="effect" key={e.id}>
                 <Link to={`/worksinglevideo/${e.id}`}>
-                <Image src={e.image} />
+                  <Image src={e.image} />
                 </Link>
                 <Box color="white" className="Free">
                   <div>Free</div>
