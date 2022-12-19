@@ -132,7 +132,7 @@ const MealPlans = () => {
     >
       {meals.meal[0] &&  meals.meal[0].map((pro) => (
         <GridItem  key={pro.id} >
-          {/* <Link to={`/Meal/${pro.id}`}> */}
+          <Link to={`/Meal/${pro.id}`}>
             <Card
               
               min={pro.time}
@@ -142,7 +142,7 @@ const MealPlans = () => {
               week={pro.week}
               id={pro.id}
             />
-          {/* </Link> */}
+          </Link>
         </GridItem>
       ))}
     </Grid>
