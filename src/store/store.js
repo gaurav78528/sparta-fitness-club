@@ -9,7 +9,7 @@ import { reducer as appReducer } from "./App/app.reducer";
 import { reducer as authReducer } from "./Auth/auth.reducer";
 import {workoutReducer} from "../pages/Workouts/REDUX/workout.reducer"
 import thunk from "redux-thunk";
-import { productReducer } from "./workout/work.reducers";
+import { mealReducer, pilotReducer, productReducer } from "./workout/work.reducers";
 import { reducer as giftReducer } from "./shop/reducer";
 import {reducer as cartReducer} from "./Cart/reducer"
 const root_reducer = combineReducers({
@@ -20,6 +20,8 @@ const root_reducer = combineReducers({
   prod: productReducer,
   workout:workoutReducer,
   Product:cartReducer,
+  meal:mealReducer,
+  pilot:pilotReducer,
 });
 
 const composeEnhancers = window.REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose;

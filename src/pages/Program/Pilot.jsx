@@ -37,6 +37,39 @@ const Pilot = () => {
   const dispatch = useDispatch();
   const { isOpen, onToggle } = useDisclosure();
 
+<<<<<<< HEAD
+    const pilots = useSelector((store) => store.pilot);
+    const dispatch = useDispatch();
+    const { isOpen, onToggle } = useDisclosure();
+   
+  
+    useEffect(() => {
+      
+      dispatch(getPilot())
+    },[])
+
+
+  return (
+    <div>
+    <Box marginLeft={20} marginTop={"100px"} marginBottom={"20px"}>
+      <Heading
+        fontFamily={
+          "Maison Neue,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif"
+        }
+        fontSize={"40px"}
+      >
+        Pilot Program
+      </Heading>
+    </Box>
+    <Box w="full">
+      <Flex h={"full"} border="1px solid gray">
+        <Box marginLeft={12} display="flex" >
+          <Box>
+            <Button onClick={onToggle}>
+              Filter
+              <TriangleDownIcon marginLeft={2} />
+            </Button>
+=======
   useEffect(() => {
     dispatch(getPilot());
   }, []);
@@ -61,6 +94,7 @@ const Pilot = () => {
                 Filter
                 <TriangleDownIcon marginLeft={2} />
               </Button>
+>>>>>>> b6156edae45204181f88c514f0c43d8d3a04f6ef
 
               <Collapse in={isOpen} animateOpacity>
                 <Box
@@ -111,6 +145,35 @@ const Pilot = () => {
         </Flex>
       </Box>
 
+<<<<<<< HEAD
+    <Grid
+      w={"95%"}
+      m="auto"
+      templateColumns={{
+        base: "repeat(1, 1fr)",
+        md: "repeat(2, 1fr)",
+        lg: "repeat(4, 1fr)",
+      }}
+      gap={4}
+      marginTop="20px"
+      marginBottom={"20px"}
+    >
+      {pilots.pilot[0] &&  pilots.pilot[0].map((pro) => (
+        <GridItem  key={pro.id} >
+          <Link to={`/Pilot/${pro.id}`}>
+            <Card
+              
+              min={pro.time}
+              price={pro.price}
+              des={pro.desc}
+              src={pro.img}
+              week={pro.week}
+            />
+          </Link>
+        </GridItem>
+      ))}
+    </Grid>
+=======
       <Grid
         w={"95%"}
         m="auto"
@@ -141,5 +204,6 @@ const Pilot = () => {
     </div>
   );
 };
+>>>>>>> b6156edae45204181f88c514f0c43d8d3a04f6ef
 
 export default Pilot;
