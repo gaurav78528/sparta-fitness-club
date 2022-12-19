@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import {useDispatch,useSelector} from "react-redux";
 import { Calender } from "./Calender";
 import "./Workout.css";
-import {fetchPosts,searchPosts} from "./REDUX/workout.action"
+import {fetchPosts,searchPosts,sortPostsAsc, sortPostsDesc} from "./REDUX/workout.action"
 
 import Paginate from "./Paginate";
 import {
@@ -16,7 +16,7 @@ import {
     Flex,
     Button,
     Collapse,
-
+    Select,
     Input,
     Accordion,
     AccordionItem,
@@ -34,11 +34,13 @@ import {
     MinusIcon,
     SearchIcon,
     TriangleDownIcon,
+    InfoOutlineIcon
   } from "@chakra-ui/icons";
 import Hovering from "./Hovering";
 //   import { Link } from "react-router-dom";
 const WorkoutVideos = () => {
     const [search, setSearch] = useState('');
+    const [sort, setSort] = useState('');
 	const dispatch = useDispatch();
 	const { posts } = useSelector((state) => state.workout);
 	const [currentPage, setCurrentPage] = useState(1);
@@ -56,6 +58,15 @@ const WorkoutVideos = () => {
 		
     dispatch(searchPosts(search));
 	}, [search]);
+  useEffect(() => {
+		
+		if (sort === 'desc') {
+			dispatch(sortPostsDesc());
+		}
+		if (sort === 'asc') {
+			dispatch(sortPostsAsc());
+		}
+	}, [ sort,dispatch]);
   
     const postPerPage = 28;
 	const totalPosts = posts.length;
@@ -72,7 +83,7 @@ const WorkoutVideos = () => {
           }
           fontSize={"40px"}
         >
-          Workout Videos
+          Workout Videos <span style={{color:"gray" }}><InfoOutlineIcon boxSize={6}/></span>
         </Heading>
       </Box>
       <Box w="full">
@@ -127,11 +138,17 @@ const WorkoutVideos = () => {
                         />
                       </Flex>
                     </AccordionPanel>
+                    
                   </>
                 )}
               </AccordionItem>
             </Accordion>
           </Box>
+          <Select placeholder='Select option' onChange={(e) => setSort(e.target.value)} size="lg" border={'none'} w={{ base: "100px", md: "170px", lg: "170px" }}>
+                      <option value='asc'>ASC</option>
+                      <option value='desc'>DESC</option>
+                      
+                   </Select>
         </Flex>
       </Box>
       <div className="WorkCard">
@@ -187,7 +204,12 @@ const WorkoutVideos = () => {
                 <img src={e.image} />
             ))
         } */}
-        <Box>
+        <Box 
+        height="60px"
+        width={"20%"}
+        m={'auto'}
+        
+        >
         {totalPosts > postPerPage && (
 						<Paginate
 							currentPage={currentPage}

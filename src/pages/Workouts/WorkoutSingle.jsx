@@ -1,22 +1,11 @@
 import React from 'react'
 import {
     Box,
-    chakra,
-    Container,
     Grid,
     Stack,
     Text,
     Image,
-    Flex,
-    VStack,
-    Button,
     Heading,
-    SimpleGrid,
-    StackDivider,
-    useColorModeValue,
-    VisuallyHidden,
-    List,
-    ListItem,
     GridItem,
   } from '@chakra-ui/react';
   import {ViewIcon,CheckCircleIcon,ChatIcon,StarIcon,TriangleUpIcon} from '@chakra-ui/icons'

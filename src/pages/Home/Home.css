@@ -176,7 +176,6 @@
   padding-top: 40px;
   background-color: #d8d9da;
 }
-
 .midimg {
   margin-bottom: -20px;
 }
@@ -282,7 +281,6 @@
 }
 .back > div {
   font-size: 0.7rem;
-
   margin-bottom: 0px;
   color: #222533;
   font-weight: bold;
@@ -297,6 +295,10 @@
 @media only screen and (min-width: 613px) and (max-width: 1090px) {
   .TopMain {
     width: 100%;
+    /* height: 600px; */
+    height: auto;
+    font-family: "Maison Neue","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    background: linear-gradient(to bottom right,#3d97ce 0%,#12debb 100%);
     height: auto;
     font-family: "Maison Neue", "Helvetica Neue", Helvetica, Arial,
       "Lucida Grande", sans-serif;
@@ -305,10 +307,36 @@
   }
   .TopFlex1 {
     width: 100%;
+    /* height: 550px; */
+   height: auto;
+    margin: auto;
+    
+}
+.TopFlex1{
+    width: 80%;
+    height: 100%;
     height: auto;
     margin: auto;
     text-align: center;
     align-items: center;
+     display: grid;
+     grid-template-columns: 47% 47%;
+    
+}
+.TopFlex3{
+    width: 68%;
+    height: auto;
+    margin: auto;
+    align-items: center;
+    padding: 80px;
+     display: grid;
+     grid-template-columns: 55% 35%;
+     grid-gap:20%;
+    
+}
+
+.TopHeading{
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
@@ -536,6 +564,113 @@
     height: auto;
     width: 99%;
     margin: auto;
+    margin-top: 12px;
+    /* margin-bottom: 30px; */
+    padding: 8px;
+    color: #2c2e3a;
+    font-weight: 600;
+    font-size: 0.8rem;
+    line-height: 1.4em;
+    margin-bottom: 40px;
+}
+.back>div{
+
+   
+    
+    font-size: 0.7rem;
+   
+    margin-bottom: 0px;
+    color: #222533;
+    font-weight: bold;
+    padding-left: 4px;
+}
+.end_a{
+    color:#4296cb ;
+    margin-top: 30px;
+}
+
+
+
+/*  */
+@media only screen and (min-width: 613px) and (max-width: 1090px) {
+   
+    .TopMain{
+        width: 100%;
+        height: auto;
+        font-family: "Maison Neue","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+        background: linear-gradient(to bottom right,#3d97ce 0%,#12debb 100%);
+        color: #fff;
+        
+    }
+    .TopFlex1{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+    .TopFlex3{
+    width: 68%;
+    height: auto;
+    margin: auto;
+    align-items: center;
+     
+     display: grid;
+     grid-template-columns: repeat(1,afr);
+     grid-gap:20%;
+    }
+    .TopFlex2{
+        margin-top: -60px;
+    }
+    .TopFlex{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        
+    }
+    .TopHeading>h2{
+        font-size: 2.3rem;
+        letter-spacing: -0.02em;
+        z-index: 2;
+        text-align: center;
+        line-height: 1.2em;
+        font-weight: 400;
+    
+    }
+    .TopHeading>p{
+        width: 70%;
+        margin: auto;
+        margin-top: 10px;
+        font-size: 1.3rem;
+        line-height: 1.4em;
+        z-index: 2;
+        text-align: center;
+        letter-spacing: 0.2px;
+    }
+    .TopAnchor{
+        height: 90px;
+        width: 200px;
+        margin: auto;
+        margin-top: 40px;
+        cursor: pointer;
+        
+    }
+    .TopFlex2{
+        
+        margin: auto;
+        margin-top: -70px;
+    }
+
+
+    .Topsection2>div>h2{
+        font-size: 2.1rem;
+        line-height: 1.2em
+    }
+    .Topsection2>div>p{
+       width: 62%;
     margin-top: -70px;
   }
   .Topsec2img > img {
@@ -573,7 +708,128 @@
   .Mdiv3 > p {
     width: 94%;
   }
-
+    .Middlesec2 p{
+        width: 60%;
+        font-size: 20px;
+       }
+       .Middlesec2divanch{
+        margin-top: 10px;
+       }
+    
+   
+    .Middlesec1img>img{
+      height: 230px;
+      width: 100%;
+    }  
+    
+    
+    /*  */
+    .end{
+        padding: 30px;
+        padding-top: 50px;
+    }
+    .end1{
+        height: auto;
+        width: 100%;
+        margin: auto;
+        margin-top: -40px;
+       
+    }
+    .end1>h2{
+        font-size: 2.3rem;
+        
+    }
+    .end1>p{
+        width: 100%;
+        
+    }
+    .flex1{
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 8px;
+        
+    }
+    .flex2{
+        margin-top: 20px;
+    }
+    .back>img{
+        width: 100%;
+    }
+    .back{
+        height: auto;
+           }
+    
+    }
+       
+           
+         
+            
+            
+ @media only screen and (min-width: 0px) and (max-width: 612px) {
+    .TopMain{
+        width: 100%;
+        height: auto;
+        font-family: "Maison Neue","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+        background: linear-gradient(to bottom right,#3d97ce 0%,#12debb 100%);
+        color: #fff;
+        
+    }
+    .TopFlex1{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+    .TopFlex3{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .TopFlex2{
+        margin-top: -60px;
+    }
+    .TopFlex{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        
+    }
+    .TopHeading>h2{
+        font-size: 2rem;
+        letter-spacing: -0.02em;
+        z-index: 2;
+        text-align: center;
+        line-height: 1.2em;
+        font-weight: 400;
+    
+    }
+    .TopHeading>p{
+        width: 95%;
+        margin-top: 10px;
+        font-size: 1.1rem;
+        line-height: 1.4em;
+        z-index: 2;
+        text-align: center;
+        letter-spacing: 0.2px;
+    }
+    .TopAnchor{
+        height: 90px;
+        width: 200px;
+        margin: auto;
+        margin-top: 40px;
+        cursor: pointer;
+        
+    }
   /* Middlesection 2 */
 
   .Middlesec2 p {

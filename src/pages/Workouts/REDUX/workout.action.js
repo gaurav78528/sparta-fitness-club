@@ -13,7 +13,15 @@ export const fetchPosts = () => async (dispatch) => {
 		console.log(error.message);
 	}
 };
+export const sortPostsAsc = () =>  (dispatch, getState) => {
+	const { workout } = getState();
+	dispatch({ type: actions.SORT_POSTS_ASC, payload: workout.posts });
+};
 
+export const sortPostsDesc = () => (dispatch, getState) => {
+	const { workout } = getState();
+	dispatch({ type: actions.SORT_POSTS_DESC, payload: workout.posts });
+};
 
 export const searchPosts = (query) => (dispatch, getState) => {
 	console.log(query);

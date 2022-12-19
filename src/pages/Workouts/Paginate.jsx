@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./Paginate.css"
 const Paginate = ({ currentPage, setCurrentPage, totalPosts, postPerPage }) => {
 	const totalPages = Math.ceil(totalPosts / postPerPage);
 
