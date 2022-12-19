@@ -44,7 +44,6 @@ const MealPlans = () => {
    
   
     useEffect(() => {
-      
       dispatch(getMeal())
     },[])
 
