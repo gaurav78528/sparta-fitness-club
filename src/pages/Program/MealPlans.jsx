@@ -34,7 +34,7 @@ import { Link } from "react-router-dom";
 
 const MealPlans = () => {
 
-    const products = useSelector((store) => store.product);
+    const products = useSelector((store) => store.prod);
     const dispatch = useDispatch();
     const { isOpen, onToggle } = useDisclosure();
    

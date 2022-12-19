@@ -1,7 +1,7 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
-import {BiChevronLeft} from "react-icons/bi"
+import { BiChevronLeft } from "react-icons/bi";
 const ReviewOrder = () => {
   return (
     <Flex
@@ -52,8 +52,9 @@ const ReviewOrder = () => {
         <Heading as="h2" size="sm" fontWeight={500}>
           7-Day Pass
         </Heading>
-
-        <Text fontSize="15px">Edit Cart</Text>
+        <Heading as="h2" size="sm" fontWeight={500}>
+          $3.19
+        </Heading>
       </Flex>
       <Flex
         align="center"
