@@ -1,54 +1,67 @@
 import React from "react";
 import "./Workout.css";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import { Calender } from "./Calender";
 import { Flex, Spacer, Box, Heading, Text, Image } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+const getVideoData = async () => {
+  let res = await fetch(`https://sparta-fitness-database.vercel.app/work`);
+  let data = await res.json();
+  return data;
+};
 const Workout = () => {
   const [liked, setLiked] = useState(null);
   const [showvideo,setShowVideo]=useState([])
-  let work = [
-    {
-      id:1,
-      image:
-        "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1167-kickboxing-kettlebell-and-core-b94e.jpg",
-        url:"https://www.youtube.com/embed/vDXICApDZSI" ,
-      name: "Kickboxing, Kettlebell, and Core ",
-      des: "Bored Easily Combo Workout",
-      day: "38 Min • Total Body ",
-    },
-    {
-      id:2,
-      image:
-        "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1022-beginner-friendly-cardio-warm-up-bae7.jpg",
-        url:"https://www.youtube.com/embed/zdXZDuVX0nU",
-      name: "Beginner-Friendly Cardio Warm Up  ",
-      des: "Low-Impact Feel-Good Exercises ",
-      day: "10 Min • Total Body ",
-    },
-    {
-      id:3,
-      image:
-        "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1083-restorative-bodyweight-workout-ac41.jpg",
-        url:"https://www.youtube.com/embed/V8QQ_bYgWUw" ,
-      name: "Restorative Bodyweight Workout  ",
-      des: "Low Impact Exercises for Sore Muscles ",
-      day: "24 Min • Total Body ",
-    },
-    {
-      id:4,
-      image:
-        "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1133-single-weight-upper-body-a19e.jpg",
-        url:"https://www.youtube.com/embed/AhR9_YAKJcs" ,
-      name: "Single Weight Upper Body  ",
-      des: "Quick Strength Training Circuit  ",
-      day: "23 Min • Upper Body  ",
-    },
-  ];
+  const getActualData1 = () => {
+    getVideoData().then((res) => setShowVideo(res));
+  };
+console.log(showvideo)
+  useEffect(() => {
+    getActualData1();
+  }, []);
+  // let work = [
+  //   {
+  //     id:1,
+  //     image:
+  //       "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1167-kickboxing-kettlebell-and-core-b94e.jpg",
+  //       url:"https://www.youtube.com/embed/vDXICApDZSI" ,
+  //     name: "Kickboxing, Kettlebell, and Core ",
+  //     des: "Bored Easily Combo Workout",
+  //     day: "38 Min • Total Body ",
+  //   },
+  //   {
+  //     id:2,
+  //     image:
+  //       "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1022-beginner-friendly-cardio-warm-up-bae7.jpg",
+  //       url:"https://www.youtube.com/embed/zdXZDuVX0nU",
+  //     name: "Beginner-Friendly Cardio Warm Up  ",
+  //     des: "Low-Impact Feel-Good Exercises ",
+  //     day: "10 Min • Total Body ",
+  //   },
+  //   {
+  //     id:3,
+  //     image:
+  //       "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1083-restorative-bodyweight-workout-ac41.jpg",
+  //       url:"https://www.youtube.com/embed/V8QQ_bYgWUw" ,
+  //     name: "Restorative Bodyweight Workout  ",
+  //     des: "Low Impact Exercises for Sore Muscles ",
+  //     day: "24 Min • Total Body ",
+  //   },
+  //   {
+  //     id:4,
+  //     image:
+  //       "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1133-single-weight-upper-body-a19e.jpg",
+  //       url:"https://www.youtube.com/embed/AhR9_YAKJcs" ,
+  //     name: "Single Weight Upper Body  ",
+  //     des: "Quick Strength Training Circuit  ",
+  //     day: "23 Min • Upper Body  ",
+  //   },
+  // ];
 
   let work1 = [
     {
+      id:1,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1154-intermediate-power-yoga-with-twists-adef.jpg",
       name: "Intermediate Power Yoga With Twists  ",
@@ -56,6 +69,7 @@ const Workout = () => {
       day: "52 Min • Total Body • Energizing  ",
     },
     {
+      id:2,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1150-30-minute-hiit-a15c.jpg",
       name: "Quick HIIT With Extended Cool Down  ",
@@ -63,6 +77,7 @@ const Workout = () => {
       day: "29 Min • Total Body ",
     },
     {
+      id:3,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1156-lower-body-strength-bb7d.jpg",
       name: "Lower Body Strength   ",
@@ -70,6 +85,7 @@ const Workout = () => {
       day: "66 Min • Lower Body • Challenging ",
     },
     {
+      id:4,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1155-express-upper-body-90e4.jpg",
       name: "Express Upper Body ",
@@ -79,6 +95,7 @@ const Workout = () => {
   ];
   let work3 = [
     {
+      id:1,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1161-lower-body-strength-and-hiit-cardio-ba59.jpg",
       name: "Lower Body Strength and HIIT Cardio   ",
@@ -86,6 +103,7 @@ const Workout = () => {
       day: "40 Min • Lower Body • Fun  ",
     },
     {
+      id:2,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1022-beginner-friendly-cardio-warm-up-bae7.jpg",
       name: "Beginner-Friendly Cardio Warm Up  ",
@@ -93,6 +111,7 @@ const Workout = () => {
       day: "10 Min • Total Body  ",
     },
     {
+      id:3,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1141-weighted-core-strength-98b4.jpg",
       name: "Weighted Core Strength  ",
@@ -100,6 +119,7 @@ const Workout = () => {
       day: "19 Min • Core • Empowering ",
     },
     {
+      id:4,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1143-bored-easily-strength-afcd.jpg",
       name: "Bored Easily Strength  ",
@@ -109,6 +129,7 @@ const Workout = () => {
   ];
   let work4 = [
     {
+      id:1,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1150-30-minute-hiit-a15c.jpg",
       name: "Quick HIIT With Extended Cool Down  ",
@@ -116,6 +137,7 @@ const Workout = () => {
       day: "29 Min • Total Body  ",
     },
     {
+      id:2,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1146-aerobic-step-hiit-a107.jpg",
       name: "Aerobic Step HIIT   ",
@@ -123,6 +145,7 @@ const Workout = () => {
       day: "33 Min • Total Body   ",
     },
     {
+      id:3,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1161-lower-body-strength-and-hiit-cardio-ba59.jpg",
       name: "Lower Body Strength and HIIT Cardio  ",
@@ -130,6 +153,7 @@ const Workout = () => {
       day: "40 Min • Lower Body • Fun  ",
     },
     {
+      id:4,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1139-low-impact-tabata-hiit-a11e.jpg",
       name: "Low Impact Tabata HIIT  ",
@@ -139,6 +163,7 @@ const Workout = () => {
   ];
   let work5 = [
     {
+      id:1,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1156-lower-body-strength-bb7d.jpg",
       name: "Lower Body Strength  ",
@@ -146,6 +171,7 @@ const Workout = () => {
       day: "66 Min • Lower Body • Challenging   ",
     },
     {
+      id:2,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1155-express-upper-body-90e4.jpg",
       name: "Express Upper Body   ",
@@ -153,6 +179,7 @@ const Workout = () => {
       day: "17 Min • Upper Body • Feel-Good   ",
     },
     {
+      id:3,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1158-upper-body-strength-ab3b.jpg",
       name: "Upper Body Strength   ",
@@ -160,6 +187,7 @@ const Workout = () => {
       day: "51 Min • Upper Body • Challenging  ",
     },
     {
+      id:4,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1167-kickboxing-kettlebell-and-core-b94e.jpg",
       name: "Kickboxing, Kettlebell, and Core  ",
@@ -191,19 +219,32 @@ const Workout = () => {
 
       <div className="WorkCard">
         <div className="WorkCard1">
-          <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
+          <Flex minWidth="max-content" alignItems="center" gap="2" pb={8} >
             <Box p="2">
-              <Heading as="h2" size="xl">
+              <Heading as="h2" size={{
+               base: "md",
+                md:"md",
+               lg: "xl"}}>
                 Newest Free Workout Videos
               </Heading>
             </Box>
             <Spacer />
-            <Box gap="2">
-              <Text color="#4296cb">View All Free Workouts</Text>
+            <Box gap="2" className="workoutlink">
+              <Text color="#4296cb" size={{
+               base: "md",
+                md:"md",
+               lg: "xl"}}><Link to="/workout-videos">View All Free Workouts</Link></Text>
             </Box>
           </Flex>
-          <Grid templateColumns="repeat(4, 1fr)" gap={4}>
-            {work.map((e) => (
+          <Grid  w={"full"}
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+        
+        gap={2}>
+            {showvideo.map((e) => (
               <GridItem h="auto" pb={5} bg="#fff" className="effect" key={e.id}>
                 <Link to={`/worksinglevideo/${e.id}`}>
                 <Image src={e.image} />
@@ -217,7 +258,7 @@ const Workout = () => {
                       <Text fontSize="md">{e.name}</Text>
                     </Box>
                     <Spacer />
-                    <Box gap="2">
+                    <Box gap="2" color={'gray'}>
                       <Calender />
                     </Box>
                   </Flex>
@@ -243,18 +284,27 @@ const Workout = () => {
         <div className="WorkCard1">
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
-              <Heading as="h2" size="xl">
+              <Heading as="h2" size={{
+               base: "md",
+                md:"md",
+               lg: "xl"}}>
                 Newest Plus Workout Videos
               </Heading>
             </Box>
             <Spacer />
-            <Box gap="2">
-              <Text color="#4296cb">View All Plus Workouts</Text>
+            <Box gap="2" className="workoutlink">
+              <Text color="#4296cb" ><Link to="/workout-videos">View All Plus Workouts</Link></Text>
             </Box>
           </Flex>
-          <Grid templateColumns="repeat(4, 1fr)" gap={4}>
-            {work.map((e) => (
-              <GridItem h="auto" pb={5} bg="#fff" className="effect1">
+          <Grid  w={"full"}
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+        gap={2}>
+            {work1.map((e) => (
+              <GridItem h="auto" pb={5} bg="#fff" className="effect1" key={e.id}>
                 <Image src={e.image} />
 
                 <Box p={2} marginTop={2}>
@@ -289,18 +339,27 @@ const Workout = () => {
         <div className="WorkCard1">
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
-              <Heading as="h2" size="xl">
+              <Heading as="h2" size={{
+               base: "md",
+                md:"md",
+               lg: "xl"}}>
                 Beginner Workouts
               </Heading>
             </Box>
             <Spacer />
-            <Box gap="2">
-              <Text color="#4296cb">View All Beginner Workouts</Text>
+            <Box gap="2" className="workoutlink">
+              <Text color="#4296cb"><Link to="/workout-videos">View All Beginner Workouts</Link></Text>
             </Box>
           </Flex>
-          <Grid templateColumns="repeat(4, 1fr)" gap={4}>
+          <Grid  w={"full"}
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+        gap={2}>
             {work3.map((e) => (
-              <GridItem h="auto" pb={5} bg="#fff" className="effect">
+              <GridItem h="auto" pb={5} bg="#fff" className="effect" key={e.id}>
                 <Image src={e.image} />
 
                 <Box p={2} marginTop={2}>
@@ -335,18 +394,27 @@ const Workout = () => {
         <div className="WorkCard1">
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
-              <Heading as="h2" size="xl">
+              <Heading as="h2" size={{
+               base: "md",
+                md:"md",
+               lg: "xl"}}>
                 HIIT Workouts
               </Heading>
             </Box>
             <Spacer />
-            <Box gap="2">
-              <Text color="#4296cb">View All HIIT Workouts</Text>
+            <Box gap="2" className="workoutlink">
+              <Text color="#4296cb"><Link to="/workout-videos">View All HIIT Workouts</Link></Text>
             </Box>
           </Flex>
-          <Grid templateColumns="repeat(4, 1fr)" gap={4}>
+          <Grid  w={"full"}
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+        gap={2}>
             {work4.map((e) => (
-              <GridItem h="auto" pb={5} bg="#fff" className="effect1">
+              <GridItem h="auto" pb={5} bg="#fff" className="effect1" key={e.id}>
                 <Image src={e.image} />
 
                 <Box p={2} marginTop={2}>
@@ -381,18 +449,27 @@ const Workout = () => {
         <div className="WorkCard1">
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
-              <Heading as="h2" size="xl">
+              <Heading as="h2" size={{
+               base: "md",
+                md:"md",
+               lg: "xl"}}>
                 Strength Workouts
               </Heading>
             </Box>
             <Spacer />
-            <Box gap="2">
-              <Text color="#4296cb">View All Strength Workouts</Text>
+            <Box gap="2" className="workoutlink">
+              <Text color="#4296cb"><Link to="/workout-videos">View All Strength Workouts</Link></Text>
             </Box>
           </Flex>
-          <Grid templateColumns="repeat(4, 1fr)" gap={4}>
+          <Grid t w={"full"}
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+        gap={2}>
             {work5.map((e) => (
-              <GridItem h="auto" pb={5} bg="#fff" className="effect">
+              <GridItem h="auto" pb={5} bg="#fff" className="effect" key={e.id}>
                 <Image src={e.image} />
 
                 <Box p={2} marginTop={2}>

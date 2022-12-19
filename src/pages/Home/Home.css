@@ -1,6 +1,7 @@
 .TopMain{
     width: 100%;
-    height: 600px;
+    /* height: 600px; */
+    height: auto;
     font-family: "Maison Neue","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
     background: linear-gradient(to bottom right,#3d97ce 0%,#12debb 100%);
     color: #fff;
@@ -8,7 +9,8 @@
 }
 .TopFlex{
     width: 100%;
-    height: 550px;
+    /* height: 550px; */
+   height: auto;
     margin: auto;
     
 }
@@ -21,6 +23,18 @@
      grid-template-columns: 47% 47%;
     
 }
+.TopFlex3{
+    width: 68%;
+    height: auto;
+    margin: auto;
+    align-items: center;
+    padding: 80px;
+     display: grid;
+     grid-template-columns: 55% 35%;
+     grid-gap:20%;
+    
+}
+
 .TopHeading{
     width: 80%;
     height: auto;
@@ -325,6 +339,16 @@ font-weight: 500;
         grid-template-columns: repeat(1,1fr);
         
     }
+    .TopFlex3{
+    width: 68%;
+    height: auto;
+    margin: auto;
+    align-items: center;
+     
+     display: grid;
+     grid-template-columns: repeat(1,afr);
+     grid-gap:20%;
+    }
     .TopFlex2{
         margin-top: -60px;
     }
@@ -509,6 +533,15 @@ font-weight: 500;
         display: grid;
         grid-template-columns: repeat(1,1fr);
         
+    }
+    .TopFlex3{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
     }
     .TopFlex2{
         margin-top: -60px;

@@ -3,6 +3,7 @@ import React from "react";
 import { useUserAuth } from "../../context/UserAuthContext";
 import "./Home.css";
 import UserAvatar from "./UserAvatar";
+import {Link} from "react-router-dom"
 const Home = () => {
   const { user } = useUserAuth();
   let homearr = [
@@ -45,14 +46,15 @@ const Home = () => {
       <div className="TopMain">
         <div className="TopFlex">
           {user ? (
-            <div className="TopFlex1">
+            <div className="TopFlex3">
               <div>
                 <div className="TopHeading">
-                  <h2>
+                  <h2 >
                     Welcome
                     <br />
-                    {user.email}
+                    {/* {user.email} */}
                   </h2>
+                    <h2 style={{fontSize:"30px"}}> {user.email}</h2>
                   <p style={{ fontSize: "17px" }}>
                     Your free membership gives you access to hundreds of videos,
                     articles, and recipes as well as a positive and supportive
@@ -61,7 +63,7 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <div className="TopFlex2">
+              <div >
                 <UserAvatar size="2xl" />
               </div>
             </div>
@@ -128,7 +130,8 @@ const Home = () => {
             on the road.
           </p>
           <div className="Midan">
-            <a href="#">Find a Workout</a>
+            
+            <Link to="/workout">Find a Workout</Link>
           </div>
           <div className="midimg">
             <img src="https://cloudfront.fitnessblender.com/assets/img/homepage/workouts-1440.webp" />
@@ -141,7 +144,8 @@ const Home = () => {
             exercising.
           </p>
           <div className="Midan">
-            <a href="#">Browse All Programs</a>
+            
+            <Link to="/pilot">Browse All Programs</Link>
           </div>
           <div className="midimg">
             <img src="https://cloudfront.fitnessblender.com/assets/img/homepage/programs-1440.webp" />
@@ -167,7 +171,8 @@ const Home = () => {
             chefs.
           </p>
           <div className="Midan">
-            <a href="#">Find a Recipe</a>
+            
+            <Link to="/healthy-living">Browse All Programs</Link>
           </div>
           <div className="midimg">
             <img src="https://cloudfront.fitnessblender.com/assets/img/homepage/recipes-1440.webp" />
