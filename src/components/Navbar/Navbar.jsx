@@ -577,6 +577,22 @@ const Navbar = () => {
           </div>
         </Link>
         <Link to="/routine">
+ 
+       
+        <div className="navbar_main_menu_blackbox-workout_items">
+          <div className="navbar_main_menu_blackbox-workout_image_box">
+            <Image
+              src={customWorkouts}
+              alt="customWorkouts"
+              boxSize="50px"
+              objectFit="cover"
+            />
+          </div>
+          <div className="navbar_main_menu_blackbox-workout_text_box">
+            <h4 className="navbar_main_menu_blackbox_h4">ROUTINES</h4>
+          </div>
+        </div>
+=======
           <div className="navbar_main_menu_blackbox-workout_items">
             <div className="navbar_main_menu_blackbox-workout_image_box">
               <Image
@@ -591,6 +607,7 @@ const Navbar = () => {
               <h4 className="navbar_main_menu_blackbox_h4">ROUTINES</h4>
             </div>
           </div>
+ 
         </Link>
       </div>
 
