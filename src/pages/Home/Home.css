@@ -619,8 +619,8 @@ font-weight: 500;
 
 
     .Middle{
-        width: 99%;
-        height: auto;
+        /* width: 80%;
+        height: auto; */
         margin: auto;
         margin-top: 10px;
         text-align: center;

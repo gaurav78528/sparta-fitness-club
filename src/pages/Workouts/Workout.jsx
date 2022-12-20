@@ -181,7 +181,7 @@ console.log(showvideo)
       {/* card */}
 
       <div className="WorkCard">
-        <div className="WorkCard1">
+        <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8} >
             <Box p="2">
               <Heading as="h2" size={{
@@ -199,13 +199,13 @@ console.log(showvideo)
                lg: "xl"}}><Link to="/workout-videos">View All Free Workouts</Link></Text>
             </Box>
           </Flex>
-          <Grid  w={"full"}
+          <Grid  w={"85%"}
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
           lg: "repeat(4, 1fr)",
         }}
-        
+        m={'auto'}
         gap={2}>
             {showvideo.map((e) => (
               <GridItem h="auto" pb={5} bg="#fff" className="effect" key={e.id}>
@@ -239,12 +239,12 @@ console.log(showvideo)
               </GridItem>
             ))}
           </Grid>
-        </div>
+        </Box>
       </div>
       {/* card end */}
       {/* 2nd card */}
       <div className="WorkCard2">
-        <div className="WorkCard1">
+        <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
               <Heading as="h2" size={{
@@ -259,12 +259,13 @@ console.log(showvideo)
               <Text color="#4296cb" ><Link to="/workout-videos">View All Plus Workouts</Link></Text>
             </Box>
           </Flex>
-          <Grid  w={"full"}
+          <Grid  w={"85%"}
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
           lg: "repeat(4, 1fr)",
         }}
+        m={'auto'}
         gap={2}>
             {work1.map((e) => (
               <GridItem h="auto" pb={5} bg="#fff" className="effect1" key={e.id}>
@@ -294,12 +295,12 @@ console.log(showvideo)
               </GridItem>
             ))}
           </Grid>
-        </div>
+        </Box>
       </div>
       {/* 2nd card end */}
       {/* 3rd card */}
       <div className="WorkCard">
-        <div className="WorkCard1">
+        <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
               <Heading as="h2" size={{
@@ -314,12 +315,13 @@ console.log(showvideo)
               <Text color="#4296cb"><Link to="/workout-videos">View All Beginner Workouts</Link></Text>
             </Box>
           </Flex>
-          <Grid  w={"full"}
+          <Grid  w={"85%"}
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
           lg: "repeat(4, 1fr)",
         }}
+            m={'auto'}
         gap={2}>
             {work3.map((e) => (
               <GridItem h="auto" pb={5} bg="#fff" className="effect" key={e.id}>
@@ -349,12 +351,12 @@ console.log(showvideo)
               </GridItem>
             ))}
           </Grid>
-        </div>
+        </Box>
       </div>
       {/* 3rd card end */}
       {/* 3nd card */}
       <div className="WorkCard2">
-        <div className="WorkCard1">
+        <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
               <Heading as="h2" size={{
@@ -369,12 +371,13 @@ console.log(showvideo)
               <Text color="#4296cb"><Link to="/workout-videos">View All HIIT Workouts</Link></Text>
             </Box>
           </Flex>
-          <Grid  w={"full"}
+          <Grid  w={"85%"}
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
           lg: "repeat(4, 1fr)",
         }}
+        m={'auto'}
         gap={2}>
             {work4.map((e) => (
               <GridItem h="auto" pb={5} bg="#fff" className="effect1" key={e.id}>
@@ -404,12 +407,12 @@ console.log(showvideo)
               </GridItem>
             ))}
           </Grid>
-        </div>
+        </Box>
       </div>
       {/* 4th end */}
       {/*  */}
       <div className="WorkCard">
-        <div className="WorkCard1">
+        <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
               <Heading as="h2" size={{
@@ -424,12 +427,13 @@ console.log(showvideo)
               <Text color="#4296cb"><Link to="/workout-videos">View All Strength Workouts</Link></Text>
             </Box>
           </Flex>
-          <Grid t w={"full"}
+          <Grid t w={"85%"}
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
           lg: "repeat(4, 1fr)",
         }}
+        m={'auto'}
         gap={2}>
             {work5.map((e) => (
               <GridItem h="auto" pb={5} bg="#fff" className="effect" key={e.id}>
@@ -459,7 +463,7 @@ console.log(showvideo)
               </GridItem>
             ))}
           </Grid>
-        </div>
+        </Box>
       </div>
       {/*  */}
     </div>
