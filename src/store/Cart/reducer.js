@@ -3,6 +3,7 @@ const initstate = {
   product: [],
   TotalPrice: 0,
   TotalQuantity: 0,
+  // emptyCart:[]
 };
 const reducer = (state = initstate, action) => {
   const { type, payload } = action;
@@ -10,11 +11,11 @@ const reducer = (state = initstate, action) => {
     case types.Cart_Update:
       //    console.log(state,"state");
       let newProduct = [...state.product, payload];
-      console.log(state);
+      // console.log(state);
       const totalPrice = newProduct.reduce((prev, next) => {
         return Number(prev) + Number(next.price);
       }, 0);
-      console.log(totalPrice);
+      // console.log(totalPrice);
 
       return {
         ...state,
@@ -35,7 +36,9 @@ const reducer = (state = initstate, action) => {
     // c=
     // console.log(length);
     // return {TotalQuantity:length}
-
+    case "EMPTY_CART": {
+      return [];
+    }
     default:
       return state;
   }

@@ -69,7 +69,7 @@ const Navbar = () => {
   const Productarray = useSelector((store) => store.Product);
 
   let totalCartItems = Productarray.product.length;
-  console.log(totalCartItems);
+  // console.log(totalCartItems);
 
   const { user, logOut } = useUserAuth();
   // console.log(user);

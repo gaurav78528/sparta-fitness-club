@@ -159,7 +159,7 @@ import { useNavigate } from "react-router";
 const Cart = () => {
   const Productarray = useSelector((store) => store.Product);
   // const total = useSelector((store) => store.Product);
-  console.log(Productarray, "data");
+  // console.log(Productarray);
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
@@ -194,11 +194,11 @@ const Cart = () => {
                     <Flex gap="15px" justify="center" align="center">
                       <Image
                         width={["25%", "25%", "28%", "150px"]}
-                        src={el.image}
+                        src={el.img}
                         alt=""
                       />
                       <Box>
-                        <p>FB PLUS PASS</p>
+                        <p>{el.desc}</p>
 
                         <p>{el.pass}</p>
 
@@ -239,14 +239,17 @@ const Cart = () => {
       </Box>
       <Divider />
       <Box w="78%" m="auto">
-        <Flex justifyContent="space-between">
+        <Flex justifyContent="space-between" mt="30px">
           <Heading>Total: </Heading>
-          <Box>${Productarray.TotalPrice}</Box>
+          <Box>${Math.ceil(Productarray.TotalPrice)}</Box>
         </Flex>
       </Box>
-      <Center>
+      <Center py="30px">
         <Button
           bg="rgb(66,151,202)"
+          color="#fff"
+          colorScheme="blue"
+          borderRadius="5px"
           m="auto"
           onClick={() => navigate("/checkout")}
         >
