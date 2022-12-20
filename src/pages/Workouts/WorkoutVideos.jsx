@@ -154,7 +154,7 @@ const WorkoutVideos = () => {
       <div className="WorkCard">
         <div className="WorkCard1">
       <Grid
-        w={"full"}
+        w={"80%"}
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
