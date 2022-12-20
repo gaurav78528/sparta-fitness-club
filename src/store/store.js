@@ -9,9 +9,8 @@ import { reducer as appReducer } from "./App/app.reducer";
 import { reducer as authReducer } from "./Auth/auth.reducer";
 import {workoutReducer} from "../pages/Workouts/REDUX/workout.reducer"
 import thunk from "redux-thunk";
-import { productReducer } from "./workout/work.reducers";
+import { mealReducer, pilotReducer, productReducer } from "./workout/work.reducers";
 import { reducer as giftReducer } from "./shop/reducer";
-import { healthLivingReducer } from "./healthyLiving/healthyLiving.reducer";
 import {reducer as cartReducer} from "./Cart/reducer"
 const root_reducer = combineReducers({
   app: appReducer,
@@ -19,9 +18,10 @@ const root_reducer = combineReducers({
   gift: giftReducer,
   // product: productReducer,
   prod: productReducer,
-  healthLiving: healthLivingReducer,
   workout:workoutReducer,
   Product:cartReducer,
+  meal:mealReducer,
+  pilot:pilotReducer,
 });
 
 const composeEnhancers = window.REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose;

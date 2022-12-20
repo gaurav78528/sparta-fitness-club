@@ -1,11 +1,12 @@
-import { Wrap } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Wrap } from "@chakra-ui/react";
 import React from "react";
 import { useUserAuth } from "../../context/UserAuthContext";
 import "./Home.css";
 import UserAvatar from "./UserAvatar";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 const Home = () => {
   const { user } = useUserAuth();
+  console.log(user);
   let homearr = [
     {
       name: "Perfect for Beginners",
@@ -43,18 +44,18 @@ const Home = () => {
   return (
     <div>
       {/* Top section  */}
-      <div className="TopMain">
-        <div className="TopFlex">
+      <Flex justify="center" align="center" className="TopMain">
+        <Flex w="80%" align="center" justify="space-between">
           {user ? (
-            <div className="TopFlex3">
+            <Flex align="center" justify="center" className="TopFlex3">
               <div>
                 <div className="TopHeading">
-                  <h2 >
+                  <h2>
                     Welcome
                     <br />
                     {/* {user.email} */}
                   </h2>
-                    <h2 style={{fontSize:"30px"}}> {user.email}</h2>
+                  <h2 style={{ fontSize: "30px" }}> {user.email}</h2>
                   <p style={{ fontSize: "17px" }}>
                     Your free membership gives you access to hundreds of videos,
                     articles, and recipes as well as a positive and supportive
@@ -63,10 +64,10 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <div >
+              <Box>
                 <UserAvatar size="2xl" />
-              </div>
-            </div>
+              </Box>
+            </Flex>
           ) : (
             <div className="TopFlex1">
               <div>
@@ -82,7 +83,7 @@ const Home = () => {
                     approach to feeling great.
                   </p>
                   <div className="TopAnchor">
-                    <a>JOIN NOW</a>
+                    <Link to="/membership">JOIN NOW</Link>
                   </div>
                 </div>
               </div>
@@ -95,8 +96,9 @@ const Home = () => {
               </div>
             </div>
           )}
-        </div>
-      </div>
+        </Flex>
+      </Flex>
+
       {/* Top section end */}
 
       {/* Top section 2nd */}
@@ -130,7 +132,6 @@ const Home = () => {
             on the road.
           </p>
           <div className="Midan">
-            
             <Link to="/workout">Find a Workout</Link>
           </div>
           <div className="midimg">
@@ -144,7 +145,6 @@ const Home = () => {
             exercising.
           </p>
           <div className="Midan">
-            
             <Link to="/pilot">Browse All Programs</Link>
           </div>
           <div className="midimg">
@@ -171,7 +171,6 @@ const Home = () => {
             chefs.
           </p>
           <div className="Midan">
-            
             <Link to="/healthy-living">Browse All Programs</Link>
           </div>
           <div className="midimg">

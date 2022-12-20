@@ -25,7 +25,7 @@ const Card = ({src, week, min, des, price,key,handleAdd }) => {
             </Box>
             <Box>
                 <Button gap={2} bg={"blue.300"} color={"white"} onClick={handleAdd}><MdOutlineShoppingBag fontSize={"25px"}/>ADD TO BAG</Button>
-                <Button gap={2} bg={"blue.300"} color={"white"}><MdOutlineShoppingBag fontSize={"25px"}/>ADD TO BAG</Button>
+                {/* <Button gap={2} bg={"blue.300"} color={"white"}><MdOutlineShoppingBag fontSize={"25px"}/>ADD TO BAG</Button> */}
             </Box>
 
         </Flex>

@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Workout.css";
-import { useState ,useEffect} from "react";
 import { Calender } from "./Calender";
 import { Flex, Spacer, Box, Heading, Text, Image } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
@@ -12,19 +11,21 @@ const getVideoData = async () => {
 };
 const Workout = () => {
   const [liked, setLiked] = useState(null);
-  const [showvideo,setShowVideo]=useState([])
+  const [showvideo, setShowVideo] = useState([]);
   const getActualData1 = () => {
     getVideoData().then((res) => setShowVideo(res));
   };
-console.log(showvideo)
+  console.log(showvideo);
   useEffect(() => {
     getActualData1();
   }, []);
+
   
+
 
   let work1 = [
     {
-      id:1,
+      id: 1,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1154-intermediate-power-yoga-with-twists-adef.jpg",
       name: "Intermediate Power Yoga With Twists  ",
@@ -32,7 +33,7 @@ console.log(showvideo)
       day: "52 Min • Total Body • Energizing  ",
     },
     {
-      id:2,
+      id: 2,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1150-30-minute-hiit-a15c.jpg",
       name: "Quick HIIT With Extended Cool Down  ",
@@ -40,7 +41,7 @@ console.log(showvideo)
       day: "29 Min • Total Body ",
     },
     {
-      id:3,
+      id: 3,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1156-lower-body-strength-bb7d.jpg",
       name: "Lower Body Strength   ",
@@ -48,7 +49,7 @@ console.log(showvideo)
       day: "66 Min • Lower Body • Challenging ",
     },
     {
-      id:4,
+      id: 4,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1155-express-upper-body-90e4.jpg",
       name: "Express Upper Body ",
@@ -58,7 +59,7 @@ console.log(showvideo)
   ];
   let work3 = [
     {
-      id:1,
+      id: 1,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1161-lower-body-strength-and-hiit-cardio-ba59.jpg",
       name: "Lower Body Strength and HIIT Cardio   ",
@@ -66,7 +67,7 @@ console.log(showvideo)
       day: "40 Min • Lower Body • Fun  ",
     },
     {
-      id:2,
+      id: 2,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1022-beginner-friendly-cardio-warm-up-bae7.jpg",
       name: "Beginner-Friendly Cardio Warm Up  ",
@@ -74,7 +75,7 @@ console.log(showvideo)
       day: "10 Min • Total Body  ",
     },
     {
-      id:3,
+      id: 3,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1141-weighted-core-strength-98b4.jpg",
       name: "Weighted Core Strength  ",
@@ -82,7 +83,7 @@ console.log(showvideo)
       day: "19 Min • Core • Empowering ",
     },
     {
-      id:4,
+      id: 4,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1143-bored-easily-strength-afcd.jpg",
       name: "Bored Easily Strength  ",
@@ -92,7 +93,7 @@ console.log(showvideo)
   ];
   let work4 = [
     {
-      id:1,
+      id: 1,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1150-30-minute-hiit-a15c.jpg",
       name: "Quick HIIT With Extended Cool Down  ",
@@ -100,7 +101,7 @@ console.log(showvideo)
       day: "29 Min • Total Body  ",
     },
     {
-      id:2,
+      id: 2,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1146-aerobic-step-hiit-a107.jpg",
       name: "Aerobic Step HIIT   ",
@@ -108,7 +109,7 @@ console.log(showvideo)
       day: "33 Min • Total Body   ",
     },
     {
-      id:3,
+      id: 3,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1161-lower-body-strength-and-hiit-cardio-ba59.jpg",
       name: "Lower Body Strength and HIIT Cardio  ",
@@ -116,7 +117,7 @@ console.log(showvideo)
       day: "40 Min • Lower Body • Fun  ",
     },
     {
-      id:4,
+      id: 4,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1139-low-impact-tabata-hiit-a11e.jpg",
       name: "Low Impact Tabata HIIT  ",
@@ -126,7 +127,7 @@ console.log(showvideo)
   ];
   let work5 = [
     {
-      id:1,
+      id: 1,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1156-lower-body-strength-bb7d.jpg",
       name: "Lower Body Strength  ",
@@ -134,7 +135,7 @@ console.log(showvideo)
       day: "66 Min • Lower Body • Challenging   ",
     },
     {
-      id:2,
+      id: 2,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1155-express-upper-body-90e4.jpg",
       name: "Express Upper Body   ",
@@ -142,7 +143,7 @@ console.log(showvideo)
       day: "17 Min • Upper Body • Feel-Good   ",
     },
     {
-      id:3,
+      id: 3,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1158-upper-body-strength-ab3b.jpg",
       name: "Upper Body Strength   ",
@@ -150,7 +151,7 @@ console.log(showvideo)
       day: "51 Min • Upper Body • Challenging  ",
     },
     {
-      id:4,
+      id: 4,
       image:
         "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1167-kickboxing-kettlebell-and-core-b94e.jpg",
       name: "Kickboxing, Kettlebell, and Core  ",
@@ -158,7 +159,11 @@ console.log(showvideo)
       day: "38 Min • Total Body ",
     },
   ];
- 
+
+  useEffect(() => {
+    document.title = "Workout";
+  }, []);
+
   return (
     <div>
       {/* top image */}
@@ -183,22 +188,37 @@ console.log(showvideo)
       <div className="WorkCard">
         <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8} >
+
+        <div className="WorkCard1">
+          <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
+
             <Box p="2">
-              <Heading as="h2" size={{
-               base: "md",
-                md:"md",
-               lg: "xl"}}>
+              <Heading
+                as="h2"
+                size={{
+                  base: "md",
+                  md: "md",
+                  lg: "xl",
+                }}
+              >
                 Newest Free Workout Videos
               </Heading>
             </Box>
             <Spacer />
             <Box gap="2" className="workoutlink">
-              <Text color="#4296cb" size={{
-               base: "md",
-                md:"md",
-               lg: "xl"}}><Link to="/workout-videos">View All Free Workouts</Link></Text>
+              <Text
+                color="#4296cb"
+                size={{
+                  base: "md",
+                  md: "md",
+                  lg: "xl",
+                }}
+              >
+                <Link to="/workout-videos">View All Free Workouts</Link>
+              </Text>
             </Box>
           </Flex>
+
           <Grid  w={"85%"}
         templateColumns={{
           base: "repeat(1, 1fr)",
@@ -207,10 +227,21 @@ console.log(showvideo)
         }}
         m={'auto'}
         gap={2}>
+
+          <Grid
+            w={"full"}
+            templateColumns={{
+              base: "repeat(1, 1fr)",
+              md: "repeat(2, 1fr)",
+              lg: "repeat(4, 1fr)",
+            }}
+            gap={2}
+          >
+
             {showvideo.map((e) => (
               <GridItem h="auto" pb={5} bg="#fff" className="effect" key={e.id}>
                 <Link to={`/worksinglevideo/${e.id}`}>
-                <Image src={e.image} />
+                  <Image src={e.image} />
                 </Link>
                 <Box color="white" className="Free">
                   <div>Free</div>
@@ -221,7 +252,7 @@ console.log(showvideo)
                       <Text fontSize="md">{e.name}</Text>
                     </Box>
                     <Spacer />
-                    <Box gap="2" color={'gray'}>
+                    <Box gap="2" color={"gray"}>
                       <Calender />
                     </Box>
                   </Flex>
@@ -247,18 +278,25 @@ console.log(showvideo)
         <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
-              <Heading as="h2" size={{
-               base: "md",
-                md:"md",
-               lg: "xl"}}>
+              <Heading
+                as="h2"
+                size={{
+                  base: "md",
+                  md: "md",
+                  lg: "xl",
+                }}
+              >
                 Newest Plus Workout Videos
               </Heading>
             </Box>
             <Spacer />
             <Box gap="2" className="workoutlink">
-              <Text color="#4296cb" ><Link to="/workout-videos">View All Plus Workouts</Link></Text>
+              <Text color="#4296cb">
+                <Link to="/workout-videos">View All Plus Workouts</Link>
+              </Text>
             </Box>
           </Flex>
+
           <Grid  w={"85%"}
         templateColumns={{
           base: "repeat(1, 1fr)",
@@ -267,8 +305,25 @@ console.log(showvideo)
         }}
         m={'auto'}
         gap={2}>
+=======
+          <Grid
+            w={"full"}
+            templateColumns={{
+              base: "repeat(1, 1fr)",
+              md: "repeat(2, 1fr)",
+              lg: "repeat(4, 1fr)",
+            }}
+            gap={2}
+          >
+
             {work1.map((e) => (
-              <GridItem h="auto" pb={5} bg="#fff" className="effect1" key={e.id}>
+              <GridItem
+                h="auto"
+                pb={5}
+                bg="#fff"
+                className="effect1"
+                key={e.id}
+              >
                 <Image src={e.image} />
 
                 <Box p={2} marginTop={2}>
@@ -303,18 +358,25 @@ console.log(showvideo)
         <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
-              <Heading as="h2" size={{
-               base: "md",
-                md:"md",
-               lg: "xl"}}>
+              <Heading
+                as="h2"
+                size={{
+                  base: "md",
+                  md: "md",
+                  lg: "xl",
+                }}
+              >
                 Beginner Workouts
               </Heading>
             </Box>
             <Spacer />
             <Box gap="2" className="workoutlink">
-              <Text color="#4296cb"><Link to="/workout-videos">View All Beginner Workouts</Link></Text>
+              <Text color="#4296cb">
+                <Link to="/workout-videos">View All Beginner Workouts</Link>
+              </Text>
             </Box>
           </Flex>
+
           <Grid  w={"85%"}
         templateColumns={{
           base: "repeat(1, 1fr)",
@@ -323,6 +385,17 @@ console.log(showvideo)
         }}
             m={'auto'}
         gap={2}>
+=======
+          <Grid
+            w={"full"}
+            templateColumns={{
+              base: "repeat(1, 1fr)",
+              md: "repeat(2, 1fr)",
+              lg: "repeat(4, 1fr)",
+            }}
+            gap={2}
+          >
+
             {work3.map((e) => (
               <GridItem h="auto" pb={5} bg="#fff" className="effect" key={e.id}>
                 <Image src={e.image} />
@@ -359,18 +432,25 @@ console.log(showvideo)
         <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
-              <Heading as="h2" size={{
-               base: "md",
-                md:"md",
-               lg: "xl"}}>
+              <Heading
+                as="h2"
+                size={{
+                  base: "md",
+                  md: "md",
+                  lg: "xl",
+                }}
+              >
                 HIIT Workouts
               </Heading>
             </Box>
             <Spacer />
             <Box gap="2" className="workoutlink">
-              <Text color="#4296cb"><Link to="/workout-videos">View All HIIT Workouts</Link></Text>
+              <Text color="#4296cb">
+                <Link to="/workout-videos">View All HIIT Workouts</Link>
+              </Text>
             </Box>
           </Flex>
+
           <Grid  w={"85%"}
         templateColumns={{
           base: "repeat(1, 1fr)",
@@ -379,8 +459,25 @@ console.log(showvideo)
         }}
         m={'auto'}
         gap={2}>
+=======
+          <Grid
+            w={"full"}
+            templateColumns={{
+              base: "repeat(1, 1fr)",
+              md: "repeat(2, 1fr)",
+              lg: "repeat(4, 1fr)",
+            }}
+            gap={2}
+          >
+
             {work4.map((e) => (
-              <GridItem h="auto" pb={5} bg="#fff" className="effect1" key={e.id}>
+              <GridItem
+                h="auto"
+                pb={5}
+                bg="#fff"
+                className="effect1"
+                key={e.id}
+              >
                 <Image src={e.image} />
 
                 <Box p={2} marginTop={2}>
@@ -415,18 +512,25 @@ console.log(showvideo)
         <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
-              <Heading as="h2" size={{
-               base: "md",
-                md:"md",
-               lg: "xl"}}>
+              <Heading
+                as="h2"
+                size={{
+                  base: "md",
+                  md: "md",
+                  lg: "xl",
+                }}
+              >
                 Strength Workouts
               </Heading>
             </Box>
             <Spacer />
             <Box gap="2" className="workoutlink">
-              <Text color="#4296cb"><Link to="/workout-videos">View All Strength Workouts</Link></Text>
+              <Text color="#4296cb">
+                <Link to="/workout-videos">View All Strength Workouts</Link>
+              </Text>
             </Box>
           </Flex>
+
           <Grid t w={"85%"}
         templateColumns={{
           base: "repeat(1, 1fr)",
@@ -435,6 +539,18 @@ console.log(showvideo)
         }}
         m={'auto'}
         gap={2}>
+
+          <Grid
+            t
+            w={"full"}
+            templateColumns={{
+              base: "repeat(1, 1fr)",
+              md: "repeat(2, 1fr)",
+              lg: "repeat(4, 1fr)",
+            }}
+            gap={2}
+          >
+
             {work5.map((e) => (
               <GridItem h="auto" pb={5} bg="#fff" className="effect" key={e.id}>
                 <Image src={e.image} />

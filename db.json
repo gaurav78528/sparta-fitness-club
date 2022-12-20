@@ -529,78 +529,86 @@
   "gift": [
     {
       "id": 1,
-      "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-1-10-egift-card-84c3.jpg",
+      "desc": "eGift Card",
+      "img": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-1-10-egift-card-84c3.jpg",
       "price": 10
     },
     {
       "id": 2,
-      "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-2-20-egift-card-a464.jpg",
+      "desc": "eGift Card",
+      "img": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-2-20-egift-card-a464.jpg",
       "price": 20
     },
     {
       "id": 3,
-      "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-3-30-egift-card-a760.jpg",
+      "desc": "eGift Card",
+      "img": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-3-30-egift-card-a760.jpg",
       "price": 30
     },
     {
       "id": 4,
-      "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-4-40-egift-card-a504.jpg",
+      "desc": "eGift Card",
+      "img": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-4-40-egift-card-a504.jpg",
       "price": 40
     },
     {
       "id": 5,
-      "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-5-50-egift-card-8e17.jpg",
+      "desc": "eGift Card",
+      "img": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-5-50-egift-card-8e17.jpg",
       "price": 50
     },
     {
       "id": 6,
-      "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-6-75-egift-card-b723.jpg",
+      "desc": "eGift Card",
+      "img": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-6-75-egift-card-b723.jpg",
       "price": 75
     },
     {
       "id": 7,
-      "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-8-7999-egift-card-limited-bece.jpg",
+      "desc": "eGift Card",
+      "img": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-8-7999-egift-card-limited-bece.jpg",
       "price": 79
     },
     {
       "id": 8,
-      "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-7-100-egift-card-8673.jpg",
+      "desc": "eGift Card",
+      "img": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-7-100-egift-card-8673.jpg",
       "price": 100
     }
   ],
   "passes": [
     {
       "id": 9,
-      "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-16-1-day-pass-a272.jpg",
-      "pass": "1-Day Pass",
+      "img": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-16-1-day-pass-a272.jpg",
+      "desc": "1-Day Pass",
       "price": 1.99
     },
     {
       "id": 10,
-      "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-15-7-day-pass-8070.jpg",
-      "pass": "7-Day Pass",
+      "img": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-15-7-day-pass-8070.jpg",
+      "desc": "7-Day Pass",
       "price": 3.99
     },
     {
       "id": 11,
-      "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-14-14-day-pass-b885.jpg",
-      "pass": "14-Day Pass",
+      "img": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-14-14-day-pass-b885.jpg",
+      "desc": "14-Day Pass",
       "price": 7.99
     },
     {
       "id": 12,
-      "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-13-30-day-pass-9318.jpg",
-      "pass": "30-Day Pass",
-      "price": "11.99"
+      "img": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-13-30-day-pass-9318.jpg",
+      "desc": "30-Day Pass",
+      "price": 11.99
     },
     {
       "id": 13,
-      "image": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-12-90-day-pass-89f6.jpg",
-      "pass": "90-Day Pass",
+      "img": "https://d18zdz9g6n5za7.cloudfront.net/products/320/320-12-90-day-pass-89f6.jpg",
+      "desc": "90-Day Pass",
       "price": 29.99
     }
   ],
-"fitness": [
+  "fitness": [
     {
       "id": 1,
       "image": "https://d18zdz9g6n5za7.cloudfront.net/blog/640/640-1195-what-is-rib-flare-and-how-to-tell-if-you-have-it-9bb4.jpg",
@@ -810,39 +818,35 @@
       "description": "Guided Practice to Embrace Vulnerability Mindfulness for Overcoming Fear of Vulnerability"
     }
   ],
-   "work" : [
+  "work": [
     {
-      "id":1,
-      "image":
-        "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1167-kickboxing-kettlebell-and-core-b94e.jpg",
-        "url":"https://www.youtube.com/embed/vDXICApDZSI" ,
+      "id": 1,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1167-kickboxing-kettlebell-and-core-b94e.jpg",
+      "url": "https://www.youtube.com/embed/vDXICApDZSI",
       "name": "Kickboxing, Kettlebell, and Core ",
       "des": "Bored Easily Combo Workout",
       "day": "38 Min • Total Body "
     },
     {
-      "id":2,
-      "image":
-        "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1022-beginner-friendly-cardio-warm-up-bae7.jpg",
-        "url":"https://www.youtube.com/embed/zdXZDuVX0nU",
+      "id": 2,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1022-beginner-friendly-cardio-warm-up-bae7.jpg",
+      "url": "https://www.youtube.com/embed/zdXZDuVX0nU",
       "name": "Beginner-Friendly Cardio Warm Up  ",
       "des": "Low-Impact Feel-Good Exercises ",
       "day": "10 Min • Total Body "
     },
     {
-      "id":3,
-      "image":
-        "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1083-restorative-bodyweight-workout-ac41.jpg",
-        "url":"https://www.youtube.com/embed/V8QQ_bYgWUw" ,
+      "id": 3,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1083-restorative-bodyweight-workout-ac41.jpg",
+      "url": "https://www.youtube.com/embed/V8QQ_bYgWUw",
       "name": "Restorative Bodyweight Workout  ",
       "des": "Low Impact Exercises for Sore Muscles ",
       "day": "24 Min • Total Body "
     },
     {
-      "id":4,
-      "image":
-        "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1133-single-weight-upper-body-a19e.jpg",
-       "url":"https://www.youtube.com/embed/AhR9_YAKJcs" ,
+      "id": 4,
+      "image": "https://d18zdz9g6n5za7.cloudfront.net/video/640/640-1133-single-weight-upper-body-a19e.jpg",
+      "url": "https://www.youtube.com/embed/AhR9_YAKJcs",
       "name": "Single Weight Upper Body  ",
       "des": "Quick Strength Training Circuit  ",
       "day": "23 Min • Upper Body  "
