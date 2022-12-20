@@ -1,6 +1,10 @@
 export const GET_PRODUCT_LOADING = "product/loading"
 export const GET_PRODUCT_SUCCESS = "product/success"
 export const GET_PRODUCT_ERROR = "product/error"
+export const GET_PRODUCT_SEARCH = "product/search"
+export const GET_PRODUCT_ASC = "product/asc"
+export const GET_PRODUCT_DEC = "product/dec"
+
 
 
 export const GET_MEAL_LOADING = "meal/loading"

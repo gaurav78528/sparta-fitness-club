@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { useSelector, useDispatch } from "react-redux";
-import { getProduct } from "../../store/workout/work.action";
+import { getProduct, searchProduct } from "../../store/workout/work.action";
 import {
   Grid,
   GridItem,
@@ -33,17 +33,18 @@ import {
 import { Link } from "react-router-dom";
 
 const Plans = () => {
-  
+ 
 
   const products = useSelector((store) => store.prod);
   const dispatch = useDispatch();
   const { isOpen, onToggle } = useDisclosure();
  
- 
 
   useEffect(() => {
     dispatch(getProduct())
   },[])
+
+ 
   return (
     <div>
       <Box marginLeft={20} marginTop={"100px"} marginBottom={"20px"}>
@@ -99,6 +100,7 @@ const Plans = () => {
                         <Input
                           w={{ base: "100px", md: "300px", lg: "400px" }}
                           placeholder="Search Item"
+                           
                         />
                         <IconButton
                           aria-label="Search database"

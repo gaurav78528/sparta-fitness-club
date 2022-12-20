@@ -12,6 +12,25 @@ export const getProduct = () =>(dispatch) => {
         })
 }
 
+export const sortProductAsc = () => (dispatch, getState) => {
+    const {plans} = getState()
+    dispatch({type: type.GET_PRODUCT_ASC, payload: plans.product})
+}
+
+export const sortProductDec = () => (dispatch, getState) => {
+	const { plans } = getState();
+	dispatch({ type: type.GET_PRODUCT_DEC, payload: plans.product });
+};
+
+export const searchProduct = (query) => (dispatch, getState) => {
+	console.log(query);
+	const { plans } = getState();
+	const searchResults =  plans.searchResults.filter((post) => 
+		post.desc.toLowerCase().includes(query.toLowerCase())
+	);
+	dispatch({ type: type.GET_PRODUCT_SEARCH, payload: searchResults });
+};
+
 export const getMeal = () =>(dispatch) => {
     dispatch({type: type.GET_MEAL_LOADING})  
         return axios.get("https://fitness-handler.vercel.app/Meal")

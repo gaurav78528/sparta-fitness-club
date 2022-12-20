@@ -1,11 +1,12 @@
-import { GET_PRODUCT_LOADING, GET_PRODUCT_SUCCESS, GET_PRODUCT_ERROR, GET_MEAL_ERROR, GET_MEAL_LOADING, GET_MEAL_SUCCESS, GET_PILOT_ERROR, GET_PILOT_LOADING, GET_PILOT_SUCCESS } from "./work.types";
+import { GET_PRODUCT_LOADING, GET_PRODUCT_SUCCESS, GET_PRODUCT_ERROR, GET_MEAL_ERROR, GET_MEAL_LOADING, GET_MEAL_SUCCESS, GET_PILOT_ERROR, GET_PILOT_LOADING, GET_PILOT_SUCCESS, GET_PRODUCT_ASC, GET_PRODUCT_DEC, GET_PRODUCT_SEARCH } from "./work.types";
 
 
 const init = {
     loading: false,
     error: false,
     product: [],
- 
+    searchResults: [],
+	page: 1,
 }
 
 const initial = {
@@ -46,6 +47,27 @@ export const productReducer = (state = init, {type, payload}) => {
             ...state,
             loading:false,
             product: newdata,
+        }
+    }
+    case GET_PRODUCT_ASC:{
+        const sortAsc = payload.sort((a, b) => (a.time < b.time ? 1 : a.time > b.time ? -1 : 0));
+        return {
+            ...state,
+            product: sortAsc,
+        }
+    }
+    case GET_PRODUCT_DEC:{
+        const sortDec = payload.sort((a, b) => (a.time < b.time ? -1 : a.time > b.time ? 1 : 0));
+        return {
+            ...state,
+            product: sortDec,
+        }
+    }
+    case GET_PRODUCT_SEARCH: {
+        return {
+            ...state,
+            product: type.payload,
+            page: 1
         }
     }
  
