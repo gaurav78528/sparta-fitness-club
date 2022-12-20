@@ -15,8 +15,10 @@ import { BiChevronLeft } from "react-icons/bi";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import ReviewOrder from "../../components/Checkout/ReviewOrder";
 import BillingForm from "../../components/Checkout/BillingForm";
+import { useSelector } from "react-redux";
 const Checkout = () => {
   const navigate = useNavigate();
+
   return (
     <>
       <Box

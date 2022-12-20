@@ -3,9 +3,16 @@ import { Box, Button, Flex, Heading } from "@chakra-ui/react";
 import { BiChevronLeft } from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
 import ReviewOrder from "../../components/Checkout/ReviewOrder";
+import { useDispatch, useSelector } from "react-redux";
+import { empty_cart } from "../../store/Cart/CartAction";
 
 const Payment = () => {
+  const Productarray = useSelector((store) => store.Product);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const handlePlaceOrder = () => {
+    navigate("/success");
+  };
   return (
     <>
       <Box
@@ -73,7 +80,7 @@ const Payment = () => {
                   bg="#4296cb"
                   w={{ base: "70%", lg: "50%" }}
                   m="auto"
-                  onClick={() => navigate("/success")}
+                  onClick={handlePlaceOrder}
                 >
                   PLACE ORDER
                 </Button>

@@ -72,7 +72,7 @@ const Shop = () => {
           giftstore.gift[0].map((el) => (
             <Center key={el.id}>
               <Box bg="white" p={2}>
-                <Image src={el.image} />
+                <Image src={el.img} />
                 <p style={{ fontSize: "10px" }}>FB PLUS PASS</p>
                 <p>{el.pass}</p>
                 <div
@@ -124,7 +124,7 @@ const Shop = () => {
           giftstore.gift[1].map((el) => (
             <Center key={el.id}>
               <Box bg="white" p={4}>
-                <Image src={el.image} />
+                <Image src={el.img} />
                 <Box
                   style={{
                     display: "flex",
