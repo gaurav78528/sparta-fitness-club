@@ -844,6 +844,100 @@
     width: 100%;
   }
 
+
+    .Middle{
+        /* width: 80%;
+        height: auto; */
+        margin: auto;
+        margin-top: 10px;
+        text-align: center;
+        font-family: "Maison Neue","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+        
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 10px;
+    }
+    
+   
+    .Mdiv1>h2,.Mdiv2>h2,.Mdiv4>h2,.Middlesec2 h2,.Mdiv3>h2{
+        font-size: 2.2rem;
+        line-height: 1.6em;
+        
+    }
+   
+    .Mdiv1>p,.Mdiv2>p,.Mdiv4>p,.Mdiv3>p{
+        width: 94%;
+        
+    }
+    
+   
+    
+   
+       
+        
+    
+    /* Middlesection 2 */
+   
+    .Middlesec2 p{
+        width: 90%;
+       }
+       .Middlesec2divanch{
+        margin-top: 10px;
+       }
+    
+   
+    .Middlesec1img>img{
+      height: 210px;
+      width: 100%;
+    }  
+    
+    
+    /*  */
+    .end{
+        padding: 30px;
+        padding-top: 50px;
+    }
+    .end1{
+        height: auto;
+        width: 100%;
+        margin: auto;
+        margin-top: -40px;
+       
+    }
+    .end1>h2{
+        font-size: 1.5rem;
+        
+    }
+    .end1>p{
+        width: 100%;
+        
+    }
+    .flex1{
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 8px;
+        
+    }
+    .flex2{
+        margin-top: 20px;
+    }
+    .back>img{
+        width: 100%;
+    }
+    .back{
+        height: auto;
+           }
+   
+   
+    
+    
+    
+    
+   
+}
+
   /*  */
   .end {
     padding: 30px;
@@ -878,3 +972,4 @@
     height: auto;
   }
 }
+

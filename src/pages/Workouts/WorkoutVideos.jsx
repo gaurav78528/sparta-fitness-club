@@ -86,7 +86,7 @@ const WorkoutVideos = () => {
           Workout Videos <span style={{color:"gray" }}><InfoOutlineIcon boxSize={6}/></span>
         </Heading>
       </Box>
-      <Box w="full">
+      <Box w="100%">
         <Flex h={"full"} border="1px solid gray">
           <Box marginLeft={12} display="flex" alignItems={"center"}>
             <Box>
@@ -154,13 +154,16 @@ const WorkoutVideos = () => {
       <div className="WorkCard">
         <div className="WorkCard1">
       <Grid
-        w={"full"}
+        w={"80%"}
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
           lg: "repeat(4, 1fr)",
         }}
+        m={'auto'}
         gap={2}
+        marginTop="20px"
+        marginBottom={"20px"}
       >
        {filterPosts.map((e) => (
               <GridItem h="auto" pb={5} bg="#fff" key={e.id}>

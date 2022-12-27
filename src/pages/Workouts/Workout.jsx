@@ -20,6 +20,8 @@ const Workout = () => {
     getActualData1();
   }, []);
 
+  
+
 
   let work1 = [
     {
@@ -184,8 +186,12 @@ const Workout = () => {
       {/* card */}
 
       <div className="WorkCard">
+        <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
+          <Flex minWidth="max-content" alignItems="center" gap="2" pb={8} >
+
         <div className="WorkCard1">
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
+
             <Box p="2">
               <Heading
                 as="h2"
@@ -212,6 +218,16 @@ const Workout = () => {
               </Text>
             </Box>
           </Flex>
+
+          <Grid  w={"85%"}
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+        m={'auto'}
+        gap={2}>
+
           <Grid
             w={"full"}
             templateColumns={{
@@ -221,6 +237,7 @@ const Workout = () => {
             }}
             gap={2}
           >
+
             {showvideo.map((e) => (
               <GridItem h="auto" pb={5} bg="#fff" className="effect" key={e.id}>
                 <Link to={`/worksinglevideo/${e.id}`}>
@@ -253,12 +270,12 @@ const Workout = () => {
               </GridItem>
             ))}
           </Grid>
-        </div>
+        </Box>
       </div>
       {/* card end */}
       {/* 2nd card */}
       <div className="WorkCard2">
-        <div className="WorkCard1">
+        <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
               <Heading
@@ -279,6 +296,16 @@ const Workout = () => {
               </Text>
             </Box>
           </Flex>
+
+          <Grid  w={"85%"}
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+        m={'auto'}
+        gap={2}>
+=======
           <Grid
             w={"full"}
             templateColumns={{
@@ -288,6 +315,7 @@ const Workout = () => {
             }}
             gap={2}
           >
+
             {work1.map((e) => (
               <GridItem
                 h="auto"
@@ -322,12 +350,12 @@ const Workout = () => {
               </GridItem>
             ))}
           </Grid>
-        </div>
+        </Box>
       </div>
       {/* 2nd card end */}
       {/* 3rd card */}
       <div className="WorkCard">
-        <div className="WorkCard1">
+        <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
               <Heading
@@ -348,6 +376,16 @@ const Workout = () => {
               </Text>
             </Box>
           </Flex>
+
+          <Grid  w={"85%"}
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+            m={'auto'}
+        gap={2}>
+=======
           <Grid
             w={"full"}
             templateColumns={{
@@ -357,6 +395,7 @@ const Workout = () => {
             }}
             gap={2}
           >
+
             {work3.map((e) => (
               <GridItem h="auto" pb={5} bg="#fff" className="effect" key={e.id}>
                 <Image src={e.image} />
@@ -385,12 +424,12 @@ const Workout = () => {
               </GridItem>
             ))}
           </Grid>
-        </div>
+        </Box>
       </div>
       {/* 3rd card end */}
       {/* 3nd card */}
       <div className="WorkCard2">
-        <div className="WorkCard1">
+        <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
               <Heading
@@ -411,6 +450,16 @@ const Workout = () => {
               </Text>
             </Box>
           </Flex>
+
+          <Grid  w={"85%"}
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+        m={'auto'}
+        gap={2}>
+=======
           <Grid
             w={"full"}
             templateColumns={{
@@ -420,6 +469,7 @@ const Workout = () => {
             }}
             gap={2}
           >
+
             {work4.map((e) => (
               <GridItem
                 h="auto"
@@ -454,12 +504,12 @@ const Workout = () => {
               </GridItem>
             ))}
           </Grid>
-        </div>
+        </Box>
       </div>
       {/* 4th end */}
       {/*  */}
       <div className="WorkCard">
-        <div className="WorkCard1">
+        <Box className="WorkCard1" w={'85%'} h={'auto'} m="auto" p={'4'}>
           <Flex minWidth="max-content" alignItems="center" gap="2" pb={8}>
             <Box p="2">
               <Heading
@@ -480,6 +530,16 @@ const Workout = () => {
               </Text>
             </Box>
           </Flex>
+
+          <Grid t w={"85%"}
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+        m={'auto'}
+        gap={2}>
+
           <Grid
             t
             w={"full"}
@@ -490,6 +550,7 @@ const Workout = () => {
             }}
             gap={2}
           >
+
             {work5.map((e) => (
               <GridItem h="auto" pb={5} bg="#fff" className="effect" key={e.id}>
                 <Image src={e.image} />
@@ -518,7 +579,7 @@ const Workout = () => {
               </GridItem>
             ))}
           </Grid>
-        </div>
+        </Box>
       </div>
       {/*  */}
     </div>
